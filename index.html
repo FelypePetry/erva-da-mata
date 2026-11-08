@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erva da Mata — Chás e aditivos para chimarrão | São José do Inhacorá, RS</title>
+<meta name="description" content="Chás, aditivos e ervas selecionadas para o seu chimarrão. Anis estrelado, carqueja, mate tostado e blends da casa, direto de São José do Inhacorá (RS). 10% de desconto no Pix e pedido pelo WhatsApp.">
+<meta name="theme-color" content="#0d1d15">
+<!-- PRÉVIA para validação: troque para "index, follow" quando publicar no domínio oficial -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://ervadamata.com.br/">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Erva da Mata">
+<meta property="og:title" content="Erva da Mata — Do coração da mata para a sua cuia">
+<meta property="og:description" content="Chás e aditivos para chimarrão do interior gaúcho. Monte seu blend e peça pelo WhatsApp.">
+<meta property="og:url" content="https://ervadamata.com.br/">
+<meta property="og:image" content="https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Laranja-com-canela-600x600-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230d1d15'/%3E%3Cpath d='M50 14C74 30 80 58 50 86 20 58 26 30 50 14Z' fill='%23b6c878'/%3E%3Cpath d='M50 22V80' stroke='%230d1d15' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Erva da Mata",
+  "description": "Chás, aditivos para chimarrão, especiarias e temperos.",
+  "url": "https://ervadamata.com.br/",
+  "telephone": "+55 55 3316-0098",
+  "email": "contato@ervadamata.com.br",
+  "address": { "@type": "PostalAddress", "addressLocality": "São José do Inhacorá", "addressRegion": "RS", "addressCountry": "BR" },
+  "sameAs": ["https://www.instagram.com/chaervadamata/", "https://www.facebook.com/chaervadamata/"]
+}
+</script>
+
+<script>document.documentElement.classList.add('js')</script>
+
+<style>
+/* =========================================================
+   ERVA DA MATA — tokens
+   ========================================================= */
+:root{
+  --mata:#0d1d15; --mata2:#13291e; --mata3:#1d3b2b;
+  --erva:#7f9c45; --erva2:#b6c878; --broto:#dfe8b4;
+  --creme:#f3ebd8; --papel:#faf5ea; --linho:#efe6d0;
+  --ouro:#d9a050; --terra:#b0582c; --ink:#14211a; --muted:#5f6b62;
+  --line:rgba(20,33,26,.12);
+  --r:24px; --r-sm:14px;
+  --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --pad:clamp(20px, 5vw, 64px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);background:var(--papel);-webkit-font-smoothing:antialiased;overflow-x:clip}
+main,footer{overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+p{margin:0}
+::selection{background:var(--erva2);color:var(--mata)}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px;border-radius:8px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+section{position:relative}
+
+/* grão de papel por cima de tudo */
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:200;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+/* utilitários tipográficos */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.h-xl{font-size:clamp(44px, 9.2vw, 128px)}
+.h-lg{font-size:clamp(38px, 6.4vw, 84px)}
+.h-md{font-size:clamp(30px, 4.2vw, 54px)}
+em, .ital{font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100}
+.lead{font-size:clamp(16px,1.35vw,19px);color:var(--muted);max-width:56ch}
+
+/* botões */
+.btn{--bg:var(--ouro);--fg:var(--mata);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;background:var(--bg);color:var(--fg);font-weight:700;font-size:15px;letter-spacing:.01em;overflow:hidden;isolation:isolate;transition:transform .5s var(--ease), box-shadow .4s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;background:var(--erva2);border-radius:inherit;transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover::after{transform:translateY(0)}
+.btn:hover{box-shadow:0 14px 40px -12px rgba(217,160,80,.6)}
+.btn svg{width:18px;height:18px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-ghost{--bg:transparent;--fg:var(--creme);box-shadow:inset 0 0 0 1px rgba(243,235,216,.35)}
+.btn-ghost::after{background:var(--creme)}
+.btn-ghost:hover{--fg:var(--mata);box-shadow:inset 0 0 0 1px var(--creme)}
+.btn-dark{--bg:var(--mata);--fg:var(--creme)}
+.btn-dark::after{background:var(--mata3)}
+.btn-dark:hover{box-shadow:0 14px 40px -14px rgba(13,29,21,.6)}
+.btn-wa{--bg:#25d366;--fg:#06361b}
+.btn-wa::after{background:#5ff293}
+.btn[disabled]{opacity:.45;pointer-events:none}
+
+/* reveals */
+.js [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease), transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal="scale"]{transform:scale(.94)}
+.js [data-reveal="left"]{transform:translateX(-40px)}
+
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+.loader{position:fixed;inset:0;z-index:300;background:var(--mata);display:grid;place-items:center;color:var(--creme);transition:clip-path 1.1s var(--ease) .1s;clip-path:inset(0 0 0 0)}
+.loader.done{clip-path:inset(0 0 100% 0);pointer-events:none}
+.loader-inner{display:grid;justify-items:center;gap:18px}
+.loader svg{width:74px;height:90px}
+.loader path{fill:none;stroke:var(--erva2);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.4s var(--ease) forwards}
+.loader .vein{animation-delay:.4s}
+.loader span{font-family:var(--serif);font-size:22px;font-style:italic;letter-spacing:.02em;opacity:0;animation:fadeUp .8s var(--ease) .5s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+html:not(.js) .loader{display:none}
+
+/* =========================================================
+   CURSOR + PROGRESSO
+   ========================================================= */
+.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:250;border-radius:50%;display:none}
+.has-cursor .cursor,.has-cursor .cursor-dot{display:block}
+.cursor{width:42px;height:42px;margin:-21px 0 0 -21px;border:1px solid rgba(217,160,80,.8);transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s;display:none;place-items:center;mix-blend-mode:normal}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--ouro)}
+.cursor.hover{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(217,160,80,.14)}
+.cursor.label{width:92px;height:92px;margin:-46px 0 0 -46px;background:var(--ouro);border-color:var(--ouro)}
+.cursor b{position:absolute;inset:0;display:grid;place-items:center;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mata);opacity:0;transition:opacity .2s}
+.cursor.label b{opacity:1}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--erva2),var(--ouro));z-index:120}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;padding:14px 0;transition:transform .6s var(--ease), background .4s, padding .4s, box-shadow .4s;color:var(--creme)}
+.header.scrolled{background:rgba(13,29,21,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);padding:8px 0;box-shadow:0 10px 40px -20px rgba(0,0,0,.5)}
+.header.hide{transform:translateY(-110%)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:22px;letter-spacing:-.01em}
+.brand svg{width:30px;height:36px}
+.brand b{font-weight:500}
+.brand i{font-style:italic;color:var(--erva2)}
+.menu{display:none;gap:4px;font-size:14px;font-weight:600}
+.menu a{position:relative;padding:10px 14px;border-radius:999px;transition:background .3s}
+.menu a:hover{background:rgba(243,235,216,.1)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(243,235,216,.08);box-shadow:inset 0 0 0 1px rgba(243,235,216,.18);transition:background .3s, transform .4s var(--spring)}
+.icon-btn:hover{background:rgba(243,235,216,.18)}
+.icon-btn svg{width:20px;height:20px}
+.cart-count{position:absolute;top:-2px;right:-2px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--ouro);color:var(--mata);font-size:11px;font-weight:800;display:grid;place-items:center;transform:scale(0);transition:transform .4s var(--spring)}
+.cart-count.on{transform:scale(1)}
+.bump{animation:bump .6s var(--spring)}
+@keyframes bump{30%{transform:scale(1.25) rotate(-8deg)}60%{transform:scale(.92) rotate(4deg)}}
+.burger i{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;transition:transform .4s var(--ease)}
+.burger i+i{margin-top:5px}
+.menu-open .burger i:first-child{transform:translateY(3.5px) rotate(45deg)}
+.menu-open .burger i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.menu-open .wa-float{opacity:0;pointer-events:none}
+.nav-cta{display:none}
+
+/* menu mobile */
+.mnav{position:fixed;inset:0;z-index:90;background:var(--mata);color:var(--creme);padding:110px var(--pad) 40px;display:flex;flex-direction:column;justify-content:space-between;clip-path:circle(0% at calc(100% - 44px) 38px);transition:clip-path .8s var(--ease);visibility:hidden}
+.menu-open .mnav{clip-path:circle(150% at calc(100% - 44px) 38px);visibility:visible}
+.mnav ul{list-style:none;margin:0;padding:0}
+.mnav li{overflow:hidden;border-bottom:1px solid rgba(243,235,216,.12)}
+.mnav li a{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;font-family:var(--serif);font-size:clamp(34px,10vw,56px);transform:translateY(110%);transition:transform .8s var(--ease)}
+.mnav li a small{font-family:var(--sans);font-size:12px;opacity:.5}
+.menu-open .mnav li a{transform:none}
+.menu-open .mnav li:nth-child(2) a{transition-delay:.06s}.menu-open .mnav li:nth-child(3) a{transition-delay:.12s}.menu-open .mnav li:nth-child(4) a{transition-delay:.18s}.menu-open .mnav li:nth-child(5) a{transition-delay:.24s}
+.mnav-foot{display:grid;gap:14px;font-size:14px;opacity:.85}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{--mx:0;--my:0;min-height:100svh;background:
+   radial-gradient(1200px 700px at 78% 30%, rgba(127,156,69,.28), transparent 60%),
+   radial-gradient(900px 600px at 10% 90%, rgba(217,160,80,.14), transparent 60%),
+   var(--mata);color:var(--creme);overflow:clip;display:flex;align-items:center;padding:120px 0 70px}
+.hero-grid{display:grid;gap:30px;align-items:center;position:relative;z-index:2}
+.hero .eyebrow{color:var(--erva2)}
+.hero h1{margin:22px 0 22px;font-size:clamp(46px,6.6vw,100px)}
+.hero h1 .line>span{white-space:nowrap}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line>span{display:inline-block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.ready .hero h1 .line>span{transform:none}
+.ready .hero h1 .line:nth-child(2)>span{transition-delay:.1s}
+.ready .hero h1 .line:nth-child(3)>span{transition-delay:.2s}
+.hero h1 em{color:var(--erva2)}
+.hero .lead{color:rgba(243,235,216,.75)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-fade{opacity:0;transform:translateY(20px);transition:opacity 1s var(--ease) .5s, transform 1s var(--ease) .5s}
+.ready .hero-fade{opacity:1;transform:none}
+.hero-stats{display:flex;flex-wrap:wrap;gap:26px 38px;margin-top:44px;padding-top:26px;border-top:1px solid rgba(243,235,216,.14)}
+.hero-stats div{display:grid}
+.hero-stats strong{font-family:var(--serif);font-size:38px;font-weight:400;line-height:1;color:var(--creme)}
+.hero-stats span{font-size:13px;color:rgba(243,235,216,.6)}
+.hero-stats strong span{font:inherit;color:inherit}
+
+/* cena da cuia */
+.scene{position:relative;width:min(92vw,520px);aspect-ratio:1/1.05;margin-inline:auto}
+.scene .halo{position:absolute;inset:8% 6% 12%;border-radius:50%;background:radial-gradient(circle at 50% 45%, rgba(217,160,80,.35), rgba(127,156,69,.12) 45%, transparent 70%);filter:blur(10px);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.06);opacity:.8}}
+.scene .ring{position:absolute;inset:6%;border-radius:50%;border:1px dashed rgba(243,235,216,.18);animation:spin 80s linear infinite}
+.cuia{position:absolute;inset:14% 16% 4%;transform:translate(calc(var(--mx)*-10px), calc(var(--my)*-8px));transition:transform .8s var(--ease)}
+.cuia svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 40px 50px rgba(0,0,0,.45))}
+.steam path{fill:none;stroke:rgba(243,235,216,.55);stroke-width:5;stroke-linecap:round;stroke-dasharray:6 14;animation:steam 4.5s ease-in-out infinite;opacity:0}
+.steam path:nth-child(2){animation-delay:1.4s}.steam path:nth-child(3){animation-delay:2.7s}
+@keyframes steam{0%{opacity:0;transform:translateY(20px)}30%{opacity:.8}100%{opacity:0;transform:translateY(-60px)}}
+.orbit{position:absolute;inset:0;animation:spin 46s linear infinite}
+.orbit .ing{position:absolute;width:var(--s,74px);height:var(--s,74px);left:var(--x);top:var(--y);margin:calc(var(--s,74px)/-2);animation:spin 46s linear infinite reverse}
+.orbit .ing>div{width:100%;height:100%;border-radius:50%;background:rgba(243,235,216,.06);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px rgba(243,235,216,.16), 0 20px 40px -18px rgba(0,0,0,.6);display:grid;place-items:center;transform:translate(calc(var(--mx)*var(--p,16px)), calc(var(--my)*var(--p,16px)));transition:transform .9s var(--ease)}
+.orbit .ing svg{width:56%;height:56%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tag-float{position:absolute;z-index:3;padding:10px 14px;border-radius:14px;background:var(--creme);color:var(--mata);font-size:12px;font-weight:700;box-shadow:0 20px 40px -16px rgba(0,0,0,.5);display:flex;gap:10px;align-items:center;animation:float 6s ease-in-out infinite}
+.tag-float b{display:block;font-family:var(--serif);font-size:18px;font-weight:500}
+.tag-float .dot{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--mata);color:var(--erva2)}
+.tag-float .dot svg{width:18px;height:18px}
+.tag-a{left:-2%;bottom:16%}
+.tag-b{right:-2%;top:12%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-12px)}}
+
+/* foto real da cuia */
+.cuia-photo{position:absolute;inset:9% 19% 5%;margin:0;z-index:2;transform:translate(calc(var(--mx)*-12px), calc(var(--my)*-10px));transition:transform .9s var(--ease)}
+.cuia-frame{position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(217,160,80,.45);pointer-events:none}
+.cuia-frame::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--ouro);box-shadow:0 0 18px 4px rgba(217,160,80,.6)}
+.cuia-img{position:relative;width:100%;height:100%;border-radius:999px 999px 26px 26px;overflow:hidden;background:var(--mata3);box-shadow:0 60px 90px -40px rgba(0,0,0,.85), 0 0 0 1px rgba(243,235,216,.12)}
+.cuia-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.12) translate(calc(var(--mx)*8px), calc(var(--my)*8px));transition:transform 1.2s var(--ease), opacity 1.2s var(--ease), filter 1.4s var(--ease);opacity:0;filter:saturate(1.05) contrast(1.04)}
+.ready .cuia-img img{opacity:1;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.2) translate(-2%,1.5%)}}
+.cuia-img::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top, rgba(13,29,21,.75), rgba(13,29,21,0) 42%), radial-gradient(120% 70% at 50% 0%, rgba(217,160,80,.18), transparent 60%)}
+.cuia-shine{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg, transparent 35%, rgba(255,240,210,.22) 50%, transparent 65%);transform:translateX(-120%);animation:shine 7s var(--ease) 2s infinite}
+@keyframes shine{0%{transform:translateX(-120%)}35%,100%{transform:translateX(120%)}}
+.cuia-photo figcaption{position:absolute;left:0;right:0;bottom:22px;z-index:3;text-align:center;color:var(--creme);line-height:1.1}
+.cuia-photo figcaption span{display:block;font-size:10.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--erva2)}
+.cuia-photo figcaption b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,2.2vw,26px)}
+.cuia-fallback{display:none}
+.noimg .cuia-photo{display:none}
+.noimg .cuia-fallback{display:block}
+.scene .tag-float{z-index:4}
+.scene .orbit{z-index:3}
+/* folhas de fundo */
+.leaves{position:absolute;inset:0;z-index:1;pointer-events:none}
+.leaf{position:absolute;width:var(--w);left:var(--x);top:var(--y);opacity:var(--o,.5);transform:translate(calc(var(--mx)*var(--d)), calc(var(--my)*var(--d))) rotate(var(--r));transition:transform 1.2s var(--ease)}
+.leaf svg{animation:sway var(--t,9s) ease-in-out infinite;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(7deg)}}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,235,216,.55);gap:10px;align-items:center;flex-direction:column}
+.scroll-hint i{width:1px;height:44px;background:linear-gradient(var(--erva2),transparent);animation:drip 2s var(--ease) infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* =========================================================
+   MARQUEE
+   ========================================================= */
+.marquee{background:var(--ouro);color:var(--mata);overflow:hidden;padding:18px 0;transform:rotate(-1.6deg) scale(1.03);margin-top:-18px;position:relative;z-index:5;box-shadow:0 20px 50px -30px rgba(0,0,0,.5)}
+.marquee-track{display:flex;width:max-content;animation:marq 32s linear infinite}
+.marquee span{display:flex;align-items:center;gap:30px;padding-right:30px;font-family:var(--serif);font-size:clamp(22px,3vw,34px);font-style:italic;white-space:nowrap}
+.marquee svg{width:22px;height:22px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* =========================================================
+   MANIFESTO
+   ========================================================= */
+.manifesto{padding:clamp(100px,14vw,190px) 0 clamp(80px,10vw,140px);background:var(--papel)}
+.manifesto .eyebrow{color:var(--erva)}
+.manifesto-text{font-family:var(--serif);font-size:clamp(28px,4.4vw,62px);line-height:1.12;letter-spacing:-.02em;margin-top:28px;max-width:20ch}
+.manifesto-text .w{opacity:.14;transition:opacity .25s linear}
+.manifesto-text .w.on{opacity:1}
+.manifesto-text em{color:var(--erva)}
+.pillars{display:grid;gap:14px;margin-top:70px}
+.pillar{padding:26px;border-radius:var(--r);background:var(--creme);display:flex;gap:18px;align-items:flex-start;transition:transform .5s var(--ease), background .4s}
+.pillar:hover{transform:translateY(-6px);background:var(--linho)}
+.pillar .ic{flex:none;width:52px;height:52px;border-radius:16px;background:var(--mata);color:var(--erva2);display:grid;place-items:center}
+.pillar .ic svg{width:24px;height:24px}
+.pillar h3{font-size:22px;margin-bottom:6px}
+.pillar p{font-size:14.5px;color:var(--muted)}
+
+/* =========================================================
+   LABORATÓRIO (BLEND BUILDER)
+   ========================================================= */
+.lab{background:var(--mata);color:var(--creme);padding:clamp(90px,11vw,150px) 0;overflow:clip;border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0}
+.lab .eyebrow{color:var(--erva2)}
+.lab-head{display:grid;gap:18px;margin-bottom:50px}
+.lab-head .lead{color:rgba(243,235,216,.7)}
+.lab-grid{display:grid;gap:28px}
+.lab-stage{position:relative;border-radius:var(--r);background:radial-gradient(circle at 50% 40%, var(--mata3), var(--mata2) 70%);padding:30px 20px 26px;box-shadow:inset 0 0 0 1px rgba(243,235,216,.08);display:grid;justify-items:center;gap:16px;overflow:hidden}
+.lab-cup{width:min(84vw,380px);perspective:900px}
+.lab-cup svg{width:100%;overflow:visible;transform:rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform .8s var(--ease)}
+#teaCup stop{transition:stop-color 1.4s ease}
+#teaCup .tc{transition:fill 1.4s ease}
+.bob{animation:bob 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{50%{transform:translateY(3px) rotate(7deg)}}
+.bubble{opacity:0;animation:rise var(--t,3s) ease-in infinite;animation-delay:var(--d,0s)}
+@keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:.75}100%{transform:translateY(-62px);opacity:0}}
+.ripple{transform-box:fill-box;transform-origin:center}
+.lab-steam path{stroke:rgba(243,235,216,.32);stroke-width:9;stroke-dasharray:none;animation-duration:5.5s}
+.layer{transition:transform 1s var(--spring)}
+.wave{animation:wave 4s linear infinite}
+@keyframes wave{to{transform:translateX(-150px)}}
+.blend-name{text-align:center}
+.blend-name small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--erva2);font-weight:700}
+.blend-name h3{font-size:clamp(30px,4vw,44px);margin-top:6px;font-style:italic}
+.blend-name p{font-size:14px;color:rgba(243,235,216,.65);margin-top:6px;min-height:22px}
+.lab-panel{display:grid;gap:26px;align-content:start}
+.lab-panel h4{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:rgba(243,235,216,.55);margin-bottom:12px;display:flex;justify-content:space-between}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px 9px 9px;border-radius:999px;background:rgba(243,235,216,.06);box-shadow:inset 0 0 0 1px rgba(243,235,216,.16);font-size:14px;font-weight:600;transition:background .3s, box-shadow .3s, transform .4s var(--spring), color .3s}
+.chip i{width:26px;height:26px;border-radius:50%;background:var(--c);display:grid;place-items:center;transition:transform .5s var(--spring)}
+.chip i svg{width:15px;height:15px}
+.chip:hover{background:rgba(243,235,216,.12)}
+.chip[aria-pressed="true"]{background:var(--creme);color:var(--mata);box-shadow:none}
+.chip[aria-pressed="true"] i{transform:rotate(360deg) scale(1.08)}
+.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.bars{display:grid;gap:12px}
+.bar{display:grid;grid-template-columns:86px 1fr 28px;align-items:center;gap:12px;font-size:13px;font-weight:600}
+.bar .track{height:8px;border-radius:99px;background:rgba(243,235,216,.08);overflow:hidden}
+.bar .fill{height:100%;width:0;border-radius:inherit;background:var(--c);transition:width 1s var(--ease)}
+.bar output{text-align:right;color:rgba(243,235,216,.6);font-variant-numeric:tabular-nums}
+.lab-actions{display:flex;flex-wrap:wrap;gap:10px}
+.lab-total{font-size:14px;color:rgba(243,235,216,.7)}
+.lab-total strong{color:var(--creme);font-size:18px}
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+.shop{padding:clamp(90px,11vw,150px) 0;background:var(--papel)}
+.shop .eyebrow{color:var(--erva)}
+.shop-head{display:grid;gap:20px;margin-bottom:34px}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:30px;position:sticky;top:70px;z-index:20;padding:10px 0}
+.filters{position:relative;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:4px;background:var(--creme);border-radius:999px;max-width:100%}
+.filters::-webkit-scrollbar{display:none}
+.filter{position:relative;white-space:nowrap;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:700;color:var(--muted);transition:color .3s}
+.filter[aria-pressed="true"]{color:var(--creme)}
+.filter-pill{position:absolute;top:4px;left:0;height:calc(100% - 8px);border-radius:999px;background:var(--mata);transition:transform .55s var(--ease), width .55s var(--ease);z-index:0}
+.filter span{position:relative;z-index:1}
+.filter sup{font-size:10px;opacity:.7;margin-left:3px}
+.sort{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--muted)}
+.sort select{appearance:none;-webkit-appearance:none;font:inherit;color:var(--ink);background:var(--creme) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314211a' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/16px;border:0;border-radius:999px;padding:10px 38px 10px 16px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{position:relative;display:flex;flex-direction:column;border-radius:var(--r);background:#fff;box-shadow:0 1px 0 var(--line), 0 30px 60px -40px rgba(20,33,26,.35);transition:box-shadow .5s var(--ease), transform .6s var(--ease)}
+.card:hover{box-shadow:0 1px 0 var(--line), 0 40px 70px -36px rgba(20,33,26,.5)}
+.card.pop{animation:pop .6s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97)}}
+.card-media{--rx:0deg;--ry:0deg;position:relative;display:grid;place-items:center;aspect-ratio:1/1.02;border-radius:var(--r) var(--r) 0 0;background:radial-gradient(circle at 50% 60%, color-mix(in srgb, var(--c) 22%, #fff), var(--creme) 70%);overflow:hidden;perspective:800px;width:100%}
+.card-media .pouch-wrap{width:58%;transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .5s var(--ease);transform-style:preserve-3d}
+.card-media .pouch{filter:drop-shadow(0 22px 22px rgba(20,33,26,.28));transition:transform .7s var(--spring)}
+.card:hover .pouch{transform:translateY(-8px) rotate(-3deg)}
+.card-media::after{content:"";position:absolute;left:20%;right:20%;bottom:9%;height:14px;border-radius:50%;background:rgba(20,33,26,.16);filter:blur(8px);transition:transform .7s var(--spring)}
+.card:hover .card-media::after{transform:scaleX(.8)}
+.badge{position:absolute;top:12px;left:12px;z-index:2;padding:5px 10px;border-radius:999px;background:var(--terra);color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em}
+.quick{position:absolute;right:12px;top:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.8);display:grid;place-items:center;opacity:0;transform:scale(.7);transition:opacity .3s, transform .4s var(--spring)}
+.quick svg{width:16px;height:16px}
+.card:hover .quick{opacity:1;transform:none}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.kicker{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--erva)}
+.card h3{font-size:clamp(18px,2vw,23px);line-height:1.1}
+.notes{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.note{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--creme);color:var(--muted)}
+.price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:auto;padding-top:12px}
+.price s{display:block;font-size:12px;color:var(--muted)}
+.price strong{display:block;font-family:var(--serif);font-size:24px;font-weight:500;line-height:1}
+.price small{display:block;font-size:11.5px;font-weight:700;color:var(--erva);margin-top:4px}
+.add{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mata);color:var(--creme);display:grid;place-items:center;transition:transform .45s var(--spring), background .3s}
+.add:hover{transform:rotate(90deg) scale(1.08);background:var(--terra)}
+.add svg{width:20px;height:20px}
+.add.ok{background:var(--erva)}
+.fly{position:fixed;z-index:260;pointer-events:none}
+.empty-filter{grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)}
+
+/* =========================================================
+   MOMENTOS (sol arrastável)
+   ========================================================= */
+.moments{--sky1:#f6d9a3;--sky2:#f3ebd8;--fg:var(--ink);padding:clamp(90px,11vw,150px) 0 clamp(70px,8vw,110px);background:linear-gradient(180deg,var(--sky1),var(--sky2));color:var(--fg);transition:--sky1 1s, color 1s;overflow:clip}
+.moments[data-m="tarde"]{--sky1:#e9a25c;--sky2:#f1d3a6}
+.moments[data-m="noite"]{--sky1:#0b1730;--sky2:#1d2b45;--fg:var(--creme)}
+.moments .bgfade{position:absolute;inset:0;pointer-events:none;transition:opacity 1.2s var(--ease)}
+.moments .bg-m{background:linear-gradient(180deg,#f7dcaa,#f3ebd8)}
+.moments .bg-t{background:linear-gradient(180deg,#e59a52,#f1d3a6);opacity:0}
+.moments .bg-n{background:linear-gradient(180deg,#0a1530,#1b2a44);opacity:0}
+.moments[data-m="tarde"] .bg-t{opacity:1}
+.moments[data-m="noite"] .bg-n{opacity:1}
+.moments .wrap{position:relative;z-index:2}
+.stars{position:absolute;inset:0;opacity:0;transition:opacity 1.2s;pointer-events:none}
+.moments[data-m="noite"] .stars{opacity:1}
+.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.2}}
+.moments-head{text-align:center;display:grid;justify-items:center;gap:14px}
+.moments .eyebrow{color:inherit;opacity:.7}
+.arc-wrap{position:relative;max-width:640px;margin:20px auto 0;touch-action:none}
+.arc-wrap svg{width:100%;overflow:visible}
+.arc-path{fill:none;stroke:currentColor;stroke-opacity:.3;stroke-width:2;stroke-dasharray:4 8}
+.sun{cursor:grab;outline:none}
+.sun:active{cursor:grabbing}
+.sun-core{transition:fill 1s}
+.sun-glow{transition:fill 1s;animation:breathe 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sun:focus-visible .sun-ring{stroke:var(--ouro);stroke-width:3}
+.horizon{stroke:currentColor;stroke-opacity:.25}
+.arc-labels{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:-6px}
+.drag-hint{font-size:13px;font-weight:600;opacity:.7;display:flex;align-items:center;gap:8px;justify-content:center;margin-top:10px}
+.drag-hint svg{width:18px;height:18px;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(6px)}}
+.mtabs{display:flex;justify-content:center;gap:6px;margin-top:18px}
+.mtab{padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:inset 0 0 0 1px currentColor;opacity:.6;transition:opacity .3s, background .3s}
+.mtab[aria-selected="true"]{opacity:1;background:var(--fg);color:var(--sky1)}
+.moments[data-m="noite"] .mtab[aria-selected="true"]{color:#0b1730}
+.mcopy{text-align:center;margin:40px auto 30px;max-width:620px;min-height:110px}
+.mcopy h3{font-size:clamp(30px,4.6vw,56px);font-style:italic}
+.mcopy p{margin-top:12px;opacity:.75}
+.mcopy.swap{animation:swap .7s var(--ease)}
+@keyframes swap{from{opacity:0;transform:translateY(16px);filter:blur(6px)}}
+.mpicks{display:grid;gap:12px;grid-template-columns:1fr;max-width:980px;margin:0 auto}
+.mpick{display:flex;align-items:center;gap:14px;padding:12px 14px 12px 12px;border-radius:20px;background:rgba(255,255,255,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);box-shadow:0 20px 40px -30px rgba(0,0,0,.5);animation:pop .6s var(--ease) both;animation-delay:var(--d,0s)}
+.moments[data-m="noite"] .mpick{background:rgba(243,235,216,.1);color:var(--creme);box-shadow:inset 0 0 0 1px rgba(243,235,216,.14)}
+.mpick .thumb{flex:none;width:64px;height:72px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 25%, #fff)}
+.mpick .thumb svg{width:44px}
+.mpick div{flex:1;min-width:0}
+.mpick b{display:block;font-family:var(--serif);font-weight:500;font-size:18px;line-height:1.15}
+.mpick span{font-size:13px;opacity:.7}
+.mpick .add{width:40px;height:40px}
+.moments[data-m="noite"] .mpick .add{background:var(--creme);color:var(--mata)}
+
+/* =========================================================
+   RITUAL
+   ========================================================= */
+.ritual{background:var(--creme);padding:clamp(90px,11vw,150px) 0}
+.ritual .eyebrow{color:var(--erva)}
+.ritual-grid{display:grid;gap:40px}
+.ritual-visual{display:none}
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.steps .rail{position:absolute;left:23px;top:10px;width:2px;height:calc(100% - 20px);background:var(--erva);transform-origin:top;transform:scaleY(var(--p,0))}
+.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 0;opacity:.45;transition:opacity .5s}
+.step.on{opacity:1}
+.step .n{width:48px;height:48px;border-radius:50%;background:var(--papel);box-shadow:inset 0 0 0 2px var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:18px;position:relative;z-index:1;transition:background .5s, color .5s, box-shadow .5s, transform .5s var(--spring)}
+.step.on .n{background:var(--mata);color:var(--erva2);box-shadow:none;transform:scale(1.08)}
+.step h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 8px}
+.step p{color:var(--muted);font-size:15px;max-width:48ch}
+.step .tip{display:inline-flex;margin-top:10px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--mata);color:var(--erva2)}
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+.cats{padding:clamp(90px,11vw,150px) 0;background:var(--papel)}
+.cats .eyebrow{color:var(--erva)}
+.cat-list{margin-top:40px;border-top:1px solid var(--line)}
+.cat{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:26px 4px;border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate}
+.cat::before{content:"";position:absolute;inset:0;background:var(--mata);transform:scaleY(0);transform-origin:bottom;transition:transform .6s var(--ease);z-index:-1}
+.cat:hover::before,.cat:focus-visible::before{transform:scaleY(1);transform-origin:top}
+.cat h3{font-size:clamp(26px,4.6vw,60px);transition:color .4s, transform .6s var(--ease)}
+.cat:hover h3{color:var(--creme);transform:translateX(14px)}
+.cat .meta{display:flex;align-items:center;gap:14px;font-weight:700;font-size:14px;color:var(--muted);transition:color .4s}
+.cat:hover .meta{color:var(--erva2)}
+.cat .arrow{width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1px currentColor;display:grid;place-items:center;transition:transform .6s var(--ease), background .4s}
+.cat:hover .arrow{transform:rotate(-45deg);background:var(--erva2);color:var(--mata);box-shadow:none}
+.cat .arrow svg{width:18px;height:18px}
+.cat .num{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--erva);margin-right:10px;vertical-align:super}
+
+/* =========================================================
+   BENEFÍCIOS / FAQ
+   ========================================================= */
+.perks{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden;margin-top:60px}
+.perk{background:var(--papel);padding:24px 18px;display:grid;gap:8px}
+.perk svg{width:26px;height:26px;color:var(--erva)}
+.perk b{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.15}
+.perk span{font-size:13px;color:var(--muted)}
+.faq{padding:0 0 clamp(90px,11vw,150px);background:var(--papel)}
+.faq-grid{display:grid;gap:30px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;cursor:pointer;font-family:var(--serif);font-size:clamp(19px,2vw,24px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--creme);display:grid;place-items:center;transition:transform .5s var(--ease), background .3s}
+.faq summary i svg{width:16px;height:16px}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--erva2)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:60ch;animation:fadeUp .5s var(--ease)}
+
+/* =========================================================
+   CTA FINAL + FOOTER
+   ========================================================= */
+.cta{background:var(--mata);color:var(--creme);padding:clamp(100px,12vw,170px) 0 60px;overflow:clip;border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0}
+.cta-inner{display:grid;gap:28px;justify-items:start;position:relative;z-index:2}
+.cta .eyebrow{color:var(--erva2)}
+.cta h2 em{color:var(--erva2)}
+.cta .lead{color:rgba(243,235,216,.7)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+.cta-leaf{position:absolute;right:-60px;top:40px;width:340px;opacity:.12;transform:rotate(25deg);pointer-events:none}
+.contact-grid{display:grid;gap:12px;margin-top:70px;position:relative;z-index:2}
+.contact{display:flex;align-items:center;gap:14px;padding:18px;border-radius:var(--r-sm);background:rgba(243,235,216,.05);box-shadow:inset 0 0 0 1px rgba(243,235,216,.1);transition:background .3s, transform .5s var(--ease)}
+.contact:hover{background:rgba(243,235,216,.1);transform:translateY(-4px)}
+.contact .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--erva2);color:var(--mata);display:grid;place-items:center}
+.contact .ic svg{width:20px;height:20px}
+.contact small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;font-weight:700}
+.contact b{font-weight:600;font-size:15px;word-break:break-word}
+.footer{background:var(--mata);color:rgba(243,235,216,.6);padding:0 0 calc(30px + env(safe-area-inset-bottom));overflow:clip}
+.giant{font-family:var(--serif);font-size:clamp(64px,17.5vw,270px);line-height:.85;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(243,235,216,.22);white-space:nowrap;text-align:center;margin:20px 0 30px;user-select:none}
+.giant em{-webkit-text-stroke:0;color:var(--erva2)}
+.foot-row{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;font-size:13px;border-top:1px solid rgba(243,235,216,.1);padding-top:24px}
+.foot-row nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.foot-row a{display:inline-flex;align-items:center;min-height:36px}
+.foot-row a:hover{color:var(--creme)}
+
+/* =========================================================
+   WHATSAPP FLUTUANTE / DRAWER / MODAL / TOAST
+   ========================================================= */
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:95;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 18px 40px -12px rgba(37,211,102,.7);transition:transform .5s var(--spring), opacity .4s}
+.wa-float:hover{transform:scale(1.08) rotate(-8deg)}
+.wa-float svg{width:30px;height:30px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite;z-index:-1}
+@keyframes ping{75%,100%{transform:scale(1.7);opacity:0}}
+.wa-tip{position:absolute;right:72px;top:50%;transform:translateY(-50%) translateX(10px);white-space:nowrap;padding:9px 14px;border-radius:12px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .4s, transform .5s var(--ease)}
+.wa-float.tip .wa-tip,.wa-float:hover .wa-tip{opacity:1;transform:translateY(-50%)}
+
+.overlay{position:fixed;inset:0;z-index:140;background:rgba(8,18,13,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .5s}
+.cart-open .overlay{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:150;width:min(100%,440px);background:var(--papel);display:flex;flex-direction:column;transform:translateX(105%);transition:transform .7s var(--ease), visibility 0s .7s;visibility:hidden}
+.cart-open .drawer{transform:none;visibility:visible;transition:transform .7s var(--ease);box-shadow:-30px 0 80px -30px rgba(0,0,0,.4)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 18px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:30px}
+.drawer-head .icon-btn{background:var(--creme);box-shadow:none;color:var(--ink)}
+.drawer-body{flex:1;overflow-y:auto;padding:10px 22px;overscroll-behavior:contain}
+.citem{display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);animation:pop .5s var(--ease)}
+.citem .thumb{width:62px;height:70px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 22%, #fff)}
+.citem .thumb svg{width:42px}
+.citem b{display:block;font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.15}
+.citem small{font-size:12.5px;color:var(--muted)}
+.qty{display:inline-flex;align-items:center;gap:2px;margin-top:8px;border-radius:999px;background:var(--creme);padding:3px}
+.qty button{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;transition:background .2s}
+.qty button:hover{background:#fff}
+.qty span{min-width:24px;text-align:center;font-weight:800;font-size:14px;font-variant-numeric:tabular-nums}
+.citem .rm{font-size:12px;font-weight:700;color:var(--terra);display:block;margin:2px 0 0 auto;padding:10px 0;min-height:36px;text-align:right}
+.citem .lt{text-align:right;font-weight:800;font-size:15px}
+.cart-empty{text-align:center;padding:50px 10px;display:grid;justify-items:center;gap:14px;color:var(--muted)}
+.cart-empty svg{width:120px;opacity:.9}
+.cart-empty b{font-family:var(--serif);font-size:24px;color:var(--ink);font-weight:500}
+.drawer-foot{padding:18px 22px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px;background:var(--creme)}
+.sumline{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+.sumline.big{font-size:16px;color:var(--ink);font-weight:800}
+.sumline.big span:last-child{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--erva)}
+.pixnote{font-size:12px;text-align:center;color:var(--muted)}
+
+dialog.qv{border:0;padding:0;border-radius:28px;width:min(94vw,900px);max-height:92vh;background:var(--papel);color:var(--ink);box-shadow:0 50px 120px -30px rgba(0,0,0,.6);overflow:auto}
+dialog.qv::backdrop{background:rgba(8,18,13,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+dialog.qv[open]{animation:qvIn .6s var(--ease)}
+@keyframes qvIn{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.qv-grid{display:grid}
+.qv-media{position:relative;display:grid;place-items:center;padding:40px 30px;background:radial-gradient(circle at 50% 55%, color-mix(in srgb,var(--c) 28%, #fff), var(--creme) 70%);min-height:300px}
+.qv-media .pouch{width:min(52vw,220px);filter:drop-shadow(0 30px 30px rgba(20,33,26,.3));animation:float 6s ease-in-out infinite}
+.qv-media img{width:min(70vw,320px);border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}
+.qv-toggle{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:4px;border-radius:999px;background:rgba(255,255,255,.7);font-size:12px;font-weight:700}
+.qv-toggle button{padding:6px 12px;border-radius:999px}
+.qv-toggle button[aria-pressed="true"]{background:var(--mata);color:var(--creme)}
+.qv-body{padding:30px 26px 30px;display:grid;gap:14px;align-content:start}
+.qv-body h2{font-size:clamp(30px,4vw,42px)}
+.qv-body p{color:var(--muted)}
+.qv-close{position:absolute;top:14px;right:14px;z-index:3;background:#fff;color:var(--ink);box-shadow:0 10px 20px -10px rgba(0,0,0,.3)}
+.qv-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.qv-price strong{font-family:var(--serif);font-size:38px;font-weight:500;line-height:1}
+.qv-price s{color:var(--muted)}
+.qv-price span{font-size:13px;font-weight:800;color:var(--erva);padding:4px 10px;background:var(--broto);border-radius:999px}
+.qv .bars .bar{grid-template-columns:80px 1fr 24px}
+.qv .bar .track{background:var(--creme)}
+.qv .bar output{color:var(--muted)}
+.qv-buy{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.qv-buy .qty{margin:0;padding:6px}
+.qv-buy .qty button{width:36px;height:36px}
+
+.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));z-index:270;transform:translate(-50%,30px);opacity:0;padding:12px 18px;border-radius:999px;background:var(--mata);color:var(--creme);font-size:14px;font-weight:600;box-shadow:0 20px 40px -14px rgba(0,0,0,.5);transition:opacity .4s, transform .6s var(--spring);pointer-events:none;display:flex;gap:10px;align-items:center;max-width:calc(100vw - 40px)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast i{width:22px;height:22px;border-radius:50%;background:var(--erva2);color:var(--mata);display:grid;place-items:center;flex:none}
+.toast i svg{width:13px;height:13px}
+
+/* =========================================================
+   BREAKPOINTS
+   ========================================================= */
+@media (min-width:640px){
+  .grid{gap:20px}
+  .pillars{grid-template-columns:repeat(3,1fr)}
+  .pillar{flex-direction:column}
+  .mpicks{grid-template-columns:repeat(3,1fr)}
+  .perks{grid-template-columns:repeat(4,1fr)}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .card-body{padding:20px 20px 22px}
+}
+@media (min-width:900px){
+  .menu{display:flex}
+  .nav-cta{display:inline-flex;min-height:46px;padding:0 20px;font-size:14px}
+  .burger{display:none}
+  .hero-grid{grid-template-columns:1.08fr .92fr;gap:40px}
+  .scroll-hint{display:flex}
+  .lab-head{grid-template-columns:1.2fr 1fr;align-items:end}
+  .lab-grid{grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .lab-stage{padding:44px 30px 34px;position:sticky;top:100px;align-self:start}
+  .shop-head{grid-template-columns:1.3fr 1fr;align-items:end}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ritual-grid{grid-template-columns:.9fr 1.1fr;gap:80px}
+  .ritual-visual{display:block;position:sticky;top:110px;align-self:start}
+  .faq-grid{grid-template-columns:.8fr 1.2fr;gap:80px}
+  .contact b{white-space:nowrap}
+  .qv-grid{grid-template-columns:1fr 1fr}
+  .qv-media{min-height:520px}
+  .qv-body{padding:54px 40px 40px}
+  .cta-inner{justify-items:center;text-align:center}
+  .cta .lead{margin-inline:auto}
+}
+@media (min-width:1200px){
+  .contact-grid{grid-template-columns:1fr 1.35fr 1fr 1.15fr}
+}
+@media (max-width:899px){
+  .toolbar{top:58px}
+  .tag-a{bottom:25%;left:-3%}
+}
+@media (max-width:420px){
+  .card-body{padding:14px 12px 14px}
+  .price strong{font-size:20px}
+  .add{width:40px;height:40px}
+  .note:nth-child(n+2){display:none}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .hero-stats strong{font-size:30px}
+  .hero-stats span{font-size:12px;line-height:1.3}
+  .hero-ctas .btn{flex:1 1 auto}
+  .wa-float{width:54px;height:54px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+  .tag-float{font-size:11px;padding:8px 10px}
+  .tag-float b{font-size:15px}
+  .tag-float .dot{width:28px;height:28px}
+  .bar{grid-template-columns:76px 1fr 24px}
+}
+
+/* ritual visual (desktop) */
+.rv-card{border-radius:32px;background:var(--mata);color:var(--creme);padding:40px;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.rv-num{font-family:var(--serif);font-size:200px;line-height:.8;font-style:italic;color:var(--erva2);transition:transform .6s var(--ease), opacity .4s}
+.rv-num.flip{opacity:0;transform:translateY(30px)}
+.rv-temp{display:flex;align-items:center;gap:16px}
+.thermo{width:14px;height:120px;border-radius:99px;background:rgba(243,235,216,.12);position:relative;overflow:hidden}
+.thermo i{position:absolute;left:0;right:0;bottom:0;height:var(--h,20%);background:linear-gradient(var(--ouro),var(--terra));border-radius:inherit;transition:height 1s var(--ease)}
+.rv-temp b{font-family:var(--serif);font-size:44px;font-weight:400;line-height:1}
+.rv-temp span{display:block;font-size:13px;opacity:.6}
+.rv-card svg.bgleaf{position:absolute;right:-40px;bottom:-30px;width:260px;opacity:.08}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .js [data-reveal]{opacity:1;transform:none}
+  .grain{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg viewBox="0 0 74 90"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z"/><path class="vein" d="M37 12V80M37 34l12-9M37 48l-13-10M37 60l13-9"/></svg>
+    <span>Erva da Mata</span>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><b>ver</b></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <!-- Para usar o logo oficial: troque o SVG abaixo por <img src="https://ervadamata.com.br/wp-content/uploads/2023/09/logoerva.svg" alt="Erva da Mata" height="40"> -->
+    <a href="#inicio" class="brand" aria-label="Erva da Mata — início">
+      <svg viewBox="0 0 30 36" fill="none" aria-hidden="true"><path d="M15 1.5C25 8 29 20 15 34.5 1 20 5 8 15 1.5Z" fill="#b6c878"/><path d="M15 6v25M15 14l5-4M15 20l-5-4M15 25l5-4" stroke="#0d1d15" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span><b>Erva</b> <i>da</i> <b>Mata</b></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#laboratorio">Monte seu blend</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#momentos">Momentos</a>
+      <a href="#ritual">Ritual</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn nav-cta magnetic" href="#produtos">Comprar agora</a>
+      <button class="icon-btn" id="cartBtn" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><span><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <ul>
+    <li><a href="#laboratorio">Monte seu blend <small>01</small></a></li>
+    <li><a href="#produtos">Produtos <small>02</small></a></li>
+    <li><a href="#momentos">Momentos <small>03</small></a></li>
+    <li><a href="#ritual">Ritual <small>04</small></a></li>
+    <li><a href="#contato">Contato <small>05</small></a></li>
+  </ul>
+  <div class="mnav-foot">
+    <a href="#" data-wa="Olá, Erva da Mata! Vim pelo site e quero fazer um pedido." class="btn btn-wa">Pedir pelo WhatsApp</a>
+    <span>São José do Inhacorá · RS · (55) 3316-0098</span>
+  </div>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="leaves" aria-hidden="true" id="leaves"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-fade">São José do Inhacorá · RS</span>
+      <h1 class="h-xl">
+        <span class="line"><span>Do coração</span></span>
+        <span class="line"><span>da mata para</span></span>
+        <span class="line"><span>a sua <em>cuia.</em></span></span>
+      </h1>
+      <p class="lead hero-fade">Chás, aditivos e ervas selecionadas para quem leva o chimarrão a sério — e gosta de inventar moda de vez em quando.</p>
+      <div class="hero-ctas hero-fade">
+        <a href="#laboratorio" class="btn magnetic">Montar meu blend
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#produtos" class="btn btn-ghost magnetic">Ver a coleção</a>
+      </div>
+      <div class="hero-stats hero-fade">
+        <div><strong data-count="29">0</strong><span>produtos na loja</span></div>
+        <div><strong data-count="8">0</strong><span>aditivos p/ chimarrão</span></div>
+        <div><strong><span data-count="10">0</span>%</strong><span>de desconto no Pix</span></div>
+      </div>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="ring"></div>
+      <div class="orbit" id="orbit"></div>
+      <!-- Foto: Matias Luge / Unsplash (licença Unsplash, uso livre). Para usar foto própria do cliente, troque o src/srcset abaixo. -->
+      <figure class="cuia-photo" id="cuiaPhoto">
+        <span class="cuia-frame"></span>
+        <div class="cuia-img">
+          <img src="https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=900&amp;h=1125&amp;q=78" srcset="https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=560&amp;h=700&amp;q=78 560w, https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=900&amp;h=1125&amp;q=78 900w, https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=1200&amp;h=1500&amp;q=78 1200w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1125" alt="Cuia de chimarrão com erva-mate e bomba de metal" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
+          <span class="cuia-shine"></span>
+        </div>
+        <figcaption><span>Chimarrão</span><b>de verdade</b></figcaption>
+      </figure>
+      <div class="cuia cuia-fallback">
+        <svg viewBox="0 0 400 460">
+          <defs>
+            <linearGradient id="cuiaG" x1="0" x2="1">
+              <stop offset="0" stop-color="#3a2212"/><stop offset=".45" stop-color="#8a552c"/><stop offset=".7" stop-color="#6b3f1f"/><stop offset="1" stop-color="#2b170b"/>
+            </linearGradient>
+            <linearGradient id="rimG" x1="0" x2="1">
+              <stop offset="0" stop-color="#8f8f86"/><stop offset=".35" stop-color="#f1efe4"/><stop offset=".6" stop-color="#b9b7aa"/><stop offset="1" stop-color="#6f6e66"/>
+            </linearGradient>
+            <radialGradient id="ervaG" cx=".4" cy=".4"><stop offset="0" stop-color="#b6c878"/><stop offset="1" stop-color="#4d6b26"/></radialGradient>
+            <linearGradient id="bombaG" x1="0" x2="1"><stop offset="0" stop-color="#a7a59a"/><stop offset=".5" stop-color="#fbfaf2"/><stop offset="1" stop-color="#8d8b80"/></linearGradient>
+          </defs>
+          <g class="steam"><path d="M170 150c-14-24 16-36 2-62s14-40 6-60"/><path d="M205 140c-14-24 16-36 2-62s14-40 6-60"/><path d="M238 152c-14-24 16-36 2-62s14-40 6-60"/></g>
+          <path d="M84 176c-26 96 22 236 116 240 94-4 142-144 116-240Z" fill="url(#cuiaG)"/>
+          <path d="M120 230c-6 60 20 130 64 150" stroke="rgba(255,240,210,.18)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path d="M92 300c70 26 146 26 216 0" stroke="#d9a050" stroke-opacity=".55" stroke-width="3" fill="none"/>
+          <path d="M98 318c68 24 136 24 204 0" stroke="#d9a050" stroke-opacity=".35" stroke-width="2" fill="none" stroke-dasharray="2 8" stroke-linecap="round"/>
+          <ellipse cx="200" cy="176" rx="118" ry="30" fill="url(#rimG)"/>
+          <ellipse cx="200" cy="176" rx="106" ry="23" fill="#2a3a1a"/>
+          <path d="M100 178c20-30 80-36 120-30 36 6 70 14 82 28-30 18-176 22-202 2Z" fill="url(#ervaG)"/>
+          <g fill="#dfe8b4" opacity=".5"><circle cx="150" cy="166" r="2"/><circle cx="178" cy="160" r="1.6"/><circle cx="214" cy="164" r="2"/><circle cx="246" cy="170" r="1.5"/><circle cx="130" cy="174" r="1.4"/></g>
+          <path d="M258 30 214 186" stroke="url(#bombaG)" stroke-width="10" stroke-linecap="round"/>
+          <rect x="248" y="18" width="26" height="12" rx="6" transform="rotate(16 261 24)" fill="#d9a050"/>
+        </svg>
+      </div>
+      <div class="tag-float tag-a"><span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 5.6L20 6l-3.4 5L22 13l-5.8 1.2L17 20l-5-3.4L7 20l.8-5.8L2 13l5.4-2L4 6l5.6 1.6Z"/></svg></span><span><b>Anis estrelado</b>notas doces e especiadas</span></div>
+      <div class="tag-float tag-b"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5 6.8 15M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.5"/></svg></span><span><b>70–80 °C</b>a água ideal</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>role</span><i></i></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto" id="sobre">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Quem somos</span>
+    <p class="manifesto-text" id="manifesto">Somos de São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate.</em></p>
+    <div class="pillars">
+      <article class="pillar" data-reveal style="--d:0s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-4-8-8-8-12a8 8 0 0 1 16 0c0 4-3 8-8 12Z"/><path d="M12 7v10M12 11l3-2M12 14l-3-2"/></svg></span>
+        <div><h3>Ervas selecionadas</h3><p>Cada folha, flor e semente escolhida a dedo para entregar aroma de verdade na sua cuia.</p></div>
+      </article>
+      <article class="pillar" data-reveal style="--d:.1s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+        <div><h3>Jeito do interior</h3><p>Atendimento próximo, de gente que conhece o produto e conversa com você pelo WhatsApp.</p></div>
+      </article>
+      <article class="pillar" data-reveal style="--d:.2s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></span>
+        <div><h3>Liberdade pra misturar</h3><p>Anis, carqueja, mate tostado, laranja com canela… combine e crie o chimarrão que é a sua cara.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LABORATÓRIO ============ -->
+<section class="lab" id="laboratorio">
+  <div class="wrap">
+    <div class="lab-head">
+      <div>
+        <span class="eyebrow" data-reveal>Laboratório de chás</span>
+        <h2 class="h-lg" data-reveal style="--d:.08s">Monte o seu <em>blend</em> e veja ele nascer.</h2>
+      </div>
+      <p class="lead" data-reveal style="--d:.16s">Escolha até 3 ingredientes e veja o seu chá ganhar cor na xícara. A gente mostra o perfil de sabor, dá nome à mistura e você pede tudo em um toque.</p>
+    </div>
+
+    <div class="lab-grid">
+      <div class="lab-stage" data-reveal="scale">
+        <div class="lab-cup" id="labCup">
+          <svg viewBox="0 0 400 380" id="teaCup" role="img" aria-label="Xícara de vidro com o chá do seu blend">
+            <defs>
+              <clipPath id="cupClip"><path id="cupInnerPath" d="M84 120C86 206 106 282 138 296Q200 312 262 296C294 282 314 206 316 120Z"/></clipPath>
+              <linearGradient id="teaBody" x1="0" y1="0" x2="0" y2="1"><stop id="teaTop" offset="0" stop-color="#d6a338"/><stop id="teaBot" offset="1" stop-color="#5a3608"/></linearGradient>
+              <radialGradient id="teaDepth" cx=".5" cy=".42" r=".62"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></radialGradient>
+              <linearGradient id="glassL" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".03"/><stop offset=".07" stop-color="#fff" stop-opacity=".38"/><stop offset=".15" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity=".05"/><stop offset=".93" stop-color="#fff" stop-opacity=".24"/><stop offset="1" stop-color="#fff" stop-opacity=".04"/></linearGradient>
+              <filter id="softB" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+              <filter id="blurS" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4"/></filter>
+            </defs>
+            <!-- sombra, luz colorida do chá e pires -->
+            <ellipse cx="200" cy="350" rx="165" ry="14" fill="#000" opacity=".5" filter="url(#softB)"/>
+            <ellipse id="caustic" class="tc" cx="200" cy="326" rx="86" ry="13" fill="#e3c86e" opacity=".5" filter="url(#softB)"/>
+            <ellipse cx="200" cy="328" rx="170" ry="32" fill="none" stroke="#fff" stroke-opacity=".12"/>
+            <ellipse cx="200" cy="322" rx="170" ry="32" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".3"/>
+            <ellipse cx="200" cy="320" rx="108" ry="19" fill="none" stroke="#fff" stroke-opacity=".14"/>
+            <path d="M30 324A170 32 0 0 0 370 324" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
+            <!-- alça de vidro -->
+            <path d="M318 158C394 150 398 264 300 268" fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="20" stroke-linecap="round"/>
+            <path d="M320 150C404 142 408 272 298 276" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M318 168C380 164 382 252 302 258" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- parede de trás -->
+            <path d="M74 116C76 210 98 292 132 306Q200 326 268 306C302 292 324 210 326 116Z" fill="#fff" fill-opacity=".035"/>
+            <ellipse cx="200" cy="116" rx="126" ry="22" fill="#fff" fill-opacity=".03" stroke="#fff" stroke-opacity=".28" stroke-width="1.4"/>
+            <!-- chá -->
+            <g clip-path="url(#cupClip)">
+              <rect id="teaRect" x="70" y="214" width="260" height="160" fill="url(#teaBody)" opacity=".9"/>
+              <g id="sunk"></g>
+              <ellipse id="teaSurf" class="tc" cx="200" cy="214" rx="104" ry="18" fill="#e0c878"/>
+              <ellipse id="teaSheen" cx="168" cy="211" rx="40" ry="4" fill="#fff" opacity=".22"/>
+              <g id="floaters"></g>
+              <rect id="teaTint" x="70" y="222" width="260" height="160" fill="url(#teaBody)" opacity=".45"/>
+              <rect x="70" y="100" width="260" height="240" fill="url(#teaDepth)"/>
+              <g id="bubbles"></g>
+              <g id="ripples"></g>
+            </g>
+            <!-- parede da frente -->
+            <path d="M74 116C76 210 98 292 132 306Q200 326 268 306C302 292 324 210 326 116" fill="url(#glassL)"/>
+            <path d="M74 116C76 210 98 292 132 306Q200 326 268 306C302 292 324 210 326 116" fill="none" stroke="#fff" stroke-opacity=".42" stroke-width="1.6"/>
+            <ellipse cx="200" cy="304" rx="64" ry="9" fill="#fff" fill-opacity=".09" stroke="#fff" stroke-opacity=".3"/>
+            <path d="M74 116A126 22 0 0 0 326 116" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
+            <path d="M84 120A116 19 0 0 0 316 120" fill="none" stroke="#fff" stroke-opacity=".22"/>
+            <path d="M98 150C100 210 114 262 138 286" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="6" stroke-linecap="round" filter="url(#blurS)"/>
+            <path d="M110 136C111 150 112 162 114 172" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="3" stroke-linecap="round"/>
+            <path d="M306 160C304 202 298 238 286 260" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="4" stroke-linecap="round" filter="url(#blurS)"/>
+            <!-- vapor -->
+            <g class="steam lab-steam" filter="url(#blurS)"><path d="M168 100c-14-24 16-36 2-62s14-40 6-60"/><path d="M204 92c-14-24 16-36 2-62s14-40 6-60"/><path d="M238 102c-14-24 16-36 2-62s14-40 6-60"/></g>
+          </svg>
+        </div>
+        <div class="blend-name" aria-live="polite">
+          <small>Seu blend</small>
+          <h3 id="blendName">Chá de Erva-Mate</h3>
+          <p id="blendDesc">A base de sempre. Escolha um ingrediente para começar.</p>
+        </div>
+      </div>
+
+      <div class="lab-panel">
+        <div data-reveal>
+          <h4><span>1 · Escolha os ingredientes</span><span id="pickCount">0/3</span></h4>
+          <div class="chips" id="chips" role="group" aria-label="Ingredientes disponíveis"></div>
+        </div>
+        <div data-reveal style="--d:.1s">
+          <h4><span>2 · Perfil de sabor</span></h4>
+          <div class="bars" id="bars"></div>
+        </div>
+        <div data-reveal style="--d:.2s">
+          <h4><span>3 · Leve pra casa</span></h4>
+          <p class="lab-total" id="labTotal">Selecione ao menos um ingrediente.</p>
+          <div class="lab-actions" style="margin-top:14px">
+            <button class="btn magnetic" id="labAdd" disabled>Adicionar ao carrinho</button>
+            <button class="btn btn-ghost magnetic" id="labWa" disabled>Pedir no WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUTOS ============ -->
+<section class="shop" id="produtos">
+  <div class="wrap">
+    <div class="shop-head">
+      <div>
+        <span class="eyebrow" data-reveal>Chás e aditivos para chimarrão</span>
+        <h2 class="h-lg" data-reveal style="--d:.08s">A coleção da <em>casa</em>.</h2>
+      </div>
+      <p class="lead" data-reveal style="--d:.16s">Toque em um produto para ver os detalhes. No Pix, todos os itens saem com 10% de desconto.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters" id="filters" role="group" aria-label="Filtrar produtos">
+        <span class="filter-pill" id="filterPill" aria-hidden="true"></span>
+        <button class="filter" data-f="all" aria-pressed="true"><span>Todos<sup></sup></span></button>
+        <button class="filter" data-f="aditivo" aria-pressed="false"><span>Aditivos<sup></sup></span></button>
+        <button class="filter" data-f="cha" aria-pressed="false"><span>Chás<sup></sup></span></button>
+        <button class="filter" data-f="misto" aria-pressed="false"><span>Mistos<sup></sup></span></button>
+        <button class="filter" data-f="promo" aria-pressed="false"><span>Ofertas<sup></sup></span></button>
+      </div>
+      <label class="sort">Ordenar
+        <select id="sort" aria-label="Ordenar produtos">
+          <option value="featured">Destaques</option>
+          <option value="price-asc">Menor preço</option>
+          <option value="discount">Maior desconto</option>
+          <option value="name">A–Z</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ MOMENTOS ============ -->
+<section class="moments" id="momentos" data-m="manha">
+  <div class="bgfade bg-m"></div><div class="bgfade bg-t"></div><div class="bgfade bg-n"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="moments-head">
+      <span class="eyebrow">Um chá pra cada hora</span>
+      <h2 class="h-lg">Arraste <em id="astro">o sol</em>.</h2>
+    </div>
+
+    <div class="arc-wrap" id="arcWrap">
+      <svg viewBox="0 0 600 330" id="arcSvg">
+        <line class="horizon" x1="0" y1="300" x2="600" y2="300"/>
+        <path class="arc-path" d="M60 300A240 240 0 0 1 540 300"/>
+        <g class="sun" id="sun" tabindex="0" role="slider" aria-label="Momento do dia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="15" aria-valuetext="Manhã">
+          <circle class="sun-glow" r="56" fill="rgba(255,190,90,.25)"/>
+          <circle class="sun-ring" r="34" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/>
+          <circle class="sun-core" r="26" fill="#f2a93b"/>
+          <circle id="moonMask" r="22" cx="14" cy="-8" fill="#121f3a" opacity="0" style="transition:opacity .8s"/>
+        </g>
+      </svg>
+      <div class="arc-labels"><span>Manhã</span><span>Tarde</span><span>Noite</span></div>
+    </div>
+    <p class="drag-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Arraste ou use as abas</p>
+    <div class="mtabs" role="tablist" aria-label="Momento do dia">
+      <button class="mtab" role="tab" data-m="manha" aria-selected="true">Manhã</button>
+      <button class="mtab" role="tab" data-m="tarde" aria-selected="false">Tarde</button>
+      <button class="mtab" role="tab" data-m="noite" aria-selected="false">Noite</button>
+    </div>
+
+    <div class="mcopy" id="mcopy" aria-live="polite"><h3></h3><p></p></div>
+    <div class="mpicks" id="mpicks"></div>
+  </div>
+</section>
+
+<!-- ============ RITUAL ============ -->
+<section class="ritual" id="ritual">
+  <div class="wrap ritual-grid">
+    <div>
+      <span class="eyebrow" data-reveal>O ritual</span>
+      <h2 class="h-lg" data-reveal style="--d:.08s" >O chimarrão <em>perfeito</em> em seis passos.</h2>
+      <div class="ritual-visual" style="margin-top:40px">
+        <div class="rv-card">
+          <svg class="bgleaf" viewBox="0 0 74 90" fill="#b6c878"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z"/></svg>
+          <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;font-weight:700">Passo</span>
+          <div class="rv-num" id="rvNum">01</div>
+          <div class="rv-temp">
+            <div class="thermo"><i id="thermo"></i></div>
+            <div><b id="rvTemp">—</b><span id="rvLabel">prepare a cuia</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ol class="steps" id="steps">
+      <span class="rail" aria-hidden="true"></span>
+      <li class="step" data-t="—" data-h="10" data-l="prepare a cuia"><span class="n">01</span><div><h3>Encha ⅔ da cuia</h3><p>Coloque a erva-mate até cerca de dois terços da cuia. Tampe com a mão, vire e agite de leve para o pó subir.</p></div></li>
+      <li class="step" data-t="—" data-h="18" data-l="forme o morro"><span class="n">02</span><div><h3>Forme o morro</h3><p>Incline a cuia até a erva acomodar de um lado, formando uma encosta. É ali que o sabor vai se manter por mais tempo.</p></div></li>
+      <li class="step" data-t="+" data-h="26" data-l="hora do aditivo"><span class="n">03</span><div><h3>Hora do aditivo</h3><p>Espalhe uma pitada de anis, carqueja ou do seu blend sobre a erva. Comece com pouco — dá pra reforçar na próxima cuia.</p><span class="tip">Dica: monte o seu no Laboratório ↑</span></div></li>
+      <li class="step" data-t="morna" data-h="45" data-l="umedeça a base"><span class="n">04</span><div><h3>Umedeça a base</h3><p>Despeje um pouco de água morna no espaço vazio e espere a erva absorver. Isso protege as folhas do choque térmico.</p></div></li>
+      <li class="step" data-t="—" data-h="45" data-l="posicione a bomba"><span class="n">05</span><div><h3>Posicione a bomba</h3><p>Com o bocal tampado pelo dedo, encaixe a bomba na parte baixa, encostada no fundo. Depois disso, não mexa mais nela.</p></div></li>
+      <li class="step" data-t="70–80 °C" data-h="78" data-l="nunca fervendo"><span class="n">06</span><div><h3>Água no ponto</h3><p>Sirva sempre no mesmo lugar, com água entre 70 °C e 80 °C. Fervendo, ela queima a erva e deixa o mate amargo demais.</p><span class="tip">Chaleira chiando = ponto certo</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CATEGORIAS ============ -->
+<section class="cats" id="categorias">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Explore a loja</span>
+    <h2 class="h-lg" data-reveal style="--d:.08s">Tem mais coisa <em>boa</em> por aqui.</h2>
+    <div class="cat-list">
+      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Chás Aromáticos da Erva da Mata." data-cursor="pedir">
+        <h3><span class="num">01</span>Chás Aromáticos</h3>
+        <span class="meta">12 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
+      <a href="#produtos" class="cat" data-reveal data-cursor="ver">
+        <h3><span class="num">02</span>Aditivos p/ Chimarrão</h3>
+        <span class="meta">8 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
+      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer as Especiarias, Kits e Frutas Secas da Erva da Mata." data-cursor="pedir">
+        <h3><span class="num">03</span>Especiarias, Kits &amp; Frutas Secas</h3>
+        <span class="meta">4 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
+      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Temperos da Erva da Mata." data-cursor="pedir">
+        <h3><span class="num">04</span>Temperos</h3>
+        <span class="meta">5 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
+    </div>
+
+    <div class="perks" data-reveal>
+      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg><b>10% off no Pix</b><span>Em todos os produtos</span></div>
+      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg><b>Pedido no WhatsApp</b><span>Rápido e sem cadastro</span></div>
+      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-4-8-8-8-12a8 8 0 0 1 16 0c0 4-3 8-8 12Z"/><path d="M12 7v10"/></svg><b>Ervas selecionadas</b><span>Aroma e frescor</span></div>
+      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Interior gaúcho</b><span>São José do Inhacorá</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow" data-reveal style="color:var(--erva)">Dúvidas</span>
+      <h2 class="h-md" data-reveal style="--d:.08s;margin-top:16px">Perguntas de <em>roda de mate</em>.</h2>
+    </div>
+    <div data-reveal style="--d:.12s">
+      <details><summary>Como faço meu pedido?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Adicione os produtos ao carrinho e toque em “Finalizar pelo WhatsApp”. A mensagem já vai pronta com os itens e o total — é só enviar e combinar o pagamento e a entrega com a gente.</p></details>
+      <details><summary>Como funciona o desconto no Pix?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Pagando no Pix, todos os produtos saem com 10% de desconto. O valor com desconto aparece embaixo de cada preço e no resumo do carrinho.</p></details>
+      <details><summary>Vocês entregam na minha cidade?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Fale com a gente pelo WhatsApp informando seu CEP. Combinamos a melhor forma de envio ou retirada para a sua região.</p></details>
+      <details><summary>Quanto aditivo coloco na cuia?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Comece com uma pitada sobre a erva e ajuste ao seu gosto. Aditivos de sabor marcante, como carqueja e anis, rendem bastante com pouca quantidade.</p></details>
+      <details><summary>Como guardo meus chás?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Em pote bem fechado, em lugar seco, fresco e longe da luz. Assim o aroma se mantém por muito mais tempo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / CONTATO ============ -->
+<section class="cta" id="contato">
+  <svg class="cta-leaf" viewBox="0 0 74 90" fill="#b6c878" aria-hidden="true"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z"/></svg>
+  <div class="wrap">
+    <div class="cta-inner">
+      <span class="eyebrow" data-reveal>Bora de mate?</span>
+      <h2 class="h-xl" data-reveal style="--d:.08s">A chaleira já tá <em>chiando.</em></h2>
+      <p class="lead" data-reveal style="--d:.16s">Chame a gente no WhatsApp, tire suas dúvidas e monte o pedido do seu jeito.</p>
+      <div class="cta-actions" data-reveal style="--d:.24s">
+        <a href="#" class="btn btn-wa magnetic" data-wa="Olá, Erva da Mata! Vim pelo site e quero fazer um pedido.">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.2.2.2.7 0 1.2Z"/></svg>
+          Chamar no WhatsApp</a>
+        <a href="#produtos" class="btn btn-ghost magnetic">Ver produtos</a>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <a class="contact" href="tel:+555533160098" data-reveal><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span><span><small>Telefone</small><b>(55) 3316-0098</b></span></a>
+      <a class="contact" href="mailto:contato@ervadamata.com.br" data-reveal style="--d:.06s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small><b>contato@ervadamata.com.br</b></span></a>
+      <a class="contact" href="https://www.instagram.com/chaervadamata/" target="_blank" rel="noopener" data-reveal style="--d:.12s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><small>Instagram</small><b>@chaervadamata</b></span></a>
+      <a class="contact" href="https://www.google.com/maps/search/?api=1&amp;query=S%C3%A3o+Jos%C3%A9+do+Inhacor%C3%A1+RS" target="_blank" rel="noopener" data-reveal style="--d:.18s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Onde estamos</small><b>São José do Inhacorá · RS</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="giant" aria-hidden="true">Erva <em>da</em> Mata</div>
+    <div class="foot-row">
+      <span>© <span id="year">2026</span> Erva da Mata · Todos os direitos reservados</span>
+      <nav aria-label="Rodapé">
+        <a href="#produtos">Produtos</a><a href="#laboratorio">Monte seu blend</a><a href="#ritual">Ritual</a><a href="https://www.instagram.com/chaervadamata/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/chaervadamata/" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+      <span>Site por <b style="color:var(--erva2)">Kodda</b></span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="#" class="wa-float" id="waFloat" data-wa="Olá, Erva da Mata! Vim pelo site e tenho uma dúvida." aria-label="Falar no WhatsApp">
+  <span class="wa-tip">Posso ajudar? 🧉</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.2.2.2.7 0 1.2Z"/></svg>
+</a>
+
+<!-- Carrinho -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+  <div class="drawer-head">
+    <h2 id="drawerTitle">Sua <em>cuia</em></h2>
+    <button class="icon-btn" id="closeCart" aria-label="Fechar carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="drawer-body" id="cartList"></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="sumline"><span>Subtotal</span><span id="sub">R$ 0,00</span></div>
+    <div class="sumline"><span>Desconto Pix (10%)</span><span id="disc">− R$ 0,00</span></div>
+    <div class="sumline big"><span>Total no Pix</span><span id="totalPix">R$ 0,00</span></div>
+    <button class="btn btn-wa" id="checkout">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+      Finalizar pelo WhatsApp</button>
+    <p class="pixnote">Frete e entrega combinados no atendimento.</p>
+  </div>
+</aside>
+
+<!-- Detalhe do produto -->
+<dialog class="qv" id="qv" aria-labelledby="qvTitle">
+  <button class="icon-btn qv-close" id="qvClose" aria-label="Fechar detalhes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="qv-grid" id="qvContent"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></i><span></span></div>
+
+<script>
+(() => {
+'use strict';
+
+/* =========================================================
+   CONFIGURAÇÃO — troque aqui os dados da loja
+   ========================================================= */
+const WHATSAPP = '555533160098'; // ⚠️ SUBSTITUIR pelo WhatsApp oficial (DDI+DDD+número, só dígitos)
+const PIX_OFF = 0.10;
+
+const PRODUCTS = [
+  { id:'anis-10', name:'Anis Estrelado', short:'Anis Estrelado', kicker:'Aditivo', weight:'10g', price:19.00, old:null, cat:'aditivo',
+    color:'#7a3b22', accent:'#e8b46a', icon:'star', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Anis-Estrelado-10g-600x600-1.webp',
+    desc:'A estrela inteira, do jeito que a natureza entrega. Perfume adocicado e levemente especiado que transforma a primeira cuia do dia.',
+    notes:['Doce','Especiado'], f:{doce:3,amargo:0,citrico:0,especiado:4,herbal:2,tostado:0} },
+  { id:'anis-moido-12', name:'Anis Estrelado Moído', short:'Anis Moído', kicker:'Aditivo', weight:'12g', price:9.90, old:19.00, cat:'aditivo',
+    color:'#9a5a2e', accent:'#f0c98a', icon:'star', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Anis-Estrelado-Moido-12g-600x600-1.webp',
+    desc:'Já moído, se espalha por igual na erva e libera o aroma desde o primeiro mate. Mais prático, mesmo perfume doce.',
+    notes:['Doce','Prático'], f:{doce:3,amargo:0,citrico:0,especiado:4,herbal:1,tostado:0} },
+  { id:'carqueja-15', name:'Chá Carqueja', short:'Carqueja', kicker:'Chá', weight:'15g', price:19.00, old:null, cat:'cha',
+    color:'#3f5a2a', accent:'#c9d98c', icon:'herb', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Carqueja-15g-600x600-1.webp',
+    desc:'Amargor de raiz, direto do campo. Para quem gosta do chimarrão com personalidade e não abre mão do sabor marcante.',
+    notes:['Amargo','Herbal'], f:{doce:0,amargo:5,citrico:0,especiado:0,herbal:4,tostado:0} },
+  { id:'mate-tostado-20', name:'Chá Mate Tostado', short:'Mate Tostado', kicker:'Chá', weight:'20g', price:7.00, old:19.00, cat:'cha',
+    color:'#5a3a1f', accent:'#e2a65c', icon:'leaf', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Mate-Tostado-20g-600x600-1.webp',
+    desc:'A erva-mate tostada ganha notas de caramelo e torra. Vai bem quente, gelado com limão ou como base do chá da tarde.',
+    notes:['Tostado','Caramelo'], f:{doce:2,amargo:2,citrico:0,especiado:0,herbal:1,tostado:5} },
+  { id:'anoitecer-20', name:'Chá Misto Anoitecer', short:'Anoitecer', kicker:'Chá misto', weight:'20g', price:19.00, old:null, cat:'misto',
+    color:'#33305a', accent:'#c7b8f0', icon:'moon', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Misto-Anoitecer-20g-600x600-1.webp',
+    desc:'Um blend de ervas pensado para o fim do dia: suave, floral e sem pressa. Combina com luz baixa e conversa calma.',
+    notes:['Suave','Floral'], f:{doce:2,amargo:0,citrico:0,especiado:1,herbal:4,tostado:0} },
+  { id:'dr-cha', name:'Chá Misto Composto Dr. Chá', short:'Composto Dr. Chá', kicker:'Chá misto', weight:'', price:19.00, old:null, cat:'misto',
+    color:'#1f4d3a', accent:'#9fd3a8', icon:'trio', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Composto-Dr.Cha_-600x600-1.webp',
+    desc:'O composto da casa: uma combinação de ervas selecionadas que dá corpo e frescor ao chimarrão de todo dia.',
+    notes:['Herbal','Encorpado'], f:{doce:0,amargo:2,citrico:0,especiado:1,herbal:5,tostado:0} },
+  { id:'laranja-canela', name:'Chá Misto Laranja com Canela', short:'Laranja com Canela', kicker:'Chá misto', weight:'', price:19.00, old:null, cat:'misto',
+    color:'#c0642a', accent:'#ffd29a', icon:'orange', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Laranja-com-canela-600x600-1.webp',
+    desc:'Casca de laranja e canela: cítrico, quentinho e aconchegante. Feito para as tardes frias do inverno gaúcho.',
+    notes:['Cítrico','Especiado'], f:{doce:2,amargo:0,citrico:4,especiado:4,herbal:0,tostado:0} },
+  { id:'chia-100', name:'Chia', short:'Chia', kicker:'Semente', weight:'100g', price:19.00, old:null, cat:'aditivo',
+    color:'#4b4a40', accent:'#e6e1cf', icon:'seeds', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Chia-100g-600x600-1.webp',
+    desc:'Sementes de chia selecionadas. Versátil: vai no suco, no iogurte, na massa do pão e no que mais a criatividade mandar.',
+    notes:['Versátil','Neutro'], f:{doce:0,amargo:0,citrico:0,especiado:0,herbal:1,tostado:0} },
+];
+const byId = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
+const FLAVORS = [
+  { k:'doce', label:'Doce', c:'#e8b46a' }, { k:'amargo', label:'Amargo', c:'#7f9c45' },
+  { k:'citrico', label:'Cítrico', c:'#f0a33a' }, { k:'especiado', label:'Especiado', c:'#c0642a' },
+  { k:'herbal', label:'Herbal', c:'#b6c878' }, { k:'tostado', label:'Tostado', c:'#9a6a3e' },
+];
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const brl = v => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+const pix = v => Math.round(v * (1 - PIX_OFF) * 100) / 100;
+const off = p => p.old ? Math.round((1 - p.price / p.old) * 100) : 0;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const openWa = msg => window.open(waLink(msg), '_blank', 'noopener');
+let uid = 0;
+
+/* ícones (caixa 100x100) */
+function iconSVG(type, c, c2 = 'rgba(0,0,0,.25)') {
+  switch (type) {
+    case 'star': {
+      let pts = []; for (let i = 0; i < 16; i++) { const r = i % 2 ? 17 : 46, a = Math.PI / 8 * i - Math.PI / 2; pts.push((50 + r * Math.cos(a)).toFixed(1) + ',' + (50 + r * Math.sin(a)).toFixed(1)); }
+      return `<polygon points="${pts.join(' ')}" fill="${c}" stroke="${c2}" stroke-width="2" stroke-linejoin="round"/><circle cx="50" cy="50" r="7" fill="${c2}"/>`;
+    }
+    case 'leaf': return `<path d="M50 6C80 26 90 60 50 94 10 60 20 26 50 6Z" fill="${c}"/><path d="M50 16V86M50 38l14-11M50 54l-15-11M50 70l14-10" stroke="${c2}" stroke-width="3.5" stroke-linecap="round" fill="none"/>`;
+    case 'herb': return `<path d="M50 94V30" stroke="${c}" stroke-width="5" stroke-linecap="round"/><g fill="${c}"><ellipse cx="34" cy="40" rx="14" ry="6" transform="rotate(-35 34 40)"/><ellipse cx="66" cy="52" rx="14" ry="6" transform="rotate(35 66 52)"/><ellipse cx="34" cy="64" rx="14" ry="6" transform="rotate(-35 34 64)"/><ellipse cx="66" cy="76" rx="14" ry="6" transform="rotate(35 66 76)"/><ellipse cx="50" cy="20" rx="6" ry="13"/></g>`;
+    case 'moon': return `<path d="M62 8a42 42 0 1 0 30 66A34 34 0 1 1 62 8Z" fill="${c}"/><circle cx="74" cy="26" r="3" fill="${c}"/><circle cx="86" cy="44" r="2" fill="${c}"/>`;
+    case 'trio': return `<g fill="${c}"><path d="M50 8C66 20 70 40 50 60 30 40 34 20 50 8Z"/><path d="M50 60C34 50 14 54 8 70c16 10 34 6 42-10Z"/><path d="M50 60c16-10 36-6 42 10-16 10-34 6-42-10Z"/></g><path d="M50 18v40M50 60v32" stroke="${c2}" stroke-width="3" stroke-linecap="round"/>`;
+    case 'orange': return `<circle cx="50" cy="50" r="42" fill="${c}"/><circle cx="50" cy="50" r="34" fill="none" stroke="${c2}" stroke-width="2.5"/><g stroke="${c2}" stroke-width="2.5" stroke-linecap="round">${[0,1,2,3,4,5,6,7].map(i=>{const a=Math.PI/4*i;return `<line x1="50" y1="50" x2="${(50+32*Math.cos(a)).toFixed(1)}" y2="${(50+32*Math.sin(a)).toFixed(1)}"/>`}).join('')}</g><circle cx="50" cy="50" r="5" fill="${c2}"/>`;
+    case 'seeds': return `<g fill="${c}">${[[30,30],[56,24],[72,46],[44,50],[26,62],[58,70],[76,74],[40,80],[62,44]].map(([x,y],i)=>`<ellipse cx="${x}" cy="${y}" rx="7" ry="5" transform="rotate(${i*37} ${x} ${y})"/>`).join('')}</g>`;
+    case 'flower': return `<g fill="${c}">${[0,1,2,3,4].map(i=>`<ellipse cx="50" cy="26" rx="13" ry="22" transform="rotate(${i*72} 50 50)"/>`).join('')}</g><circle cx="50" cy="50" r="10" fill="${c2}"/>`;
+    case 'cinnamon': return `<g transform="rotate(-30 50 50)"><rect x="10" y="38" width="76" height="24" rx="12" fill="${c}"/><circle cx="84" cy="50" r="12" fill="${c}"/><path d="M84 42a8 8 0 1 1-6 10" stroke="${c2}" stroke-width="3" fill="none"/></g>`;
+    default: return '';
+  }
+}
+const icon = (type, c, c2) => `<svg viewBox="0 0 100 100" aria-hidden="true">${iconSVG(type, c, c2)}</svg>`;
+
+/* embalagem ilustrada (stand-up pouch) */
+function wrapLines(t, max = 11) {
+  const words = t.split(' '); const lines = []; let cur = '';
+  words.forEach(w => { if ((cur + ' ' + w).trim().length > max && cur) { lines.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); });
+  if (cur) lines.push(cur); return lines.slice(0, 3);
+}
+function pouch(p) {
+  const g = `pg${++uid}`;
+  const lines = wrapLines(p.short);
+  const startY = 150 - (lines.length - 1) * 9;
+  return `<svg class="pouch" viewBox="0 0 200 260" aria-hidden="true">
+    <defs><linearGradient id="${g}" x1="0" x2="1"><stop offset="0" stop-color="${p.color}" stop-opacity=".85"/><stop offset=".08" stop-color="${p.color}"/><stop offset=".55" stop-color="${p.color}"/><stop offset=".92" stop-color="${p.color}" stop-opacity=".88"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient></defs>
+    <path d="M28 22h144l8 218c.4 9-6 14-14 14H34c-8 0-14.4-5-14-14Z" fill="url(#${g})"/>
+    <path d="M28 22h144v14H28z" fill="#000" opacity=".18"/>
+    <path d="M28 30h144" stroke="#fff" stroke-opacity=".25" stroke-dasharray="3 4"/>
+    <g transform="translate(70 48) scale(.6)">${iconSVG(p.icon, p.accent, 'rgba(0,0,0,.28)')}</g>
+    <rect x="44" y="114" width="112" height="104" rx="10" fill="#faf5ea"/>
+    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
+    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
+    <line x1="74" y1="196" x2="126" y2="196" stroke="${p.color}" stroke-opacity=".35"/>
+    <text x="100" y="209" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
+    <path d="M36 40c-4 60-2 140 6 196" stroke="#fff" stroke-opacity=".18" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </svg>`;
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+const toastEl = $('#toast'); let toastT;
+function toast(msg) {
+  $('span', toastEl).textContent = msg; toastEl.classList.add('on');
+  clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), 2400);
+}
+
+/* =========================================================
+   CARRINHO
+   ========================================================= */
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem('edm-cart') || '{}') || {}; } catch (e) { cart = {}; }
+Object.keys(cart).forEach(k => { if (!byId[k] || !(cart[k] > 0)) delete cart[k]; });
+const save = () => { try { localStorage.setItem('edm-cart', JSON.stringify(cart)); } catch (e) {} };
+const cartQty = () => Object.values(cart).reduce((a, b) => a + b, 0);
+const cartSub = () => Object.entries(cart).reduce((a, [id, q]) => a + byId[id].price * q, 0);
+
+function addToCart(id, qty = 1, fromEl) {
+  cart[id] = (cart[id] || 0) + qty; save(); renderCart();
+  if (fromEl && !reduce) flyToCart(fromEl);
+  const b = $('#cartBtn'); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+  toast(`${byId[id].short} foi pra sua cuia`);
+}
+function setQty(id, q) { if (q <= 0) delete cart[id]; else cart[id] = q; save(); renderCart(); }
+
+function renderCart() {
+  const n = cartQty(); const cc = $('#cartCount');
+  cc.textContent = n; cc.classList.toggle('on', n > 0);
+  $('#cartBtn').setAttribute('aria-label', `Abrir carrinho (${n} ${n === 1 ? 'item' : 'itens'})`);
+  const list = $('#cartList'); const ids = Object.keys(cart);
+  if (!ids.length) {
+    list.innerHTML = `<div class="cart-empty">
+      <svg viewBox="0 0 300 300"><path d="M60 130c-18 70 14 150 90 154 76-4 108-84 90-154Z" fill="#e7dcc2"/><ellipse cx="150" cy="130" rx="92" ry="22" fill="#d7c9a8"/><path d="M196 30 160 200" stroke="#c9c2ad" stroke-width="8" stroke-linecap="round"/></svg>
+      <b>Sua cuia está vazia</b><span>Que tal começar pelo Laboratório?</span>
+      <a href="#laboratorio" class="btn btn-dark" data-close>Montar meu blend</a></div>`;
+    $('#cartFoot').style.display = 'none';
+  } else {
+    $('#cartFoot').style.display = '';
+    list.innerHTML = ids.map(id => { const p = byId[id], q = cart[id]; return `
+      <div class="citem" style="--c:${p.color}">
+        <div class="thumb">${pouch(p)}</div>
+        <div><b>${p.name}${p.weight ? ' ' + p.weight : ''}</b><small>${brl(p.price)} · ${brl(pix(p.price))} no Pix</small>
+          <div class="qty"><button data-dec="${id}" aria-label="Diminuir quantidade de ${p.name}">−</button><span>${q}</span><button data-inc="${id}" aria-label="Aumentar quantidade de ${p.name}">+</button></div></div>
+        <div><span class="lt">${brl(p.price * q)}</span><button class="rm" data-rm="${id}">Remover</button></div>
+      </div>`; }).join('');
+    const sub = cartSub();
+    $('#sub').textContent = brl(sub);
+    $('#disc').textContent = '− ' + brl(sub - pix(sub));
+    $('#totalPix').textContent = brl(pix(sub));
+  }
+}
+$('#cartList').addEventListener('click', e => {
+  const t = e.target.closest('button,a'); if (!t) return;
+  if (t.dataset.inc) setQty(t.dataset.inc, cart[t.dataset.inc] + 1);
+  if (t.dataset.dec) setQty(t.dataset.dec, cart[t.dataset.dec] - 1);
+  if (t.dataset.rm) setQty(t.dataset.rm, 0);
+  if (t.hasAttribute('data-close')) closeCart();
+});
+function openCart() { document.body.classList.add('cart-open'); $('#drawer').setAttribute('aria-hidden', 'false'); setTimeout(() => $('#closeCart').focus(), 300); }
+function closeCart() { document.body.classList.remove('cart-open'); $('#drawer').setAttribute('aria-hidden', 'true'); }
+$('#cartBtn').addEventListener('click', openCart);
+$('#closeCart').addEventListener('click', closeCart);
+$('#overlay').addEventListener('click', closeCart);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeCart(); closeMenu(); } });
+$('#checkout').addEventListener('click', () => {
+  const ids = Object.keys(cart); if (!ids.length) return;
+  const sub = cartSub();
+  const lines = ids.map(id => `• ${cart[id]}x ${byId[id].name}${byId[id].weight ? ' ' + byId[id].weight : ''} — ${brl(byId[id].price * cart[id])}`);
+  openWa(`Olá, Erva da Mata! 🧉 Quero fazer este pedido pelo site:\n\n${lines.join('\n')}\n\nSubtotal: ${brl(sub)}\nTotal no Pix (10% off): ${brl(pix(sub))}\n\nPode me passar o frete e a forma de entrega?`);
+});
+
+function flyToCart(el) {
+  const from = el.getBoundingClientRect(), to = $('#cartBtn').getBoundingClientRect();
+  if (!from.width) return;
+  const c = el.cloneNode(true); c.classList.add('fly');
+  Object.assign(c.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px', margin: 0 });
+  document.body.appendChild(c);
+  const dx = to.left + to.width / 2 - (from.left + from.width / 2), dy = to.top + to.height / 2 - (from.top + from.height / 2);
+  const a = c.animate([
+    { transform: 'translate(0,0) scale(1) rotate(0)', opacity: 1 },
+    { transform: `translate(${dx * .55}px, ${dy * .55 - 90}px) scale(.55) rotate(-14deg)`, opacity: 1, offset: .55 },
+    { transform: `translate(${dx}px, ${dy}px) scale(.1) rotate(10deg)`, opacity: .2 }
+  ], { duration: 900, easing: 'cubic-bezier(.5,0,.3,1)' });
+  a.onfinish = () => c.remove();
+}
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+const grid = $('#grid');
+const plus = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
+function cardHTML(p, i) {
+  return `<article class="card" data-id="${p.id}" data-cat="${p.cat}" style="--c:${p.color};--d:${(i % 4) * .07}s" data-reveal>
+    <button class="card-media" data-quick="${p.id}" aria-label="Ver detalhes de ${p.name}" data-cursor="ver">
+      ${p.old ? `<span class="badge">−${off(p)}%</span>` : ''}
+      <span class="quick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <div class="pouch-wrap">${pouch(p)}</div>
+    </button>
+    <div class="card-body">
+      <span class="kicker">${p.kicker}${p.weight ? ' · ' + p.weight : ''}</span>
+      <h3>${p.short}</h3>
+      <div class="notes">${p.notes.map(n => `<span class="note">${n}</span>`).join('')}</div>
+      <div class="price-row">
+        <div class="price">${p.old ? `<s>${brl(p.old)}</s>` : ''}<strong>${brl(p.price)}</strong><small>${brl(pix(p.price))} no Pix</small></div>
+        <button class="add" data-add="${p.id}" aria-label="Adicionar ${p.name} ao carrinho">${plus}</button>
+      </div>
+    </div>
+  </article>`;
+}
+grid.innerHTML = PRODUCTS.map(cardHTML).join('');
+
+// contadores dos filtros
+const counts = { all: PRODUCTS.length, promo: PRODUCTS.filter(p => p.old).length };
+PRODUCTS.forEach(p => counts[p.cat] = (counts[p.cat] || 0) + 1);
+$$('.filter').forEach(b => $('sup', b).textContent = counts[b.dataset.f] || 0);
+
+let curFilter = 'all';
+function movePill() {
+  const a = $('.filter[aria-pressed="true"]'), pill = $('#filterPill');
+  pill.style.width = a.offsetWidth + 'px'; pill.style.transform = `translateX(${a.offsetLeft}px)`;
+}
+function applyFilter() {
+  $$('.card', grid).forEach(c => {
+    const p = byId[c.dataset.id];
+    const show = curFilter === 'all' || (curFilter === 'promo' ? !!p.old : p.cat === curFilter);
+    c.hidden = !show;
+    if (show) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop', 'in'); }
+  });
+}
+$('#filters').addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  $$('.filter').forEach(x => x.setAttribute('aria-pressed', x === b));
+  curFilter = b.dataset.f; movePill(); applyFilter();
+});
+$('#sort').addEventListener('change', e => {
+  const v = e.target.value; const cards = $$('.card', grid);
+  const key = { featured: c => PRODUCTS.indexOf(byId[c.dataset.id]), 'price-asc': c => byId[c.dataset.id].price, discount: c => -off(byId[c.dataset.id]), name: c => byId[c.dataset.id].short }[v];
+  cards.sort((a, b) => { const ka = key(a), kb = key(b); return typeof ka === 'string' ? ka.localeCompare(kb, 'pt-BR') : ka - kb; });
+  cards.forEach(c => grid.appendChild(c)); applyFilter();
+});
+grid.addEventListener('click', e => {
+  const add = e.target.closest('[data-add]');
+  if (add) { addToCart(add.dataset.add, 1, $('.pouch', add.closest('.card'))); add.classList.add('ok'); setTimeout(() => add.classList.remove('ok'), 700); return; }
+  const q = e.target.closest('[data-quick]'); if (q) openQuick(q.dataset.quick);
+});
+// tilt 3D nos cards
+if (fine && !reduce) {
+  grid.addEventListener('pointermove', e => {
+    const m = e.target.closest('.card-media'); if (!m) return;
+    const r = m.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    m.style.setProperty('--ry', (x * 18).toFixed(1) + 'deg'); m.style.setProperty('--rx', (-y * 14).toFixed(1) + 'deg');
+  });
+  grid.addEventListener('pointerout', e => { const m = e.target.closest('.card-media'); if (m && !m.contains(e.relatedTarget)) { m.style.setProperty('--rx', '0deg'); m.style.setProperty('--ry', '0deg'); } });
+}
+
+/* =========================================================
+   DETALHE DO PRODUTO (dialog)
+   ========================================================= */
+const qv = $('#qv');
+function barsHTML(f, scale = 5) {
+  return FLAVORS.map(fl => `<div class="bar"><span>${fl.label}</span><div class="track"><div class="fill" style="--c:${fl.c}" data-w="${clamp(f[fl.k] / scale * 100, 0, 100)}"></div></div><output>${f[fl.k] || 0}</output></div>`).join('');
+}
+function openQuick(id) {
+  const p = byId[id]; let q = 1;
+  $('#qvContent').innerHTML = `
+    <div class="qv-media" style="--c:${p.color}">
+      ${p.old ? `<span class="badge">−${off(p)}%</span>` : ''}
+      <div id="qvIll">${pouch(p)}</div>
+      <img id="qvImg" src="${p.img}" alt="Foto da embalagem de ${p.name}" loading="lazy" hidden>
+      <div class="qv-toggle" id="qvToggle" hidden><button aria-pressed="true" data-v="ill">Ilustração</button><button aria-pressed="false" data-v="foto">Foto real</button></div>
+    </div>
+    <div class="qv-body">
+      <span class="kicker">${p.kicker}${p.weight ? ' · ' + p.weight : ''}</span>
+      <h2 id="qvTitle">${p.name}</h2>
+      <p>${p.desc}</p>
+      <div class="qv-price">${p.old ? `<s>${brl(p.old)}</s>` : ''}<strong>${brl(p.price)}</strong><span>${brl(pix(p.price))} no Pix</span></div>
+      <div class="bars" style="margin-top:6px">${barsHTML(p.f)}</div>
+      <div class="qv-buy">
+        <div class="qty"><button data-q="-1" aria-label="Diminuir">−</button><span id="qvQty">1</span><button data-q="1" aria-label="Aumentar">+</button></div>
+        <button class="btn btn-dark" id="qvAdd">Adicionar · ${brl(p.price)}</button>
+      </div>
+      <a href="#" class="btn btn-wa" id="qvWa" style="justify-self:start">Tirar dúvida no WhatsApp</a>
+    </div>`;
+  const img = $('#qvImg');
+  img.addEventListener('load', () => { $('#qvToggle').hidden = false; });
+  $('#qvToggle').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    $$('#qvToggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    const foto = b.dataset.v === 'foto'; img.hidden = !foto; $('#qvIll').hidden = foto;
+  });
+  const upd = () => { $('#qvQty').textContent = q; $('#qvAdd').textContent = `Adicionar · ${brl(p.price * q)}`; };
+  $('.qv-buy .qty').addEventListener('click', e => { const b = e.target.closest('[data-q]'); if (b) { q = clamp(q + +b.dataset.q, 1, 99); upd(); } });
+  $('#qvAdd').addEventListener('click', () => { addToCart(id, q, $('#qvIll .pouch')); qv.close(); });
+  $('#qvWa').addEventListener('click', e => { e.preventDefault(); openWa(`Olá! Tenho uma dúvida sobre o ${p.name}${p.weight ? ' ' + p.weight : ''}.`); });
+  qv.showModal();
+  requestAnimationFrame(() => setTimeout(() => $$('.fill', qv).forEach(f => f.style.width = f.dataset.w + '%'), 120));
+}
+$('#qvClose').addEventListener('click', () => qv.close());
+qv.addEventListener('click', e => { if (e.target === qv) qv.close(); });
+
+/* =========================================================
+   LABORATÓRIO
+   ========================================================= */
+const BASE = { doce:0, amargo:2, citrico:0, especiado:0, herbal:3, tostado:0 };
+const NAMES = {
+  doce: ['Doce Querência', 'macio e perfumado'], amargo: ['Raiz Campeira', 'amargo de verdade, sem rodeio'],
+  citrico: ['Sol do Noroeste', 'vivo e refrescante'], especiado: ['Galpão Aceso', 'quente e aconchegante'],
+  herbal: ['Mata Viva', 'verde, fresco e encorpado'], tostado: ['Fogo de Chão', 'tostado, com fundo de caramelo'],
+};
+let picks = [];
+const chipsEl = $('#chips');
+chipsEl.innerHTML = PRODUCTS.map(p => `<button class="chip" data-pick="${p.id}" aria-pressed="false" style="--c:${p.color}"><i>${icon(p.icon, p.accent, 'rgba(0,0,0,.25)')}</i>${p.short}</button>`).join('');
+$('#bars').innerHTML = FLAVORS.map(fl => `<div class="bar" data-k="${fl.k}"><span>${fl.label}</span><div class="track"><div class="fill" style="--c:${fl.c}"></div></div><output>0</output></div>`).join('');
+
+/* ---------- xícara de vidro ---------- */
+const SVGNS = 'http://www.w3.org/2000/svg';
+const TEA_BASE = '#c99528';
+const TEA = { 'anis-10':'#b4501a', 'anis-moido-12':'#a24816', 'carqueja-15':'#8e8a1e', 'mate-tostado-20':'#7a2e0e',
+  'anoitecer-20':'#b0506e', 'dr-cha':'#7c9426', 'laranja-canela':'#d45a14', 'chia-100':'#c99528' };
+const FLOAT = {
+  'anis-10':[{ t:'star', c:'#8a4a22', s:.36 }], 'anis-moido-12':[{ t:'seeds', c:'#7a3e1c', sink:true }],
+  'carqueja-15':[{ t:'herb', c:'#6f8a3a', s:.38 }], 'mate-tostado-20':[{ t:'leaf', c:'#6b3a1a', s:.32 }],
+  'anoitecer-20':[{ t:'flower', c:'#d9b3e6', s:.32 }], 'dr-cha':[{ t:'trio', c:'#5f8a4a', s:.36 }],
+  'laranja-canela':[{ t:'orange', c:'#f0a33a', s:.36 }, { t:'cinnamon', c:'#9a4a22', s:.36 }],
+  'chia-100':[{ t:'seeds', c:'#2f2e28', sink:true }],
+};
+const SLOTS = [-52, 40, -8, 70, -84, 18];
+const usedSlots = new Set(), floatEls = new Map();
+const hexRgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const rgbHex = a => '#' + a.map(v => Math.round(clamp(v, 0, 255)).toString(16).padStart(2, '0')).join('');
+const mixC = (a, b, t) => { const x = hexRgb(a), y = hexRgb(b); return rgbHex(x.map((v, i) => v + (y[i] - v) * t)); };
+// meia-largura interna da xícara em cada altura (para a superfície do chá)
+const halfW = {};
+try { const pth = $('#cupInnerPath'), L = pth.getTotalLength(); for (let i = 0; i <= 800; i++) { const pt = pth.getPointAtLength(L * i / 800); const y = Math.round(pt.y); halfW[y] = Math.max(halfW[y] || 0, Math.abs(pt.x - 200)); } } catch (e) {}
+const widthAt = y => { for (let d = 0; d < 6; d++) { if (halfW[Math.round(y) + d]) return halfW[Math.round(y) + d]; if (halfW[Math.round(y) - d]) return halfW[Math.round(y) - d]; } return 110 - (y - 120) * .2; };
+let level = 214, levelAnim;
+function drawLevel(y) {
+  level = y; const w = widthAt(y), ry = w * .17;
+  $('#teaRect').setAttribute('y', y);
+  $('#teaTint').setAttribute('y', y + ry * .5);
+  const sf = $('#teaSurf'); sf.setAttribute('cy', y); sf.setAttribute('rx', w + 2); sf.setAttribute('ry', ry);
+  const sh = $('#teaSheen'); sh.setAttribute('cy', y - ry * .25); sh.setAttribute('cx', 200 - w * .3); sh.setAttribute('rx', w * .38);
+  $('#floaters').setAttribute('transform', `translate(0 ${y.toFixed(1)})`);
+  $('#ripples').setAttribute('transform', `translate(0 ${y.toFixed(1)})`);
+}
+function tweenLevel(to) {
+  cancelAnimationFrame(levelAnim);
+  if (reduce) return drawLevel(to);
+  const from = level, t0 = performance.now(), dur = 1100;
+  const step = now => { const k = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - k, 3); drawLevel(from + (to - from) * e); if (k < 1) levelAnim = requestAnimationFrame(step); };
+  levelAnim = requestAnimationFrame(step);
+}
+function tintTea() {
+  let acc = hexRgb(TEA_BASE).map(v => v * 1), wsum = 1;
+  picks.forEach(id => { const c = hexRgb(TEA[id]); acc = acc.map((v, i) => v + c[i] * 1.4); wsum += 1.4; });
+  const mix = rgbHex(acc.map(v => v / wsum));
+  $('#teaTop').style.stopColor = mixC(mix, '#ffd88a', .12);
+  $('#teaBot').style.stopColor = mixC(mix, '#1a0800', .55);
+  $('#teaSurf').style.fill = mixC(mix, '#ffe2a0', .32);
+  $('#caustic').style.fill = mixC(mix, '#ffffff', .25);
+}
+function ripple(dx) {
+  if (reduce) return;
+  const e = document.createElementNS(SVGNS, 'ellipse');
+  e.setAttribute('cx', 200 + dx); e.setAttribute('cy', 0); e.setAttribute('rx', 44); e.setAttribute('ry', 7);
+  e.setAttribute('fill', 'none'); e.setAttribute('stroke', '#fff'); e.setAttribute('class', 'ripple');
+  $('#ripples').appendChild(e);
+  e.animate([{ transform: 'scale(.1)', opacity: .8 }, { transform: 'scale(1)', opacity: 0 }], { duration: 1100, easing: 'cubic-bezier(.2,.7,.3,1)', delay: 420 }).onfinish = () => e.remove();
+}
+function addFloaters(id) {
+  const els = [];
+  FLOAT[id].forEach(fl => {
+    const slot = SLOTS.find(x => !usedSlots.has(x)) ?? 0; usedSlots.add(slot);
+    const outer = document.createElementNS(SVGNS, 'g'); const drop = document.createElementNS(SVGNS, 'g'); const bob = document.createElementNS(SVGNS, 'g');
+    const s = fl.s || .3, rot = Math.round(Math.random() * 80 - 40);
+    if (fl.sink) {
+      outer.setAttribute('transform', `translate(${200 + slot * .7} 0)`);
+      bob.innerHTML = `<g transform="translate(${-50 * s} ${-50 * s}) scale(${s})">${iconSVG(fl.t, fl.c, 'rgba(0,0,0,.2)')}</g>`;
+      drop.appendChild(bob); outer.appendChild(drop);
+      outer.setAttribute('transform', `translate(${200 + slot * .7} ${272 + Math.random() * 14})`);
+      $('#sunk').appendChild(outer);
+      if (!reduce) drop.animate([{ transform: `translateY(${level - 290}px)`, opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }], { duration: 1600, easing: 'cubic-bezier(.3,.6,.3,1)' });
+    } else {
+      outer.setAttribute('transform', `translate(${200 + slot} 0)`);
+      bob.setAttribute('class', 'bob'); bob.style.animationDelay = (-Math.random() * 3).toFixed(2) + 's';
+      bob.innerHTML = `<g transform="rotate(${rot}) translate(${-50 * s} ${-50 * s - 3}) scale(${s})">${iconSVG(fl.t, fl.c, 'rgba(0,0,0,.3)')}</g>`;
+      drop.appendChild(bob); outer.appendChild(drop); $('#floaters').appendChild(outer);
+      if (!reduce) drop.animate([{ transform: 'translateY(-150px)', opacity: 0 }, { transform: 'translateY(-150px)', opacity: 1, offset: .05 }, { transform: 'translateY(10px)', offset: .7 }, { transform: 'translateY(0)' }], { duration: 950, easing: 'cubic-bezier(.45,0,.4,1)' });
+      ripple(slot);
+    }
+    outer.dataset.slot = slot; els.push(outer);
+  });
+  floatEls.set(id, els);
+}
+function removeFloaters(id) {
+  (floatEls.get(id) || []).forEach(el => {
+    usedSlots.delete(+el.dataset.slot);
+    if (reduce) return el.remove();
+    el.firstChild.animate([{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(40px)', opacity: 0 }], { duration: 600, easing: 'ease-in', fill: 'forwards' }).onfinish = () => el.remove();
+  });
+  floatEls.delete(id);
+}
+// bolhas
+$('#bubbles').innerHTML = Array.from({ length: 9 }, (_, i) => `<circle class="bubble" cx="${150 + Math.random() * 100}" cy="${288 - Math.random() * 10}" r="${(1.2 + Math.random() * 2).toFixed(1)}" fill="none" stroke="#fff" stroke-opacity=".7" style="--t:${(2.4 + Math.random() * 2).toFixed(1)}s;--d:${(-Math.random() * 4).toFixed(1)}s"/>`).join('');
+drawLevel(214); tintTea();
+// inclinação suave da xícara (desktop)
+if (fine && !reduce) {
+  const st = $('.lab-stage'), cupSvg = $('#teaCup');
+  st.addEventListener('pointermove', e => { const r = st.getBoundingClientRect(); cupSvg.style.setProperty('--ty', (((e.clientX - r.left) / r.width - .5) * 14).toFixed(1) + 'deg'); cupSvg.style.setProperty('--tx', (-((e.clientY - r.top) / r.height - .5) * 8).toFixed(1) + 'deg'); });
+  st.addEventListener('pointerleave', () => { cupSvg.style.setProperty('--ty', '0deg'); cupSvg.style.setProperty('--tx', '0deg'); });
+}
+
+function renderLab() {
+  // chips
+  $$('.chip', chipsEl).forEach(c => c.setAttribute('aria-pressed', picks.includes(c.dataset.pick)));
+  $('#pickCount').textContent = `${picks.length}/3`;
+  // xícara: nível, cor e ingredientes boiando
+  [...floatEls.keys()].forEach(id => { if (!picks.includes(id)) removeFloaters(id); });
+  picks.forEach(id => { if (!floatEls.has(id)) addFloaters(id); });
+  tweenLevel(214 - picks.length * 22);
+  tintTea();
+  // sabor
+  const sum = { ...BASE };
+  picks.forEach(id => FLAVORS.forEach(fl => sum[fl.k] += byId[id].f[fl.k]));
+  $$('#bars .bar').forEach(b => { const v = sum[b.dataset.k]; $('.fill', b).style.width = clamp(v * 10, 0, 100) + '%'; $('output', b).textContent = v; });
+  // nome
+  if (!picks.length) {
+    $('#blendName').textContent = 'Chá de Erva-Mate';
+    $('#blendDesc').textContent = 'A base de sempre. Escolha um ingrediente para começar.';
+  } else {
+    const add = {}; FLAVORS.forEach(fl => add[fl.k] = picks.reduce((a, id) => a + byId[id].f[fl.k], 0));
+    const ranked = FLAVORS.map(f => f.k).sort((a, b) => add[b] - add[a]);
+    const [name, vibe] = NAMES[ranked[0]];
+    $('#blendName').textContent = name;
+    const lbl = k => FLAVORS.find(f => f.k === k).label.toLowerCase();
+    $('#blendDesc').textContent = `${vibe[0].toUpperCase() + vibe.slice(1)} — notas ${add[ranked[1]] > 0 ? `${lbl(ranked[0])} e ${lbl(ranked[1])}` : lbl(ranked[0])}.`;
+  }
+  // total
+  const tot = picks.reduce((a, id) => a + byId[id].price, 0);
+  $('#labTotal').innerHTML = picks.length ? `${picks.map(id => byId[id].short).join(' + ')}<br><strong>${brl(tot)}</strong> · ${brl(pix(tot))} no Pix` : 'Selecione ao menos um ingrediente.';
+  $('#labAdd').disabled = $('#labWa').disabled = !picks.length;
+}
+chipsEl.addEventListener('click', e => {
+  const c = e.target.closest('.chip'); if (!c) return;
+  const id = c.dataset.pick;
+  if (picks.includes(id)) picks = picks.filter(x => x !== id);
+  else if (picks.length >= 3) { c.classList.remove('shake'); void c.offsetWidth; c.classList.add('shake'); toast('Máximo de 3 ingredientes por blend'); return; }
+  else picks.push(id);
+  renderLab();
+});
+$('#labAdd').addEventListener('click', () => {
+  picks.forEach(id => cart[id] = (cart[id] || 0) + 1); save(); renderCart();
+  const b = $('#cartBtn'); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+  toast(`Blend “${$('#blendName').textContent}” no carrinho`);
+});
+$('#labWa').addEventListener('click', () => {
+  openWa(`Olá, Erva da Mata! 🧉 Montei meu blend no site: *${$('#blendName').textContent}* — ${picks.map(id => byId[id].name).join(' + ')}. Quero pedir!`);
+});
+
+/* =========================================================
+   MOMENTOS — sol arrastável
+   ========================================================= */
+const MOMENTS = {
+  manha: { title:'Para acordar devagar', text:'Notas tostadas e cítricas para acompanhar o primeiro mate do dia, enquanto o sol ainda espreguiça.', picks:['mate-tostado-20','laranja-canela','chia-100'], astro:'o sol' },
+  tarde: { title:'Roda de mate, prosa longa', text:'Sabores marcantes para dividir a cuia com quem chegar — e fazer a conversa render.', picks:['carqueja-15','dr-cha','anis-10'], astro:'o sol' },
+  noite: { title:'Desacelerar é um ritual', text:'Blends suaves e aromáticos para fechar o dia sem pressa, com a casa em silêncio.', picks:['anoitecer-20','anis-moido-12','laranja-canela'], astro:'a lua' },
+};
+const mSec = $('#momentos'), sun = $('#sun'), arcWrap = $('#arcWrap'), arcSvg = $('#arcSvg');
+const CX = 300, CY = 300, R = 240;
+let theta = 0.5, curM = '';
+// estrelas
+$('#stars').innerHTML = Array.from({ length: 60 }, () => `<i style="left:${Math.random() * 100}%;top:${Math.random() * 70}%;animation-delay:${(Math.random() * 3).toFixed(2)}s;opacity:${(.3 + Math.random() * .7).toFixed(2)}"></i>`).join('');
+function zone(t) { return t < Math.PI / 3 ? 'manha' : t < 2 * Math.PI / 3 ? 'tarde' : 'noite'; }
+function placeSun(t) {
+  theta = clamp(t, 0.06, Math.PI - 0.06);
+  const x = CX - R * Math.cos(theta), y = CY - R * Math.sin(theta);
+  sun.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+  const z = zone(theta);
+  sun.setAttribute('aria-valuenow', Math.round(theta / Math.PI * 100));
+  sun.setAttribute('aria-valuetext', { manha:'Manhã', tarde:'Tarde', noite:'Noite' }[z]);
+  if (z !== curM) setMoment(z);
+}
+function setMoment(z) {
+  curM = z; const m = MOMENTS[z];
+  mSec.dataset.m = z;
+  $$('.mtab').forEach(t => t.setAttribute('aria-selected', t.dataset.m === z));
+  $('.sun-core').setAttribute('fill', z === 'noite' ? '#f3ebd8' : z === 'tarde' ? '#e8742c' : '#f2a93b');
+  $('.sun-glow').setAttribute('fill', z === 'noite' ? 'rgba(243,235,216,.15)' : 'rgba(255,190,90,.25)');
+  $('#moonMask').setAttribute('opacity', z === 'noite' ? 1 : 0);
+  $('#astro').textContent = m.astro;
+  const mc = $('#mcopy'); $('h3', mc).textContent = m.title; $('p', mc).textContent = m.text;
+  mc.classList.remove('swap'); void mc.offsetWidth; mc.classList.add('swap');
+  $('#mpicks').innerHTML = m.picks.map((id, i) => { const p = byId[id]; return `
+    <div class="mpick" style="--c:${p.color};--d:${i * .08}s">
+      <span class="thumb">${pouch(p)}</span>
+      <div><b>${p.short}</b><span>${brl(p.price)} · ${p.notes.join(', ').toLowerCase()}</span></div>
+      <button class="add" data-add="${id}" aria-label="Adicionar ${p.name} ao carrinho">${plus}</button>
+    </div>`; }).join('');
+}
+$('#mpicks').addEventListener('click', e => { const b = e.target.closest('[data-add]'); if (b) addToCart(b.dataset.add, 1, $('.pouch', b.closest('.mpick'))); });
+function angleFromEvent(e) {
+  const r = arcSvg.getBoundingClientRect(); const s = r.width / 600;
+  const px = (e.clientX - r.left) / s, py = (e.clientY - r.top) / s;
+  return Math.PI - Math.atan2(Math.max(CY - py, 0), px - CX);
+}
+let dragging = false;
+arcWrap.addEventListener('pointerdown', e => { dragging = true; arcWrap.setPointerCapture(e.pointerId); placeSun(angleFromEvent(e)); });
+arcWrap.addEventListener('pointermove', e => { if (dragging) placeSun(angleFromEvent(e)); });
+arcWrap.addEventListener('pointerup', () => dragging = false);
+arcWrap.addEventListener('pointercancel', () => dragging = false);
+sun.addEventListener('keydown', e => {
+  if (['ArrowRight', 'ArrowUp'].includes(e.key)) { placeSun(theta + .12); e.preventDefault(); }
+  if (['ArrowLeft', 'ArrowDown'].includes(e.key)) { placeSun(theta - .12); e.preventDefault(); }
+});
+const tabAngle = { manha: .5, tarde: Math.PI / 2, noite: Math.PI - .5 };
+function animateSunTo(target) {
+  if (reduce) return placeSun(target);
+  const from = theta, t0 = performance.now(), dur = 900;
+  const step = now => { const k = clamp((now - t0) / dur, 0, 1), ease = 1 - Math.pow(1 - k, 3); placeSun(from + (target - from) * ease); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+$$('.mtab').forEach(t => t.addEventListener('click', () => animateSunTo(tabAngle[t.dataset.m])));
+placeSun(theta);
+
+/* =========================================================
+   HERO — folhas, órbita, parallax
+   ========================================================= */
+const leafPath = c => `<svg viewBox="0 0 74 90"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z" fill="${c}"/><path d="M37 12V80M37 34l12-9M37 48l-13-10M37 60l13-9" stroke="rgba(13,29,21,.35)" stroke-width="2" stroke-linecap="round" fill="none"/></svg>`;
+const LEAVES = [
+  { x:'4%', y:'14%', w:'70px', r:'-24deg', d:'-30px', o:.35, c:'#7f9c45', t:'8s' },
+  { x:'42%', y:'8%', w:'40px', r:'40deg', d:'20px', o:.25, c:'#b6c878', t:'10s' },
+  { x:'88%', y:'70%', w:'110px', r:'150deg', d:'-46px', o:.3, c:'#4f6d2a', t:'11s' },
+  { x:'60%', y:'86%', w:'54px', r:'200deg', d:'30px', o:.28, c:'#7f9c45', t:'9s' },
+  { x:'-2%', y:'72%', w:'130px', r:'30deg', d:'-60px', o:.18, c:'#b6c878', t:'12s' },
+  { x:'30%', y:'60%', w:'26px', r:'80deg', d:'40px', o:.35, c:'#dfe8b4', t:'7s' },
+  { x:'94%', y:'18%', w:'60px', r:'-60deg', d:'26px', o:.22, c:'#7f9c45', t:'10s' },
+];
+$('#leaves').innerHTML = LEAVES.map(l => `<div class="leaf" style="--x:${l.x};--y:${l.y};--w:${l.w};--r:${l.r};--d:${l.d};--o:${l.o};--t:${l.t}">${leafPath(l.c)}</div>`).join('');
+const ORBIT = [
+  { type:'star', c:'#e8b46a', x:'12%', y:'30%', s:'78px', p:'22px' },
+  { type:'cinnamon', c:'#c0642a', x:'90%', y:'46%', s:'70px', p:'-18px' },
+  { type:'orange', c:'#f0a33a', x:'24%', y:'88%', s:'64px', p:'26px' },
+  { type:'herb', c:'#b6c878', x:'80%', y:'86%', s:'58px', p:'-24px' },
+  { type:'seeds', c:'#e6e1cf', x:'56%', y:'2%', s:'50px', p:'14px' },
+];
+$('#orbit').innerHTML = ORBIT.map(o => `<div class="ing" style="--x:${o.x};--y:${o.y};--s:${o.s};--p:${o.p}"><div>${icon(o.type, o.c)}</div></div>`).join('');
+const hero = $('.hero');
+if (fine && !reduce) {
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5) * 2);
+    hero.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5) * 2);
+  });
+  hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
+}
+
+/* marquee */
+const MQ = ['Anis estrelado', 'Carqueja', 'Mate tostado', 'Laranja com canela', 'Anoitecer', 'Composto Dr. Chá', 'Chia'];
+const mqHalf = MQ.map(t => `<span>${t}${icon('leaf', '#0d1d15', 'rgba(217,160,80,.6)')}</span>`).join('');
+$('#marquee').innerHTML = mqHalf + mqHalf;
+
+/* =========================================================
+   MANIFESTO — palavra por palavra
+   ========================================================= */
+const man = $('#manifesto');
+(function splitWords(node) {
+  [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) {
+      const frag = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) frag.appendChild(document.createTextNode(w)); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; frag.appendChild(s); } });
+      n.replaceWith(frag);
+    } else if (n.nodeType === 1) splitWords(n);
+  });
+})(man);
+const words = $$('.w', man);
+
+/* =========================================================
+   RITUAL
+   ========================================================= */
+const steps = $$('.step'); const rail = $('.rail');
+function setStep(i) {
+  steps.forEach((s, j) => s.classList.toggle('on', j <= i));
+  const s = steps[i]; const num = $('#rvNum'); if (!num) return;
+  const val = String(i + 1).padStart(2, '0');
+  if (num.textContent !== val) { num.classList.add('flip'); setTimeout(() => { num.textContent = val; num.classList.remove('flip'); }, 250); }
+  $('#thermo').style.setProperty('--h', s.dataset.h + '%');
+  $('#rvTemp').textContent = s.dataset.t; $('#rvLabel').textContent = s.dataset.l;
+}
+
+/* =========================================================
+   SCROLL LOOP (rAF)
+   ========================================================= */
+const header = $('#header'), prog = $('#progress');
+let lastY = 0, ticking = false;
+function onScroll() {
+  const y = scrollY, vh = innerHeight, max = document.documentElement.scrollHeight - vh;
+  prog.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  header.classList.toggle('scrolled', y > 40);
+  header.classList.toggle('hide', y > lastY && y > 500 && !document.body.classList.contains('menu-open'));
+  lastY = y;
+  // manifesto
+  const r = man.getBoundingClientRect();
+  const p = clamp((vh * .82 - r.top) / (r.height + vh * .25), 0, 1);
+  const on = Math.round(p * words.length * 1.15);
+  words.forEach((w, i) => w.classList.toggle('on', i < on));
+  // ritual
+  const sr = $('#steps').getBoundingClientRect();
+  const rp = clamp((vh * .55 - sr.top) / sr.height, 0, 1);
+  rail.style.setProperty('--p', rp);
+  let act = 0; steps.forEach((s, i) => { if (s.getBoundingClientRect().top < vh * .6) act = i; });
+  setStep(act);
+  ticking = false;
+}
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+addEventListener('resize', () => { movePill(); onScroll(); });
+
+/* reveals */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+$$('[data-reveal]').forEach(el => io.observe(el));
+
+/* contadores */
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = reduce ? 1 : 1600;
+  const step = now => { const k = clamp((now - t0) / dur, 0, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 4))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}), { threshold: .6 });
+$$('[data-count]').forEach(el => cio.observe(el));
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+const burger = $('#burger');
+function closeMenu() { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); $('#mnav').setAttribute('aria-hidden', 'true'); }
+burger.addEventListener('click', () => {
+  const open = !document.body.classList.contains('menu-open');
+  document.body.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open); $('#mnav').setAttribute('aria-hidden', !open);
+});
+$$('#mnav a[href^="#"]').forEach(a => a.addEventListener('click', closeMenu));
+
+/* links de WhatsApp */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-wa]'); if (!a) return;
+  e.preventDefault(); closeMenu(); openWa(a.dataset.wa);
+});
+$$('[data-wa]').forEach(a => { if (a.tagName === 'A') { a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; } });
+
+/* =========================================================
+   CURSOR + BOTÕES MAGNÉTICOS (desktop)
+   ========================================================= */
+if (fine && !reduce) {
+  document.documentElement.classList.add('has-cursor');
+  const cur = $('#cursor'), dot = $('#cursorDot'); const lbl = $('b', cur);
+  let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
+  (function loop() { cx += (mx - cx) * .18; cy += (my - cy) * .18; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
+  document.addEventListener('pointerover', e => {
+    const t = e.target.closest('[data-cursor], a, button, .chip, .sun, select, summary');
+    cur.classList.remove('hover', 'label');
+    if (!t) return;
+    if (t.dataset.cursor) { cur.classList.add('label'); lbl.textContent = t.dataset.cursor; } else cur.classList.add('hover');
+  });
+  $$('.magnetic').forEach(b => {
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+    b.addEventListener('pointerleave', () => b.style.transform = '');
+  });
+}
+
+/* =========================================================
+   INIT
+   ========================================================= */
+$('#year').textContent = new Date().getFullYear();
+renderCart(); renderLab(); movePill(); onScroll();
+function ready() {
+  $('#loader').classList.add('done');
+  document.body.classList.add('ready');
+  setTimeout(() => { $('#waFloat').classList.add('tip'); setTimeout(() => $('#waFloat').classList.remove('tip'), 4000); }, 3500);
+  if (document.fonts) document.fonts.ready.then(movePill);
+}
+if (reduce) ready();
+else { let done = false; const go = () => { if (!done) { done = true; setTimeout(ready, 650); } }; addEventListener('load', go); setTimeout(go, 2200); }
+})();
+</script>
+</body>
+</html>
