@@ -20,10 +20,10 @@ Escuro (verde-mata) nas seções de imersão; papel claro nas seções de leitur
 ## Tipografia — fontes próprias em `assets/fonts` (licença OFL, sem depender de conta)
 Pesquisa em sites reais do segmento (fontes lidas no navegador): Bellocq (Baskerville URW + Sweet Sans em caixa-alta espaçada), Rishi (Ivy Presto Headline fina + Neue Haas Grotesk), Paper & Tea (Queens + Suisse Intl), Yerba Madre (serifa própria + Cerco), Kusmi (fonte própria + Barlow).
 Padrão comum: **uma serifa de alto contraste nos títulos + uma sans neutra na interface**, e etiquetas em caixa-alta com bastante espaçamento.
-- Títulos: **Bodoni Moda** (variável, com tamanho óptico automático), 400. Itálico só como ênfase pontual, **na mesma cor do texto**.
-- Texto, botões, preços: **Instrument Sans** 400/500/600/700. Preços em sans com números tabulares (a vírgula do Bodoni some em tamanho pequeno).
-- Etiquetas: Instrument Sans 500, 11,5px, caixa-alta, espaçamento 0,24em, sem traço antes.
-- Fallback: Didot / Bodoni 72 / Georgia; system-ui.
+- Escolha final (entre 7 opções testadas com o conteúdo real): **Schibsted Grotesk** em tudo — títulos 700 com espaçamento -0,04em, h3 600, texto 400/500, botões 600.
+- Ênfase: nada de itálico; a palavra de destaque fica em verde-claro só nas seções escuras (abertura, laboratório, contato).
+- Etiquetas: Schibsted 600, 11,5px, caixa-alta, espaçamento 0,1em, sem traço antes.
+- Fallback: system-ui.
 
 ## Espaço e forma
 - Base 4px; seções `clamp(90px, 11vw, 150px)`; conteúdo até 1240px; `--pad` lateral `clamp(20px, 5vw, 64px)`.

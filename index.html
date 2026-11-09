@@ -24,9 +24,8 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230d1d15'/%3E%3Cpath d='M50 14C74 30 80 58 50 86 20 58 26 30 50 14Z' fill='%23b6c878'/%3E%3Cpath d='M50 22V80' stroke='%230d1d15' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 
-<!-- Fontes hospedadas no site (licença OFL): Bodoni Moda (títulos) + Instrument Sans (texto) -->
-<link rel="preload" href="assets/fonts/bodoni-moda.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
+<!-- Fonte hospedada no site (licença OFL): Schibsted Grotesk -->
+<link rel="preload" href="assets/fonts/schibsted-grotesk.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" as="image" href="assets/img/hero-cuia-900.webp" imagesrcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" imagesizes="(min-width:900px) 380px, 66vw">
 
 <script type="application/ld+json">
@@ -46,9 +45,8 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <style>
-@font-face{font-family:'Bodoni Moda';src:url(assets/fonts/bodoni-moda.woff) format('woff');font-weight:400 900;font-style:normal;font-display:swap}
-@font-face{font-family:'Bodoni Moda';src:url(assets/fonts/bodoni-moda-italic.woff) format('woff');font-weight:400 900;font-style:italic;font-display:swap}
-@font-face{font-family:'Instrument Sans';src:url(assets/fonts/instrument-sans.woff) format('woff');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(assets/fonts/schibsted-grotesk.woff) format('woff');font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(assets/fonts/schibsted-grotesk-italic.woff) format('woff');font-weight:400 900;font-style:italic;font-display:swap}
 /* =========================================================
    ERVA DA MATA — tokens
    ========================================================= */
@@ -60,8 +58,8 @@
   --line:rgba(20,33,26,.12);
   --r:24px; --r-sm:14px;
   --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
-  --serif:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
-  --sans:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif:'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --sans:'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --pad:clamp(20px, 5vw, 64px);
   --max:1240px;
 }
@@ -378,7 +376,7 @@ html:not(.js) .loader{display:none}
 .note{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--creme);color:var(--muted)}
 .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:auto;padding-top:12px}
 .price s{display:block;font-size:12px;color:var(--muted)}
-.price strong{display:block;font-family:var(--sans);font-size:21px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.price strong{display:block;font-family:var(--sans);font-size:21px;font-weight:600;line-height:1;letter-spacing:-.02em}
 .price small{display:block;font-size:11.5px;font-weight:700;color:var(--erva);margin-top:4px}
 .add{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mata);color:var(--creme);display:grid;place-items:center;transition:transform .45s var(--spring), background .3s}
 .add:hover{transform:rotate(90deg) scale(1.08);background:var(--terra)}
@@ -554,7 +552,7 @@ html:not(.js) .loader{display:none}
 .drawer-foot{padding:18px 22px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px;background:var(--creme)}
 .sumline{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
 .sumline.big{font-size:16px;color:var(--ink);font-weight:800}
-.sumline.big span:last-child{font-family:var(--sans);font-size:24px;font-weight:700;color:var(--erva);font-variant-numeric:tabular-nums}
+.sumline.big span:last-child{font-family:var(--sans);font-size:24px;font-weight:700;color:var(--erva)}
 .pixnote{font-size:12px;text-align:center;color:var(--muted)}
 
 dialog.qv{border:0;padding:0;border-radius:28px;width:min(94vw,900px);max-height:92vh;background:var(--papel);color:var(--ink);box-shadow:0 50px 120px -30px rgba(0,0,0,.6);overflow:auto}
@@ -573,7 +571,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 .qv-body p{color:var(--muted)}
 .qv-close{position:absolute;top:14px;right:14px;z-index:3;background:#fff;color:var(--ink);box-shadow:0 10px 20px -10px rgba(0,0,0,.3)}
 .qv-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.qv-price strong{font-family:var(--sans);font-size:32px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.qv-price strong{font-family:var(--sans);font-size:32px;font-weight:700;line-height:1;letter-spacing:-.03em}
 .qv-price s{color:var(--muted)}
 .qv-price span{font-size:13px;font-weight:800;color:var(--erva);padding:4px 10px;background:var(--broto);border-radius:999px}
 .qv .bars .bar{grid-template-columns:80px 1fr 24px}
@@ -687,6 +685,26 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
   .js [data-reveal]{opacity:1;transform:none}
   .grain{display:none}
 }
+
+/* ===== Tipografia: Schibsted Grotesk em tudo ===== */
+h1,h2,h3,h4{font-weight:700;letter-spacing:-.04em;line-height:.98}
+h3{font-weight:600;letter-spacing:-.02em;line-height:1.12}
+h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
+.hero h1 em,.lab h2 em,.cta h2 em{color:var(--erva2)}
+.blend-name h3,.mcopy h3,.cuia-photo figcaption b,.rv-num,.marquee span,.loader span,.cat .num,.brand i,.man-photo figcaption{font-style:normal}
+.manifesto-text{font-weight:600;letter-spacing:-.035em;line-height:1.08}
+.hero-stats strong,.rv-temp b{font-weight:700;letter-spacing:-.04em}
+.tag-float b,.mpick b,.perk b,.citem b,.cart-empty b{font-weight:600;letter-spacing:-.02em}
+.faq summary{font-weight:500;letter-spacing:-.015em}
+.mnav li a{font-weight:700;letter-spacing:-.04em}
+.giant{font-weight:800;letter-spacing:-.06em}
+.rv-num{font-weight:800;letter-spacing:-.06em}
+.marquee span{font-weight:700;letter-spacing:-.03em}
+.brand{font-weight:700;letter-spacing:-.03em}
+.brand b{font-weight:700}
+.step .n{font-weight:700}
+.eyebrow{font-weight:600;letter-spacing:.1em}
+@media (max-width:899px){.man-photo figcaption{left:12px}}
 </style>
 </head>
 <body>
@@ -1264,10 +1282,10 @@ function pouch(p) {
     <path d="M28 30h144" stroke="#fff" stroke-opacity=".25" stroke-dasharray="3 4"/>
     <g transform="translate(70 48) scale(.6)">${iconSVG(p.icon, p.accent, 'rgba(0,0,0,.28)')}</g>
     <rect x="44" y="114" width="112" height="104" rx="10" fill="#faf5ea"/>
-    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
-    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
+    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
+    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="15" font-weight="700" letter-spacing="-0.4" fill="#14211a">${l}</text>`).join('')}
     <line x1="74" y1="196" x2="126" y2="196" stroke="${p.color}" stroke-opacity=".35"/>
-    <text x="100" y="209" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
+    <text x="100" y="209" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
     <path d="M36 40c-4 60-2 140 6 196" stroke="#fff" stroke-opacity=".18" stroke-width="8" stroke-linecap="round" fill="none"/>
   </svg>`;
 }
