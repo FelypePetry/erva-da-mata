@@ -6,8 +6,7 @@
 <title>Erva da Mata — Chás e aditivos para chimarrão | São José do Inhacorá, RS</title>
 <meta name="description" content="Chás, aditivos e ervas selecionadas para o seu chimarrão. Anis estrelado, carqueja, mate tostado e blends da casa, direto de São José do Inhacorá (RS). 10% de desconto no Pix e pedido pelo WhatsApp.">
 <meta name="theme-color" content="#0d1d15">
-<!-- PRÉVIA para validação: troque para "index, follow" quando publicar no domínio oficial -->
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow"><!-- demonstração: troque por index, follow ao publicar no domínio do cliente -->
 <link rel="canonical" href="https://ervadamata.com.br/">
 
 <!-- Open Graph / redes sociais -->
@@ -583,6 +582,9 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 .qv-buy .qty{margin:0;padding:6px}
 .qv-buy .qty button{width:36px;height:36px}
 
+.wa-alt{color:var(--erva);font-weight:600;text-decoration:underline;text-underline-offset:3px;margin-top:4px;font-size:inherit}
+.card.soldout .add{opacity:.35;pointer-events:none}
+.card.soldout .card-media::after{content:"Esgotado";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-8deg);padding:8px 16px;border-radius:999px;background:var(--mata);color:var(--creme);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;z-index:3}
 .toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));z-index:270;transform:translate(-50%,30px);opacity:0;padding:12px 18px;border-radius:999px;background:var(--mata);color:var(--creme);font-size:14px;font-weight:600;box-shadow:0 20px 40px -14px rgba(0,0,0,.5);transition:opacity .4s, transform .6s var(--spring);pointer-events:none;display:flex;gap:10px;align-items:center;max-width:calc(100vw - 40px)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 .toast i{width:22px;height:22px;border-radius:50%;background:var(--erva2);color:var(--mata);display:grid;place-items:center;flex:none}
@@ -1228,10 +1230,9 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
     <div class="sumline"><span>Subtotal</span><span id="sub">R$ 0,00</span></div>
     <div class="sumline"><span>Desconto Pix (10%)</span><span id="disc">− R$ 0,00</span></div>
     <div class="sumline big"><span>Total no Pix</span><span id="totalPix">R$ 0,00</span></div>
-    <button class="btn btn-wa" id="checkout">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
-      Finalizar pelo WhatsApp</button>
-    <p class="pixnote">Frete e entrega combinados no atendimento.</p>
+    <a class="btn" id="checkoutBtn" href="checkout.html">Finalizar compra
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="pixnote">Frete calculado pelo CEP no próximo passo · Pix ou cartão em até 3x.<br><button type="button" id="checkout" class="wa-alt">Prefere pedir pelo WhatsApp?</button></p>
   </div>
 </aside>
 
@@ -1243,6 +1244,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
 
 <div class="toast" id="toast" role="status" aria-live="polite"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></i><span></span></div>
 
+<script src="assets/js/loja.js"></script>
 <script>
 (() => {
 'use strict';
@@ -1374,12 +1376,14 @@ const cartQty = () => Object.values(cart).reduce((a, b) => a + b, 0);
 const cartSub = () => Object.entries(cart).reduce((a, [id, q]) => a + byId[id].price * q, 0);
 
 function addToCart(id, qty = 1, fromEl) {
+  const pr = byId[id]; if (!pr || pr.unavailable) { toast('Esse item está indisponível no momento'); return; }
+  if (pr.stock != null && (cart[id] || 0) + qty > pr.stock) { toast(pr.stock ? `Só temos ${pr.stock} em estoque` : `${pr.short} esgotou`); return; }
   cart[id] = (cart[id] || 0) + qty; save(); renderCart();
   if (fromEl && !reduce) flyToCart(fromEl);
   const b = $('#cartBtn'); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
   toast(`${byId[id].short} foi pra sua cuia`);
 }
-function setQty(id, q) { if (q <= 0) delete cart[id]; else cart[id] = q; save(); renderCart(); }
+function setQty(id, q) { const pr = byId[id]; if (pr && pr.stock != null && q > pr.stock) { toast(`Só temos ${pr.stock} em estoque`); return; } if (q <= 0) delete cart[id]; else cart[id] = q; save(); renderCart(); }
 
 function renderCart() {
   const n = cartQty(); const cc = $('#cartCount');
@@ -1480,7 +1484,7 @@ function movePill() {
 function applyFilter() {
   $$('.card', grid).forEach(c => {
     const p = byId[c.dataset.id];
-    const show = curFilter === 'all' || (curFilter === 'promo' ? !!p.old : p.cat === curFilter);
+    const show = !p.unavailable && (curFilter === 'all' || (curFilter === 'promo' ? !!p.old : p.cat === curFilter));
     c.hidden = !show;
     if (show) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop', 'in'); }
   });
@@ -1939,6 +1943,29 @@ function ready() {
 }
 if (reduce) ready();
 else { let done = false; const go = () => { if (!done) { done = true; setTimeout(ready, 650); } }; addEventListener('load', go); setTimeout(go, 2200); }
+
+/* =========================================================
+   LOJA ONLINE — preços, promoções e estoque vêm do painel
+   (se o banco não responder, o site segue com os valores acima)
+   ========================================================= */
+if (window.LOJA) {
+  LOJA.products().then(list => {
+    const live = Object.fromEntries(list.map(r => [r.id, r]));
+    PRODUCTS.forEach(p => {
+      const r = live[p.id], card = $(`.card[data-id="${p.id}"]`, grid);
+      if (!r) { p.unavailable = true; if (card) card.hidden = true; delete cart[p.id]; return; }
+      p.price = Number(r.price); p.old = r.compare_at_price ? Number(r.compare_at_price) : null; p.stock = r.stock;
+      if (cart[p.id] && p.stock != null && cart[p.id] > p.stock) { if (p.stock > 0) cart[p.id] = p.stock; else delete cart[p.id]; }
+      if (!card) return;
+      $('.price', card).innerHTML = `${p.old ? `<s>${brl(p.old)}</s>` : ''}<strong>${brl(p.price)}</strong><small>${brl(pix(p.price))} no Pix</small>`;
+      const media = $('.card-media', card); $('.badge', media)?.remove();
+      if (p.old) media.insertAdjacentHTML('afterbegin', `<span class="badge">−${off(p)}%</span>`);
+      card.classList.toggle('soldout', p.stock === 0);
+    });
+    const promo = $('.filter[data-f="promo"] sup'); if (promo) promo.textContent = PRODUCTS.filter(p => p.old && !p.unavailable).length;
+    save(); renderCart(); if (PRODUCTS.some(p => p.unavailable)) applyFilter();
+  }).catch(() => {});
+}
 })();
 </script>
 </body>

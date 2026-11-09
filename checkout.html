@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finalizar compra — Erva da Mata</title>
+<meta name="description" content="Finalize seu pedido de chás e aditivos para chimarrão da Erva da Mata. Pague no Pix com 10% de desconto ou no cartão.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d1d15">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230d1d15'/%3E%3Cpath d='M50 14C74 30 80 58 50 86 20 58 26 30 50 14Z' fill='%23b6c878'/%3E%3Cpath d='M50 22V80' stroke='%230d1d15' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/schibsted-grotesk.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body>
+<div class="bg-leaves" aria-hidden="true">
+  <i style="--w:160px;--r:-30deg;--d:0s;left:-40px;top:20%"></i>
+  <i style="--w:110px;--r:40deg;--d:-3s;right:4%;top:60%"></i>
+  <i style="--w:80px;--r:10deg;--d:-5s;left:46%;top:88%"></i>
+</div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="Erva da Mata — voltar à loja"><img src="assets/img/insta/logo.png" alt="Erva da Mata" width="120" height="38"></a>
+    <span class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Compra segura</span>
+  </div>
+</header>
+
+<main class="page">
+  <div class="hero-mini reveal">
+    <a class="back" href="index.html#produtos" style="color:var(--muted)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>Continuar comprando</a>
+    <h1 class="title">Quase lá. <em>Falta pouco</em> pro seu mate.</h1>
+    <ol class="steps" aria-label="Etapas"><li class="on" data-step="1"><b>1</b>Seus dados</li><li data-step="2"><b>2</b>Entrega</li><li data-step="3"><b>3</b>Pagamento</li></ol>
+  </div>
+
+  <!-- carrinho vazio -->
+  <section id="empty" class="card reveal" hidden style="text-align:center;padding:60px 24px">
+    <svg viewBox="0 0 300 300" width="130" style="margin:0 auto 18px"><path d="M60 130c-18 70 14 150 90 154 76-4 108-84 90-154Z" fill="#e7dcc2"/><ellipse cx="150" cy="130" rx="92" ry="22" fill="#d7c9a8"/><path d="M196 30 160 200" stroke="#c9c2ad" stroke-width="8" stroke-linecap="round"/></svg>
+    <h2 style="justify-content:center">Sua cuia está vazia</h2>
+    <p class="sub" style="margin:0 auto 22px">Escolha seus chás e aditivos e volte aqui para finalizar.</p>
+    <a class="btn dark" href="index.html#produtos">Ver a coleção</a>
+  </section>
+
+  <form id="form" class="grid" novalidate hidden>
+    <div>
+      <section class="card reveal" style="--d:.05s" data-sec="1">
+        <h2><span class="n">1</span>Seus dados</h2>
+        <div class="fields">
+          <div class="f"><input id="name" name="name" autocomplete="name" placeholder=" " required><label for="name">Nome e sobrenome</label></div>
+          <div class="f h"><input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder=" " required><label for="email">E-mail</label></div>
+          <div class="f h"><input id="phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder=" " required><label for="phone">Celular com DDD</label></div>
+          <div class="f h"><input id="cpf" name="cpf" inputmode="numeric" placeholder=" " required><label for="cpf">CPF (para a nota)</label></div>
+        </div>
+      </section>
+
+      <section class="card reveal" style="--d:.12s" data-sec="2">
+        <h2><span class="n">2</span>Entrega</h2>
+        <div class="fields">
+          <div class="f h"><input id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder=" " required><label for="cep">CEP</label></div>
+          <div class="f h" style="display:flex;align-items:center"><a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener" style="font-size:13.5px;color:var(--muted)">Não sei meu CEP ↗</a></div>
+          <p class="place" id="place" aria-live="polite"></p>
+        </div>
+        <div id="shipWrap" style="margin-top:16px" hidden>
+          <p class="eyebrow" style="margin-bottom:10px">Como você quer receber?</p>
+          <div class="opts" id="shipOpts" role="radiogroup" aria-label="Formas de entrega"></div>
+        </div>
+        <div class="fields" id="addr" style="margin-top:16px" hidden>
+          <div class="f q"><input id="rua" name="rua" autocomplete="address-line1" placeholder=" "><label for="rua">Rua / avenida</label></div>
+          <div class="f t"><input id="numero" name="numero" inputmode="numeric" placeholder=" "><label for="numero">Número</label></div>
+          <div class="f h"><input id="complemento" name="complemento" autocomplete="address-line2" placeholder=" "><label for="complemento">Complemento (opcional)</label></div>
+          <div class="f h"><input id="bairro" name="bairro" placeholder=" "><label for="bairro">Bairro</label></div>
+        </div>
+      </section>
+
+      <section class="card reveal" style="--d:.19s" data-sec="3">
+        <h2><span class="n">3</span>Pagamento</h2>
+        <div class="opts" role="radiogroup" aria-label="Forma de pagamento">
+          <label class="opt"><input type="radio" name="payment" value="pix" checked><span class="dot"></span>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d3b2b" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="m7.5 12 3 3 6-6"/></svg></span>
+            <span class="info"><b>Pix <span class="badge" id="pixBadge">10% off</span></b><small>Aprovação na hora. QR Code e copia e cola na próxima tela.</small></span></label>
+          <label class="opt"><input type="radio" name="payment" value="cartao"><span class="dot"></span>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d3b2b" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg></span>
+            <span class="info"><b>Cartão de crédito</b><small id="instText">Em até 3x sem juros, pelo Mercado Pago.</small></span></label>
+        </div>
+        <p class="note" style="color:var(--muted)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>O pagamento é feito no ambiente seguro do Mercado Pago. A Erva da Mata não vê nem guarda os dados do seu cartão.</p>
+      </section>
+    </div>
+
+    <aside class="summary reveal" style="--d:.1s" aria-labelledby="sumTitle">
+      <h2 id="sumTitle">Seu pedido</h2>
+      <div class="items" id="items"><p style="color:rgba(243,235,216,.6)"><span class="spin"></span></p></div>
+      <div class="lines">
+        <div><span class="muted">Subtotal</span><span id="sSub">—</span></div>
+        <div class="disc" id="rowDisc"><span>Desconto Pix</span><span id="sDisc">—</span></div>
+        <div><span class="muted">Entrega</span><span id="sShip">Informe o CEP</span></div>
+        <div class="total" id="rowTotal"><span>Total</span><span id="sTotal">—</span></div>
+      </div>
+      <button class="btn full" type="submit" id="pay" style="margin-top:20px">Ir para o pagamento</button>
+      <div id="err" role="alert"></div>
+      <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>Preços e frete são conferidos de novo no servidor antes de gerar o pagamento.</p>
+    </aside>
+  </form>
+</main>
+
+<div class="mbar" id="mbar" hidden>
+  <div><small>Total</small><b id="mTotal">—</b></div>
+  <button class="btn" type="button" id="mPay">Pagar</button>
+</div>
+
+<footer class="foot">
+  <span>© Erva da Mata · São José do Inhacorá, RS · Desde 1999</span>
+  <a href="mailto:contato@ervadamata.com.br">contato@ervadamata.com.br</a>
+</footer>
+
+<script src="assets/js/loja.js"></script>
+<script>
+(() => {
+'use strict';
+const L = window.LOJA, $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const FORM_KEY = 'edm-checkout';
+let products = {}, settings = {}, lines = [], ship = null, shipOpts = [], subtotal = 0;
+
+/* ---------- máscaras ---------- */
+const masks = {
+  phone: v => {
+    v = L.digits(v).slice(0, 11); if (!v) return '';
+    if (v.length <= 2) return '(' + v;
+    const mid = v.length === 11 ? 7 : 6;
+    return `(${v.slice(0, 2)}) ${v.slice(2, mid)}` + (v.length > mid ? '-' + v.slice(mid) : '');
+  },
+  cpf: v => L.digits(v).slice(0, 11).replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})$/, '$1-$2'),
+  cep: v => L.digits(v).slice(0, 8).replace(/(\d{5})(\d)/, '$1-$2'),
+};
+Object.keys(masks).forEach(id => $('#' + id).addEventListener('input', e => { const el = e.target; el.value = masks[id](el.value); clearErr(el); }));
+$$('#form input').forEach(el => el.addEventListener('input', () => { clearErr(el); remember(); }));
+
+/* ---------- validação ---------- */
+function cpfOk(c) {
+  c = L.digits(c); if (c.length !== 11 || /^(\d)\1{10}$/.test(c)) return false;
+  const d = n => { let s = 0; for (let i = 0; i < n; i++) s += +c[i] * (n + 1 - i); const r = s * 10 % 11; return r === 10 ? 0 : r; };
+  return d(9) === +c[9] && d(10) === +c[10];
+}
+const rules = {
+  name: v => v.trim().split(/\s+/).length >= 2 || 'Informe nome e sobrenome.',
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) || 'Confira o e-mail.',
+  phone: v => [10, 11].includes(L.digits(v).length) || 'Celular com DDD, só números.',
+  cpf: v => cpfOk(v) || 'CPF inválido.',
+  cep: v => L.digits(v).length === 8 || 'CEP com 8 números.',
+  rua: v => isPickup() || v.trim().length > 2 || 'Informe a rua.',
+  numero: v => isPickup() || v.trim().length > 0 || 'Número (ou S/N).',
+  bairro: v => isPickup() || v.trim().length > 1 || 'Informe o bairro.',
+};
+const isPickup = () => ship && ship.id === 'retirada';
+function setErr(el, msg) { const f = el.closest('.f'); f.classList.add('err'); f.classList.remove('ok'); if (!f.querySelector('.msg')) f.insertAdjacentHTML('beforeend', `<span class="msg"></span>`); f.querySelector('.msg').textContent = msg; }
+function clearErr(el) { const f = el.closest('.f'); if (!f) return; f.classList.remove('err'); f.querySelector('.msg')?.remove(); }
+function check(id, mark = true) {
+  const el = $('#' + id), r = rules[id](el.value);
+  if (r !== true) { if (mark) setErr(el, r); return false; }
+  clearErr(el); if (mark && el.value) el.closest('.f').classList.add('ok'); return true;
+}
+Object.keys(rules).forEach(id => $('#' + id).addEventListener('blur', e => { if (e.target.value) check(id); updateSteps(); }));
+
+function updateSteps() {
+  const s1 = ['name', 'email', 'phone', 'cpf'].every(id => check(id, false));
+  const s2 = s1 && ship && ['cep', 'rua', 'numero', 'bairro'].every(id => check(id, false));
+  $$('.steps li').forEach(li => { const n = +li.dataset.step; li.classList.toggle('done', (n === 1 && s1) || (n === 2 && s2)); li.classList.toggle('on', n === (s2 ? 3 : s1 ? 2 : 1)); });
+}
+
+/* ---------- lembrar dados (sem CPF) ---------- */
+function remember() { const d = {}; ['name', 'email', 'phone', 'cep', 'rua', 'numero', 'complemento', 'bairro'].forEach(k => d[k] = $('#' + k).value); try { localStorage.setItem(FORM_KEY, JSON.stringify(d)); } catch (_) {} }
+function restore() { try { const d = JSON.parse(localStorage.getItem(FORM_KEY) || '{}'); Object.entries(d).forEach(([k, v]) => { if ($('#' + k) && v) $('#' + k).value = v; }); } catch (_) {} }
+
+/* ---------- resumo ---------- */
+const leaf = c => `<svg viewBox="0 0 100 100"><path d="M50 6C80 26 90 60 50 94 10 60 20 26 50 6Z" fill="${c}"/><path d="M50 18V84" stroke="rgba(0,0,0,.25)" stroke-width="5" stroke-linecap="round"/></svg>`;
+function renderItems() {
+  $('#items').innerHTML = lines.map(l => { const [c, a] = L.look(l.p.id); return `
+    <div class="it"><div class="th" style="--c:${c}">${leaf(a)}<em>${l.qty}</em></div>
+    <div><b>${L.esc(l.p.name)}${l.p.weight_label ? ' ' + L.esc(l.p.weight_label) : ''}</b><small>${L.brl(l.p.price)} cada</small></div>
+    <span class="v">${L.brl(l.p.price * l.qty)}</span></div>`; }).join('');
+}
+function payMethod() { return $('input[name=payment]:checked').value; }
+function totals() {
+  const pct = Number(settings.pix_discount_percent || 0);
+  const disc = payMethod() === 'pix' ? Math.round(subtotal * pct) / 100 : 0;
+  const shipCost = ship ? ship.price : 0;
+  return { disc, shipCost, total: Math.round((subtotal - disc + shipCost) * 100) / 100 };
+}
+function renderTotals() {
+  const t = totals();
+  $('#sSub').textContent = L.brl(subtotal);
+  $('#rowDisc').hidden = !t.disc; $('#sDisc').textContent = '− ' + L.brl(t.disc);
+  $('#sShip').textContent = ship ? (ship.price ? L.brl(ship.price) : 'Grátis') : 'Informe o CEP';
+  const txt = L.brl(t.total) + (ship ? '' : ' + frete');
+  if ($('#sTotal').textContent !== txt) { $('#rowTotal').classList.remove('bump'); void $('#rowTotal').offsetWidth; $('#rowTotal').classList.add('bump'); }
+  $('#sTotal').textContent = txt; $('#mTotal').textContent = txt;
+  const pay = payMethod() === 'pix' ? 'Gerar Pix de ' + L.brl(t.total) : 'Pagar ' + L.brl(t.total) + ' no cartão';
+  $('#pay').textContent = ship ? pay : 'Ir para o pagamento';
+}
+$$('input[name=payment]').forEach(r => r.addEventListener('change', renderTotals));
+
+/* ---------- frete ---------- */
+let cepSeq = 0;
+async function quote() {
+  const cep = L.digits($('#cep').value); if (cep.length !== 8) return;
+  const seq = ++cepSeq; ship = null; renderTotals();
+  $('#place').innerHTML = '<span class="spin"></span> Calculando o frete…';
+  $('#shipWrap').hidden = true;
+  // endereço pelo ViaCEP (preenche rua/bairro) — o frete vem da função da loja
+  fetch(`https://viacep.com.br/ws/${cep}/json/`).then(r => r.json()).then(j => {
+    if (seq !== cepSeq || j.erro) return;
+    if (j.logradouro && !$('#rua').value) $('#rua').value = j.logradouro;
+    if (j.bairro && !$('#bairro').value) $('#bairro').value = j.bairro;
+  }).catch(() => {});
+  try {
+    const r = await L.fn('frete', { cep, items: lines.map(l => ({ id: l.p.id, qty: l.qty })) });
+    if (seq !== cepSeq) return;
+    shipOpts = r.options;
+    $('#place').innerHTML = `Entregando em <b>${L.esc(r.city)} · ${L.esc(r.uf)}</b>`;
+    $('#cep').closest('.f').classList.add('ok');
+    $('#shipOpts').innerHTML = shipOpts.map((o, i) => `
+      <label class="opt" style="--d:${i * .06}s"><input type="radio" name="ship" value="${L.esc(o.id)}"><span class="dot"></span>
+        <span class="info"><b>${L.esc(o.name)}</b><small>${L.esc(o.company)}${o.days ? ` · chega em até ${o.days} dias úteis` : o.id === 'retirada' ? ' · combine o horário pelo WhatsApp' : ''}</small></span>
+        <span class="price ${o.price ? '' : 'free'}">${o.price ? L.brl(o.price) : 'Grátis'}</span></label>`).join('');
+    $('#shipWrap').hidden = false;
+    const first = $('#shipOpts input:not([value=retirada])') || $('#shipOpts input');
+    if (first) { first.checked = true; pickShip(first.value); }
+  } catch (e) {
+    if (seq !== cepSeq) return;
+    $('#place').textContent = e.message; setErr($('#cep'), e.message);
+  }
+}
+function pickShip(id) {
+  ship = shipOpts.find(o => o.id === id) || null;
+  $('#addr').hidden = !ship || isPickup();
+  renderTotals(); updateSteps();
+}
+$('#shipOpts').addEventListener('change', e => pickShip(e.target.value));
+$('#cep').addEventListener('input', () => { if (L.digits($('#cep').value).length === 8) quote(); else { ship = null; $('#shipWrap').hidden = true; $('#addr').hidden = true; $('#place').textContent = ''; renderTotals(); } });
+
+/* ---------- envio ---------- */
+function showErr(msg) { $('#err').innerHTML = `<div class="alert">${L.esc(msg)}</div>`; }
+async function submit(e) {
+  e && e.preventDefault(); $('#err').innerHTML = '';
+  const ids = ['name', 'email', 'phone', 'cpf', 'cep', ...(ship && !isPickup() ? ['rua', 'numero', 'bairro'] : [])];
+  const bad = ids.filter(id => !check(id));
+  if (!ship) { showErr('Informe o CEP e escolha como quer receber.'); $('#cep').focus(); return; }
+  if (bad.length) { $('#' + bad[0]).focus(); $('#' + bad[0]).scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+  const btn = $('#pay'), old = btn.innerHTML; btn.disabled = true; $('#mPay').disabled = true;
+  btn.innerHTML = '<span class="spin"></span> Gerando pagamento…';
+  try {
+    const r = await L.fn('checkout', {
+      items: lines.map(l => ({ id: l.p.id, qty: l.qty })),
+      customer: { name: $('#name').value, email: $('#email').value, phone: $('#phone').value, cpf: $('#cpf').value },
+      address: { cep: $('#cep').value, rua: $('#rua').value, numero: $('#numero').value, complemento: $('#complemento').value, bairro: $('#bairro').value },
+      shipping_id: ship.id, payment: payMethod(),
+    });
+    L.setCart({});
+    try { sessionStorage.setItem('edm-last-order', JSON.stringify({ id: r.id, t: r.token })); } catch (_) {}
+    const orderPage = `pedido.html?id=${encodeURIComponent(r.id)}&t=${encodeURIComponent(r.token)}&novo=1`;
+    location.href = r.pay_url || orderPage;
+  } catch (err) {
+    showErr(err.message); btn.disabled = false; $('#mPay').disabled = false; btn.innerHTML = old; renderTotals();
+  }
+}
+$('#form').addEventListener('submit', submit);
+$('#mPay').addEventListener('click', submit);
+
+/* ---------- início ---------- */
+(async () => {
+  const items = L.cartItems();
+  if (!items.length) { $('#empty').hidden = false; $('.steps').hidden = true; return; }
+  $('#form').hidden = false; $('#mbar').hidden = false; restore();
+  try {
+    const [ps, st] = await Promise.all([L.products(), L.settings()]);
+    settings = st; products = Object.fromEntries(ps.map(p => [p.id, p]));
+  } catch (e) { $('#items').innerHTML = ''; showErr('Não conseguimos carregar os preços agora. Verifique sua internet e recarregue a página.'); return; }
+  const cart = L.getCart(); let changed = false;
+  lines = items.filter(i => { if (!products[i.id]) { delete cart[i.id]; changed = true; return false; } return true; })
+    .map(i => { const p = products[i.id]; let qty = Math.min(99, Math.floor(i.qty));
+      if (p.stock !== null && qty > p.stock) { qty = p.stock; cart[i.id] = qty; changed = true; } return { p, qty }; })
+    .filter(l => l.qty > 0);
+  if (changed) { L.setCart(cart); $('#err').innerHTML = '<div class="alert info">Ajustamos seu carrinho: algum item saiu de linha ou está com estoque menor.</div>'; }
+  if (!lines.length) { $('#form').hidden = true; $('#mbar').hidden = true; $('#empty').hidden = false; return; }
+  subtotal = Math.round(lines.reduce((a, l) => a + l.p.price * l.qty, 0) * 100) / 100;
+  const pct = Number(settings.pix_discount_percent || 0);
+  $('#pixBadge').textContent = pct ? `${pct}% off` : ''; $('#pixBadge').hidden = !pct;
+  $('#instText').textContent = `Em até ${settings.max_installments || 1}x pelo Mercado Pago.`;
+  renderItems(); renderTotals(); updateSteps();
+  if (L.digits($('#cep').value).length === 8) quote();
+})();
+})();
+</script>
+</body>
+</html>
