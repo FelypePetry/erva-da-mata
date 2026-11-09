@@ -24,10 +24,9 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230d1d15'/%3E%3Cpath d='M50 14C74 30 80 58 50 86 20 58 26 30 50 14Z' fill='%23b6c878'/%3E%3Cpath d='M50 22V80' stroke='%230d1d15' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 
-<!-- Fontes: kit Adobe Fonts "Erva da Mata — site" (Kepler Std Display + Acumin Pro, por Robert Slimbach) -->
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://p.typekit.net" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/uhv4vyt.css">
+<!-- Fontes hospedadas no site (licença OFL): Bodoni Moda (títulos) + Instrument Sans (texto) -->
+<link rel="preload" href="assets/fonts/bodoni-moda.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" as="image" href="assets/img/hero-cuia-900.webp" imagesrcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" imagesizes="(min-width:900px) 380px, 66vw">
 
 <script type="application/ld+json">
@@ -47,6 +46,9 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <style>
+@font-face{font-family:'Bodoni Moda';src:url(assets/fonts/bodoni-moda.woff) format('woff');font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Bodoni Moda';src:url(assets/fonts/bodoni-moda-italic.woff) format('woff');font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(assets/fonts/instrument-sans.woff) format('woff');font-weight:400 700;font-style:normal;font-display:swap}
 /* =========================================================
    ERVA DA MATA — tokens
    ========================================================= */
@@ -58,8 +60,8 @@
   --line:rgba(20,33,26,.12);
   --r:24px; --r-sm:14px;
   --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
-  --serif:'kepler-std-display', 'Kepler Std', Georgia, 'Times New Roman', serif;
-  --sans:'acumin-pro', 'Acumin Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --pad:clamp(20px, 5vw, 64px);
   --max:1240px;
 }
@@ -71,7 +73,10 @@ img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.015em;font-kerning:normal;text-rendering:optimizeLegibility}
-.h-xl,.h-lg{font-weight:300}
+h1,h2,h3,h4{font-optical-sizing:auto;letter-spacing:-.022em}
+h3{letter-spacing:-.01em}
+/* ênfase em itálico sem cor extra: menos cara de template */
+h1 em,h2 em,h3 em,.manifesto-text em{color:inherit}
 body{font-feature-settings:"kern","liga"}
 p{margin:0}
 ::selection{background:var(--erva2);color:var(--mata)}
@@ -88,8 +93,7 @@ section{position:relative}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 
 /* utilitários tipográficos */
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
 .h-xl{font-size:clamp(44px, 9.2vw, 128px)}
 .h-lg{font-size:clamp(38px, 6.4vw, 84px)}
 .h-md{font-size:clamp(30px, 4.2vw, 54px)}
@@ -202,7 +206,7 @@ html:not(.js) .loader{display:none}
 .ready .hero h1 .line>span{transform:none}
 .ready .hero h1 .line:nth-child(2)>span{transition-delay:.1s}
 .ready .hero h1 .line:nth-child(3)>span{transition-delay:.2s}
-.hero h1 em{color:var(--erva2)}
+.hero h1 em{color:inherit}
 .hero .lead{color:rgba(243,235,216,.75)}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero-fade{opacity:0;transform:translateY(20px);transition:opacity 1s var(--ease) .5s, transform 1s var(--ease) .5s}
@@ -281,7 +285,7 @@ html:not(.js) .loader{display:none}
 .manifesto-text{font-family:var(--serif);font-size:clamp(28px,4.4vw,62px);line-height:1.12;letter-spacing:-.02em;margin-top:28px;max-width:20ch}
 .manifesto-text .w{opacity:.14;transition:opacity .25s linear}
 .manifesto-text .w.on{opacity:1}
-.manifesto-text em{color:var(--erva)}
+.manifesto-text em{color:inherit}
 .pillars{display:grid;gap:14px;margin-top:70px}
 .pillar{padding:26px;border-radius:var(--r);background:var(--creme);display:flex;gap:18px;align-items:flex-start;transition:transform .5s var(--ease), background .4s}
 .pillar:hover{transform:translateY(-6px);background:var(--linho)}
@@ -374,7 +378,7 @@ html:not(.js) .loader{display:none}
 .note{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--creme);color:var(--muted)}
 .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:auto;padding-top:12px}
 .price s{display:block;font-size:12px;color:var(--muted)}
-.price strong{display:block;font-family:var(--serif);font-size:24px;font-weight:500;line-height:1}
+.price strong{display:block;font-family:var(--sans);font-size:21px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .price small{display:block;font-size:11.5px;font-weight:700;color:var(--erva);margin-top:4px}
 .add{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mata);color:var(--creme);display:grid;place-items:center;transition:transform .45s var(--spring), background .3s}
 .add:hover{transform:rotate(90deg) scale(1.08);background:var(--terra)}
@@ -495,7 +499,7 @@ html:not(.js) .loader{display:none}
 .cta{background:var(--mata);color:var(--creme);padding:clamp(100px,12vw,170px) 0 60px;overflow:clip;border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0}
 .cta-inner{display:grid;gap:28px;justify-items:start;position:relative;z-index:2}
 .cta .eyebrow{color:var(--erva2)}
-.cta h2 em{color:var(--erva2)}
+.cta h2 em{color:inherit}
 .cta .lead{color:rgba(243,235,216,.7)}
 .cta-actions{display:flex;flex-wrap:wrap;gap:12px}
 .cta-leaf{position:absolute;right:-60px;top:40px;width:340px;opacity:.12;transform:rotate(25deg);pointer-events:none}
@@ -550,7 +554,7 @@ html:not(.js) .loader{display:none}
 .drawer-foot{padding:18px 22px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px;background:var(--creme)}
 .sumline{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
 .sumline.big{font-size:16px;color:var(--ink);font-weight:800}
-.sumline.big span:last-child{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--erva)}
+.sumline.big span:last-child{font-family:var(--sans);font-size:24px;font-weight:700;color:var(--erva);font-variant-numeric:tabular-nums}
 .pixnote{font-size:12px;text-align:center;color:var(--muted)}
 
 dialog.qv{border:0;padding:0;border-radius:28px;width:min(94vw,900px);max-height:92vh;background:var(--papel);color:var(--ink);box-shadow:0 50px 120px -30px rgba(0,0,0,.6);overflow:auto}
@@ -569,7 +573,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 .qv-body p{color:var(--muted)}
 .qv-close{position:absolute;top:14px;right:14px;z-index:3;background:#fff;color:var(--ink);box-shadow:0 10px 20px -10px rgba(0,0,0,.3)}
 .qv-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.qv-price strong{font-family:var(--serif);font-size:38px;font-weight:500;line-height:1}
+.qv-price strong{font-family:var(--sans);font-size:32px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
 .qv-price s{color:var(--muted)}
 .qv-price span{font-size:13px;font-weight:800;color:var(--erva);padding:4px 10px;background:var(--broto);border-radius:999px}
 .qv .bars .bar{grid-template-columns:80px 1fr 24px}
@@ -626,7 +630,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 }
 @media (max-width:420px){
   .card-body{padding:14px 12px 14px}
-  .price strong{font-size:20px}
+  .price strong{font-size:18px}
   .add{width:40px;height:40px}
   .note:nth-child(n+2){display:none}
   .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -1260,10 +1264,10 @@ function pouch(p) {
     <path d="M28 30h144" stroke="#fff" stroke-opacity=".25" stroke-dasharray="3 4"/>
     <g transform="translate(70 48) scale(.6)">${iconSVG(p.icon, p.accent, 'rgba(0,0,0,.28)')}</g>
     <rect x="44" y="114" width="112" height="104" rx="10" fill="#faf5ea"/>
-    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="acumin-pro, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
-    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="kepler-std-display, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
+    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
+    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
     <line x1="74" y1="196" x2="126" y2="196" stroke="${p.color}" stroke-opacity=".35"/>
-    <text x="100" y="209" text-anchor="middle" font-family="acumin-pro, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
+    <text x="100" y="209" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
     <path d="M36 40c-4 60-2 140 6 196" stroke="#fff" stroke-opacity=".18" stroke-width="8" stroke-linecap="round" fill="none"/>
   </svg>`;
 }

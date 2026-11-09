@@ -2,7 +2,7 @@
 
 Direção: **mata noturna + papel de erva**. Marca artesanal do interior gaúcho, premium mas acolhedora.
 Escuro (verde-mata) nas seções de imersão; papel claro nas seções de leitura e compra.
-*Direção definida sem a base UXKIN (não conectada): baseada na marca atual, no nicho (chás/chimarrão) e nas regras do skill.*
+*Direção baseada em 5 marcas reais de chá/mate analisadas no navegador (ver Tipografia); UXKIN não conectado.*
 
 ## Cor (CSS variables em `:root`)
 | Token | Valor | Papel |
@@ -17,11 +17,13 @@ Escuro (verde-mata) nas seções de imersão; papel claro nas seções de leitur
 | `--terra` | #b0582c | descontos e remover |
 | WhatsApp | #25d366 | só nos botões de WhatsApp |
 
-## Tipografia — Adobe Fonts, kit `uhv4vyt`
-- Títulos: **Kepler Std Display** (Robert Slimbach, Adobe Originals) — 300 nos títulos grandes, 400 nos médios, itálico 300/400 para a palavra de ênfase.
-- Texto e UI: **Acumin Pro** (Robert Slimbach) — 400 corpo, 500/600 UI, 700 botões e labels.
-- Escala: 12 (eyebrow, caps 0.18em) · 14 · 16 (corpo) · 19 (lead) · 22–30 (h3) · 30–54 (h-md) · 38–84 (h-lg) · 46–128 (h-xl).
-- Fallback: Georgia / system-ui.
+## Tipografia — fontes próprias em `assets/fonts` (licença OFL, sem depender de conta)
+Pesquisa em sites reais do segmento (fontes lidas no navegador): Bellocq (Baskerville URW + Sweet Sans em caixa-alta espaçada), Rishi (Ivy Presto Headline fina + Neue Haas Grotesk), Paper & Tea (Queens + Suisse Intl), Yerba Madre (serifa própria + Cerco), Kusmi (fonte própria + Barlow).
+Padrão comum: **uma serifa de alto contraste nos títulos + uma sans neutra na interface**, e etiquetas em caixa-alta com bastante espaçamento.
+- Títulos: **Bodoni Moda** (variável, com tamanho óptico automático), 400. Itálico só como ênfase pontual, **na mesma cor do texto**.
+- Texto, botões, preços: **Instrument Sans** 400/500/600/700. Preços em sans com números tabulares (a vírgula do Bodoni some em tamanho pequeno).
+- Etiquetas: Instrument Sans 500, 11,5px, caixa-alta, espaçamento 0,24em, sem traço antes.
+- Fallback: Didot / Bodoni 72 / Georgia; system-ui.
 
 ## Espaço e forma
 - Base 4px; seções `clamp(90px, 11vw, 150px)`; conteúdo até 1240px; `--pad` lateral `clamp(20px, 5vw, 64px)`.
