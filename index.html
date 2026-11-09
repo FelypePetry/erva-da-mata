@@ -35,6 +35,8 @@
   "name": "Erva da Mata",
   "description": "Chás, aditivos para chimarrão, especiarias e temperos.",
   "url": "https://ervadamata.com.br/",
+  "foundingDate": "1999",
+  "logo": "https://felypepetry.github.io/erva-da-mata/assets/img/insta/logo.png",
   "telephone": "+55 55 3316-0098",
   "email": "contato@ervadamata.com.br",
   "address": { "@type": "PostalAddress", "addressLocality": "São José do Inhacorá", "addressRegion": "RS", "addressCountry": "BR" },
@@ -705,6 +707,30 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
 .step .n{font-weight:700}
 .eyebrow{font-weight:600;letter-spacing:.1em}
 @media (max-width:899px){.man-photo figcaption{left:12px}}
+
+/* ===== logo real + Instagram ===== */
+.brand-logo{width:44px;height:44px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;box-shadow:0 0 0 1px rgba(243,235,216,.2)}
+.insta{background:var(--mata);color:var(--creme);padding:clamp(90px,11vw,140px) 0;margin-bottom:clamp(70px,9vw,120px);border-radius:0 0 clamp(28px,4vw,56px) clamp(28px,4vw,56px)}
+.insta .eyebrow{color:var(--erva2)}
+.insta .lead{color:rgba(243,235,216,.7)}
+.insta h2 em{color:var(--erva2)}
+.insta-head{display:grid;gap:22px;margin-bottom:40px}
+.insta-side{display:grid;gap:20px;justify-items:start}
+.insta-grid{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);height:420px}
+.insta-grid::-webkit-scrollbar{display:none}
+.ig{position:relative;display:block;border-radius:20px;overflow:hidden;scroll-snap-align:start;background:var(--mata3)}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.ig:hover img{transform:scale(1.06)}
+.ig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,29,21,.75));pointer-events:none}
+.ig-cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;letter-spacing:-.01em;transition:transform .5s var(--ease)}
+.ig-cap svg{width:18px;height:18px;flex:none;color:var(--erva2)}
+.ig:hover .ig-cap{transform:translateY(-4px)}
+.ig-d img{object-position:50% 35%}
+@media (min-width:900px){
+  .insta-head{grid-template-columns:1.2fr 1fr;align-items:end}
+  .insta-grid{grid-auto-flow:row;grid-template-columns:1.15fr 1fr 1fr .8fr;grid-template-rows:260px 260px;grid-template-areas:"a b b d" "a c e d";overflow:visible;margin:0;padding:0;height:auto}
+  .ig-a{grid-area:a}.ig-b{grid-area:b}.ig-c{grid-area:c}.ig-d{grid-area:d}.ig-e{grid-area:e}
+}
 </style>
 </head>
 <body>
@@ -727,7 +753,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap nav">
     <!-- Para usar o logo oficial: troque o SVG abaixo por <img src="https://ervadamata.com.br/wp-content/uploads/2023/09/logoerva.svg" alt="Erva da Mata" height="40"> -->
     <a href="#inicio" class="brand" aria-label="Erva da Mata — início">
-      <svg viewBox="0 0 30 36" fill="none" aria-hidden="true"><path d="M15 1.5C25 8 29 20 15 34.5 1 20 5 8 15 1.5Z" fill="#b6c878"/><path d="M15 6v25M15 14l5-4M15 20l-5-4M15 25l5-4" stroke="#0d1d15" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <img class="brand-logo" src="assets/img/insta/logo.png" width="150" height="150" alt="">
       <span><b>Erva</b> <i>da</i> <b>Mata</b></span>
     </a>
     <nav class="menu" aria-label="Principal">
@@ -768,7 +794,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="leaves" aria-hidden="true" id="leaves"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow hero-fade">São José do Inhacorá · RS</span>
+      <span class="eyebrow hero-fade">Desde 1999 · São José do Inhacorá · RS</span>
       <h1 class="h-xl">
         <span class="line"><span>Do coração</span></span>
         <span class="line"><span>da mata para</span></span>
@@ -841,7 +867,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
     <div class="manifesto-grid">
     <div>
     <span class="eyebrow" data-reveal>Quem somos</span>
-    <p class="manifesto-text" id="manifesto">Somos de São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate.</em></p>
+    <p class="manifesto-text" id="manifesto">Desde 1999 em São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate.</em></p>
     </div>
     <figure class="man-photo" data-reveal="scale">
       <div class="man-photo-in"><img data-par="60" src="assets/img/erva-folhas-880.webp" srcset="assets/img/erva-folhas-560.webp 560w, assets/img/erva-folhas-880.webp 880w" sizes="(min-width:900px) 420px, 88vw" width="880" height="1179" alt="Ramo de erva-mate com gotas de orvalho sob a luz da manhã" loading="lazy" decoding="async"></div>
@@ -1086,6 +1112,44 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg><b>Pedido no WhatsApp</b><span>Rápido e sem cadastro</span></div>
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-4-8-8-8-12a8 8 0 0 1 16 0c0 4-3 8-8 12Z"/><path d="M12 7v10"/></svg><b>Ervas selecionadas</b><span>Aroma e frescor</span></div>
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Interior gaúcho</b><span>São José do Inhacorá</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM (fotos reais) ============ -->
+<section class="insta" id="instagram">
+  <div class="wrap">
+    <div class="insta-head">
+      <div>
+        <span class="eyebrow" data-reveal>@chaervadamata</span>
+        <h2 class="h-lg" data-reveal style="--d:.08s">Do nosso <em>dia a dia.</em></h2>
+      </div>
+      <div class="insta-side" data-reveal style="--d:.16s">
+        <p class="lead">Fotos reais dos nossos produtos, direto do Instagram da Erva da Mata.</p>
+        <a class="btn magnetic" href="https://www.instagram.com/chaervadamata/" target="_blank" rel="noopener">Seguir no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="insta-grid" data-reveal>
+        <a class="ig ig-a" href="https://www.instagram.com/chaervadamata/reel/CZUoZbnqL4W/" target="_blank" rel="noopener" data-cursor="ver">
+          <img src="assets/img/insta/kit-presente.webp" width="640" height="640" alt="Kit presente com chás, frutas secas e ervas frescas numa caixa de madeira" loading="lazy" decoding="async">
+          <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Kit presente</span>
+        </a>
+        <a class="ig ig-b" href="https://www.instagram.com/chaervadamata/p/DezMe9mxYxo/" target="_blank" rel="noopener" data-cursor="ver">
+          <img src="assets/img/insta/xicara.webp" width="900" height="745" alt="Xícara de chá na bandeja de palha com sachês Erva da Mata" loading="lazy" decoding="async">
+          <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Chá na xícara</span>
+        </a>
+        <a class="ig ig-c" href="https://www.instagram.com/chaervadamata/p/DceJgXZlHxF/" target="_blank" rel="noopener" data-cursor="ver">
+          <img src="assets/img/insta/copo-cha.webp" width="512" height="384" alt="Copo de vidro com chá Erva da Mata" loading="lazy" decoding="async">
+          <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Um chá pra cada ocasião</span>
+        </a>
+        <a class="ig ig-d" href="https://www.instagram.com/chaervadamata/reel/DbzG5zdNGMp/" target="_blank" rel="noopener" data-cursor="ver">
+          <img src="assets/img/insta/cuia.webp" width="360" height="499" alt="Cuia com erva-mate e blend Erva da Mata" loading="lazy" decoding="async">
+          <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Chimarrão de respeito</span>
+        </a>
+        <a class="ig ig-e" href="https://www.instagram.com/chaervadamata/p/DeAAO-Rvp2t/" target="_blank" rel="noopener" data-cursor="ver">
+          <img src="assets/img/insta/churrasco.webp" width="1000" height="701" alt="Carnes na tábua com temperos Erva da Mata" loading="lazy" decoding="async">
+          <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Temperos pro churrasco</span>
+        </a>
     </div>
   </div>
 </section>
