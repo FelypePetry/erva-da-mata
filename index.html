@@ -17,14 +17,18 @@
 <meta property="og:title" content="Erva da Mata — Do coração da mata para a sua cuia">
 <meta property="og:description" content="Chás e aditivos para chimarrão do interior gaúcho. Monte seu blend e peça pelo WhatsApp.">
 <meta property="og:url" content="https://ervadamata.com.br/">
-<meta property="og:image" content="https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Laranja-com-canela-600x600-1.webp">
+<meta property="og:image" content="https://felypepetry.github.io/erva-da-mata/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230d1d15'/%3E%3Cpath d='M50 14C74 30 80 58 50 86 20 58 26 30 50 14Z' fill='%23b6c878'/%3E%3Cpath d='M50 22V80' stroke='%230d1d15' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Fontes: kit Adobe Fonts "Erva da Mata — site" (Kepler Std Display + Acumin Pro, por Robert Slimbach) -->
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="preconnect" href="https://p.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/uhv4vyt.css">
+<link rel="preload" as="image" href="assets/img/hero-cuia-900.webp" imagesrcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" imagesizes="(min-width:900px) 380px, 66vw">
 
 <script type="application/ld+json">
 {
@@ -54,8 +58,8 @@
   --line:rgba(20,33,26,.12);
   --r:24px; --r-sm:14px;
   --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
-  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
-  --sans:'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif:'kepler-std-display', 'Kepler Std', Georgia, 'Times New Roman', serif;
+  --sans:'acumin-pro', 'Acumin Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --pad:clamp(20px, 5vw, 64px);
   --max:1240px;
 }
@@ -66,7 +70,9 @@ main,footer{overflow-x:clip}
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.015em;font-kerning:normal;text-rendering:optimizeLegibility}
+.h-xl,.h-lg{font-weight:300}
+body{font-feature-settings:"kern","liga"}
 p{margin:0}
 ::selection{background:var(--erva2);color:var(--mata)}
 :focus-visible{outline:2px solid var(--ouro);outline-offset:3px;border-radius:8px}
@@ -87,7 +93,7 @@ section{position:relative}
 .h-xl{font-size:clamp(44px, 9.2vw, 128px)}
 .h-lg{font-size:clamp(38px, 6.4vw, 84px)}
 .h-md{font-size:clamp(30px, 4.2vw, 54px)}
-em, .ital{font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100}
+em, .ital{font-style:italic}
 .lead{font-size:clamp(16px,1.35vw,19px);color:var(--muted);max-width:56ch}
 
 /* botões */
@@ -634,6 +640,33 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
   .bar{grid-template-columns:76px 1fr 24px}
 }
 
+
+/* ===== fotografia ===== */
+.manifesto-grid{display:grid;gap:44px;align-items:center}
+.man-photo{margin:0;position:relative}
+.man-photo-in{border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 50px 80px -40px rgba(20,33,26,.55)}
+.man-photo img{width:100%;height:118%;object-fit:cover;transform:translateY(var(--py,0px));will-change:transform}
+.man-photo figcaption{position:absolute;left:-14px;bottom:28px;background:var(--mata);color:var(--creme);padding:14px 18px;border-radius:16px;font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.1;box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
+.man-photo figcaption span{display:block;font-family:var(--sans);font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--erva2);margin-bottom:4px}
+.rv-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9;transform:scale(1.05);transition:transform 6s var(--ease)}
+.rv-card:hover .rv-bg{transform:scale(1.12)}
+.rv-card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(13,29,21,.82) 0%,rgba(13,29,21,.15) 38%,rgba(13,29,21,.25) 60%,rgba(13,29,21,.9) 100%)}
+.rv-card>*:not(.rv-bg){position:relative;z-index:2}
+.ritual-photo{margin:0 0 10px;border-radius:24px;overflow:hidden;aspect-ratio:16/11;box-shadow:0 40px 70px -40px rgba(20,33,26,.6)}
+.ritual-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.cats-photo{margin:40px 0 0;border-radius:var(--r);overflow:hidden;aspect-ratio:16/8;position:relative}
+.cats-photo img{width:100%;height:120%;object-fit:cover;transform:translateY(var(--py,0px)) scale(1.02);will-change:transform}
+.cats-photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(20,33,26,.08);border-radius:inherit}
+.cta-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.cta-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;opacity:.75;transform:scale(1.08) translateY(var(--py,0px))}
+.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--mata) 0%,rgba(13,29,21,.4) 35%,rgba(13,29,21,.7) 70%,var(--mata) 100%)}
+.cta .wrap{position:relative;z-index:2}
+@media (min-width:900px){
+  .manifesto-grid{grid-template-columns:1.25fr .75fr;gap:70px}
+  .ritual-photo{display:none}
+  .cats-photo{aspect-ratio:21/8}
+}
+@media (max-width:899px){ .cats-photo{aspect-ratio:4/3} .cats-photo img{height:110%} }
 /* ritual visual (desktop) */
 .rv-card{border-radius:32px;background:var(--mata);color:var(--creme);padding:40px;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
 .rv-num{font-family:var(--serif);font-size:200px;line-height:.8;font-style:italic;color:var(--erva2);transition:transform .6s var(--ease), opacity .4s}
@@ -736,11 +769,11 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
       <div class="halo"></div>
       <div class="ring"></div>
       <div class="orbit" id="orbit"></div>
-      <!-- Foto: Matias Luge / Unsplash (licença Unsplash, uso livre). Para usar foto própria do cliente, troque o src/srcset abaixo. -->
+      <!-- Foto gerada para o site (assets/img). Para usar uma foto própria do cliente, troque o src/srcset abaixo. -->
       <figure class="cuia-photo" id="cuiaPhoto">
         <span class="cuia-frame"></span>
         <div class="cuia-img">
-          <img src="https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=900&amp;h=1125&amp;q=78" srcset="https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=560&amp;h=700&amp;q=78 560w, https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=900&amp;h=1125&amp;q=78 900w, https://images.unsplash.com/photo-1784475844948-e9abada34215?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=1200&amp;h=1500&amp;q=78 1200w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1125" alt="Cuia de chimarrão com erva-mate e bomba de metal" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
+          <img src="assets/img/hero-cuia-900.webp" srcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1117" alt="Cuia de chimarrão com erva-mate e bomba de prata sobre mesa de madeira rústica" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
           <span class="cuia-shine"></span>
         </div>
         <figcaption><span>Chimarrão</span><b>de verdade</b></figcaption>
@@ -783,8 +816,16 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 <!-- ============ MANIFESTO ============ -->
 <section class="manifesto" id="sobre">
   <div class="wrap">
+    <div class="manifesto-grid">
+    <div>
     <span class="eyebrow" data-reveal>Quem somos</span>
     <p class="manifesto-text" id="manifesto">Somos de São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate.</em></p>
+    </div>
+    <figure class="man-photo" data-reveal="scale">
+      <div class="man-photo-in"><img data-par="60" src="assets/img/erva-folhas-880.webp" srcset="assets/img/erva-folhas-560.webp 560w, assets/img/erva-folhas-880.webp 880w" sizes="(min-width:900px) 420px, 88vw" width="880" height="1179" alt="Ramo de erva-mate com gotas de orvalho sob a luz da manhã" loading="lazy" decoding="async"></div>
+      <figcaption><span>Ilex paraguariensis</span>a folha que vira mate</figcaption>
+    </figure>
+    </div>
     <div class="pillars">
       <article class="pillar" data-reveal style="--d:0s">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-4-8-8-8-12a8 8 0 0 1 16 0c0 4-3 8-8 12Z"/><path d="M12 7v10M12 11l3-2M12 14l-3-2"/></svg></span>
@@ -970,7 +1011,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
       <h2 class="h-lg" data-reveal style="--d:.08s" >O chimarrão <em>perfeito</em> em seis passos.</h2>
       <div class="ritual-visual" style="margin-top:40px">
         <div class="rv-card">
-          <svg class="bgleaf" viewBox="0 0 74 90" fill="#b6c878"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z"/></svg>
+          <img class="rv-bg" src="assets/img/ritual-chaleira-900.webp" srcset="assets/img/ritual-chaleira-600.webp 600w, assets/img/ritual-chaleira-900.webp 900w" sizes="(min-width:900px) 460px, 1px" width="900" height="1117" alt="" loading="lazy" decoding="async">
           <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;font-weight:700">Passo</span>
           <div class="rv-num" id="rvNum">01</div>
           <div class="rv-temp">
@@ -980,6 +1021,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
         </div>
       </div>
     </div>
+    <figure class="ritual-photo"><img src="assets/img/ritual-chaleira-600.webp" width="600" height="745" alt="Mão servindo água quente da chaleira na cuia de chimarrão" loading="lazy" decoding="async"></figure>
     <ol class="steps" id="steps">
       <span class="rail" aria-hidden="true"></span>
       <li class="step" data-t="—" data-h="10" data-l="prepare a cuia"><span class="n">01</span><div><h3>Encha ⅔ da cuia</h3><p>Coloque a erva-mate até cerca de dois terços da cuia. Tampe com a mão, vire e agite de leve para o pó subir.</p></div></li>
@@ -997,6 +1039,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
   <div class="wrap">
     <span class="eyebrow" data-reveal>Explore a loja</span>
     <h2 class="h-lg" data-reveal style="--d:.08s">Tem mais coisa <em>boa</em> por aqui.</h2>
+    <figure class="cats-photo" data-reveal="scale"><img id="catsImg" data-par="70" src="assets/img/ervas-flatlay-1264.webp" srcset="assets/img/ervas-flatlay-800.webp 800w, assets/img/ervas-flatlay-1264.webp 1264w" sizes="(min-width:1240px) 1112px, 92vw" width="1264" height="848" alt="Anis estrelado, canela, casca de laranja, ervas secas, chia e flores sobre pedra escura" loading="lazy" decoding="async"></figure>
     <div class="cat-list">
       <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Chás Aromáticos da Erva da Mata." data-cursor="pedir">
         <h3><span class="num">01</span>Chás Aromáticos</h3>
@@ -1044,7 +1087,7 @@ dialog.qv[open]{animation:qvIn .6s var(--ease)}
 
 <!-- ============ CTA / CONTATO ============ -->
 <section class="cta" id="contato">
-  <svg class="cta-leaf" viewBox="0 0 74 90" fill="#b6c878" aria-hidden="true"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z"/></svg>
+  <div class="cta-bg" aria-hidden="true"><img data-par="50" src="assets/img/erval-amanhecer-1376.webp" srcset="assets/img/erval-amanhecer-900.webp 900w, assets/img/erval-amanhecer-1376.webp 1376w" sizes="100vw" width="1376" height="768" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="cta-inner">
       <span class="eyebrow" data-reveal>Bora de mate?</span>
@@ -1217,10 +1260,10 @@ function pouch(p) {
     <path d="M28 30h144" stroke="#fff" stroke-opacity=".25" stroke-dasharray="3 4"/>
     <g transform="translate(70 48) scale(.6)">${iconSVG(p.icon, p.accent, 'rgba(0,0,0,.28)')}</g>
     <rect x="44" y="114" width="112" height="104" rx="10" fill="#faf5ea"/>
-    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
-    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
+    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="acumin-pro, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
+    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="kepler-std-display, Georgia, serif" font-size="16" font-style="italic" fill="#14211a">${l}</text>`).join('')}
     <line x1="74" y1="196" x2="126" y2="196" stroke="${p.color}" stroke-opacity=".35"/>
-    <text x="100" y="209" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
+    <text x="100" y="209" text-anchor="middle" font-family="acumin-pro, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
     <path d="M36 40c-4 60-2 140 6 196" stroke="#fff" stroke-opacity=".18" stroke-width="8" stroke-linecap="round" fill="none"/>
   </svg>`;
 }
@@ -1732,6 +1775,8 @@ function onScroll() {
   const p = clamp((vh * .82 - r.top) / (r.height + vh * .25), 0, 1);
   const on = Math.round(p * words.length * 1.15);
   words.forEach((w, i) => w.classList.toggle('on', i < on));
+  // parallax das fotos
+  if (!reduce) $$('[data-par]').forEach(el => { const r = el.parentElement.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return; const k = (r.top + r.height / 2 - vh / 2) / vh; el.style.setProperty('--py', (k * -parseFloat(el.dataset.par)).toFixed(1) + 'px'); });
   // ritual
   const sr = $('#steps').getBoundingClientRect();
   const rp = clamp((vh * .55 - sr.top) / sr.height, 0, 1);
