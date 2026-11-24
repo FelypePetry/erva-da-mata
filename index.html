@@ -757,7 +757,7 @@ h1 em,h2 em,h3 em,.hero h1 em,.lab h2 em,.cta h2 em{color:inherit;font-style:nor
 .cuia-frame::after{display:none}
 .cuia-img::before{background:linear-gradient(to top, rgba(13,29,21,.7), rgba(13,29,21,0) 40%)}
 .ready .cuia-img img{animation-duration:30s}
-.hero-pick{position:absolute;z-index:4;left:-2%;bottom:7%;display:flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:16px;background:var(--papel);color:var(--ink);text-align:left;box-shadow:0 24px 48px -24px rgba(0,0,0,.6);transition:transform .3s var(--ease)}
+.hero-pick{position:absolute;z-index:4;right:-6%;top:16%;display:flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:16px;background:var(--papel);color:var(--ink);text-align:left;box-shadow:0 24px 48px -24px rgba(0,0,0,.6);transition:transform .3s var(--ease)}
 .hero-pick:hover{transform:translateY(-2px)}
 .hero-pick img{width:72px;height:72px;object-fit:contain;border-radius:12px;background:var(--creme)}
 .hero-pick small{display:block;font-size:12px;color:var(--muted)}
@@ -789,12 +789,22 @@ h1 em,h2 em,h3 em,.hero h1 em,.lab h2 em,.cta h2 em{color:inherit;font-style:nor
 .foot-brand img{width:56px;height:56px;border-radius:12px;background:#fff;object-fit:contain}
 .foot-brand p{max-width:52ch;font-size:15px;line-height:1.5}
 .foot-brand b{display:block;color:var(--creme);font-size:18px;font-weight:600}
+/* filme do chimarrão no topo */
+.cuia-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;opacity:0;transition:opacity 1.4s var(--ease)}
+.ready .cuia-img video{opacity:1}
+.film-steps{position:absolute;z-index:3;left:0;right:0;bottom:18px;display:flex;justify-content:center;gap:6px;margin:0;padding:0 12px;list-style:none}
+.film-steps li{position:relative;padding:4px 0 10px;font-size:12px;font-weight:500;color:rgba(243,235,216,.45);transition:color .5s var(--ease);min-width:44px;text-align:center}
+.film-steps li::after{content:"";position:absolute;left:4px;right:4px;bottom:0;height:2px;border-radius:2px;background:rgba(243,235,216,.18)}
+.film-steps li i{position:absolute;left:4px;bottom:0;height:2px;border-radius:2px;background:var(--ouro);width:0}
+.film-steps li.on{color:var(--creme)}
+@media (prefers-reduced-motion:reduce){.film-steps{display:none}}
+@media (max-width:560px){.film-steps{gap:2px;padding:0 6px;bottom:12px}.film-steps li{min-width:0;flex:1;font-size:11px}}
 /* barra de filtros: faixa sólida que gruda no topo, sem ficar por cima das fotos */
 .toolbar{top:60px;padding:12px 0;margin-bottom:24px;background:var(--papel);box-shadow:0 0 0 100vmax var(--papel),0 1px 0 100vmax var(--line);clip-path:inset(0 -100vmax -1px);transition:top .6s var(--ease)}
 body:has(.header.hide) .toolbar{top:0}
 .filters{background:var(--linho)}
 @media (max-width:699px){.toolbar{flex-wrap:nowrap;gap:8px}.filters{flex:1;min-width:0}.sort{font-size:0;gap:0}.sort select{font-size:14px;padding-left:12px;max-width:128px}}
-@media (max-width:899px){.hero-pick{left:0;bottom:2%}.hero-pick img{width:56px;height:56px}}
+@media (max-width:899px){.hero-pick{right:0;top:8%}.hero-pick img{width:56px;height:56px}}
 </style>
 </head>
 <body>
@@ -878,7 +888,13 @@ body:has(.header.hide) .toolbar{top:0}
       <figure class="cuia-photo" id="cuiaPhoto">
         <span class="cuia-frame"></span>
         <div class="cuia-img">
-          <img src="assets/img/hero-cuia-900.webp" srcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1117" alt="Cuia de chimarrão com erva-mate e bomba de prata sobre mesa de madeira rústica" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
+          <video id="heroFilm" autoplay muted loop playsinline preload="auto" poster="assets/video/chimarrao-poster.webp" aria-label="Chimarrão sendo preparado: a erva cai na cuia, a bomba entra, a água quente e o mate pronto">
+            <source src="assets/video/chimarrao.webm" type="video/webm">
+            <source src="assets/video/chimarrao.mp4" type="video/mp4">
+          </video>
+          <ol class="film-steps" id="filmSteps" aria-hidden="true">
+            <li>Cuia</li><li>Erva</li><li>Bomba</li><li>Água</li><li>Mate</li>
+          </ol>
         </div>
       </figure>
       <button class="hero-pick" type="button" id="heroPick" aria-label="Ver Anis Estrelado 10g">
@@ -1930,6 +1946,21 @@ $$('[data-wa]').forEach(a => { if (a.tagName === 'A') { a.href = waLink(a.datase
    ========================================================= */
 $('#year').textContent = new Date().getFullYear();
 $('#heroPick').addEventListener('click', () => openQuick('anis-10'));
+/* filme do topo: legenda acompanha cada etapa (5 planos de 3,2 s) */
+(() => {
+  const v = $('#heroFilm'), steps = $$('#filmSteps li'); if (!v) return;
+  steps.forEach(li => li.insertAdjacentHTML('beforeend', '<i></i>'));
+  if (reduce) { v.removeAttribute('autoplay'); v.pause(); return; }
+  const SH = 3.2;
+  (function tick() {
+    const t = v.currentTime % 16, k = Math.min(4, Math.floor(t / SH)), p = (t - k * SH) / SH;
+    steps.forEach((li, i) => { li.classList.toggle('on', i === k); $('i', li).style.width = i < k ? 'calc(100% - 8px)' : i === k ? `calc((100% - 8px) * ${p.toFixed(3)})` : '0'; });
+    requestAnimationFrame(tick);
+  })();
+  // pausa fora da tela para poupar bateria
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }).observe(v);
+})();
+
 $('#statCount').dataset.count = PRODUCTS.length;
 $$('.cat[data-filter]').forEach(a => a.addEventListener('click', () => { const b = $(`.filter[data-f="${a.dataset.filter}"]`); if (b) setTimeout(() => b.click(), 450); }));
 renderCart(); renderLab(); movePill(); onScroll();
