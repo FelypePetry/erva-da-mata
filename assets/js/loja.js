@@ -15,6 +15,14 @@ window.LOJA = (() => {
     'laranja-canela': ['#c0642a', '#ffd29a'], 'chia-100': ['#4b4a40', '#e6e1cf'],
   };
   const look = id => LOOK[id] || ['#1d3b2b', '#b6c878'];
+  /* fotos das embalagens */
+  const IMGS = {
+    'anis-10': 'anis-estrelado-10g', 'anis-moido-12': 'anis-estrelado-moido-12g', 'carqueja-15': 'cha-carqueja-15g',
+    'mate-tostado-20': 'cha-mate-tostado-20g', 'anoitecer-20': 'cha-misto-anoitecer-20g', 'dr-cha': 'cha-misto-composto-drcha',
+    'laranja-canela': 'cha-misto-laranja-com-canela', 'chia-100': 'chia-100g', 'camomila': 'camomila', 'capim-cidreira': 'capim-cidreira',
+    'camomila-laranja': 'camomila-laranja', 'hortela': 'hortela', 'erva-doce': 'ervadoce', 'maca-canela': 'maca', 'misto-dia': 'dia', 'misto-noite': 'noite',
+  };
+  const img = id => IMGS[id] ? `assets/img/produtos/${IMGS[id]}.webp` : null;
 
   const headers = (extra = {}) => ({ apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`, ...extra });
 
@@ -62,5 +70,5 @@ window.LOJA = (() => {
     cancelado: { label: 'Cancelado', tone: 'bad', hint: 'Este pedido foi cancelado. Qualquer dúvida, chame a gente no WhatsApp.' },
   };
 
-  return { SUPABASE_URL, SUPABASE_KEY, headers, rest, fn, products, settings, getCart, setCart, cartItems, brl, digits, esc, look, STATUS };
+  return { img, SUPABASE_URL, SUPABASE_KEY, headers, rest, fn, products, settings, getCart, setCart, cartItems, brl, digits, esc, look, STATUS };
 })();

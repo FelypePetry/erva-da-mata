@@ -733,6 +733,63 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   .insta-grid{grid-auto-flow:row;grid-template-columns:1.15fr 1fr 1fr .8fr;grid-template-rows:260px 260px;grid-template-areas:"a b b d" "a c e d";overflow:visible;margin:0;padding:0;height:auto}
   .ig-a{grid-area:a}.ig-b{grid-area:b}.ig-c{grid-area:c}.ig-d{grid-area:d}.ig-e{grid-area:e}
 }
+
+/* =========================================================
+   UNSLOP — passe de acabamento (sobrescreve o que está acima)
+   ========================================================= */
+.loader{display:none!important}
+/* tipografia: sem caixa alta espaçada, sem destaque colorido, sem itálico de ênfase */
+.eyebrow{font-size:14px;font-weight:500;letter-spacing:0;text-transform:none}
+.kicker,.cuia-photo figcaption span,.man-photo figcaption span,.blend-name small,.lab-panel h4,.arc-labels,.contact small{letter-spacing:0;text-transform:none;font-weight:500}
+.kicker{font-size:13px;color:var(--muted)}
+.lab-panel h4{font-size:14px;color:rgba(243,235,216,.6)}
+.arc-labels{font-size:14px}
+.contact small{font-size:13px}
+.blend-name small,.cuia-photo figcaption span,.man-photo figcaption span{font-size:13px}
+h1 em,h2 em,h3 em,.hero h1 em,.lab h2 em,.cta h2 em{color:inherit;font-style:normal}
+.btn{font-weight:600}
+.filter{font-weight:600}
+.note{font-weight:500}
+.badge{font-weight:600;letter-spacing:0;border-radius:8px}
+/* hero: fundo liso, uma foto e um produto real */
+.hero{background:var(--mata)}
+.cuia-frame{border-color:rgba(243,235,216,.16)}
+.cuia-frame::after{display:none}
+.cuia-img::before{background:linear-gradient(to top, rgba(13,29,21,.7), rgba(13,29,21,0) 40%)}
+.ready .cuia-img img{animation-duration:30s}
+.hero-pick{position:absolute;z-index:4;left:-2%;bottom:7%;display:flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:16px;background:var(--papel);color:var(--ink);text-align:left;box-shadow:0 24px 48px -24px rgba(0,0,0,.6);transition:transform .3s var(--ease)}
+.hero-pick:hover{transform:translateY(-2px)}
+.hero-pick img{width:72px;height:72px;object-fit:contain;border-radius:12px;background:var(--creme)}
+.hero-pick small{display:block;font-size:12px;color:var(--muted)}
+.hero-pick b{display:block;font-size:16px;font-weight:600;line-height:1.2}
+.hero-pick em{display:block;font-style:normal;font-size:13px;color:#4f6b22}
+/* faixa de produtos: reta e calma */
+.marquee{transform:none;margin:0;background:var(--linho);color:var(--ink);box-shadow:none;padding:16px 0;border-block:1px solid var(--line)}
+.marquee span{gap:12px;padding-right:40px;font-family:var(--sans);font-style:normal;font-size:16px;font-weight:500}
+.marquee img{width:44px;height:44px;object-fit:contain}
+.marquee-track{animation-duration:60s}
+/* pilares sem ladrilho escuro */
+.pillar .ic{width:auto;height:auto;background:none;color:var(--erva);border-radius:0;justify-content:start}
+/* cards de produto com a foto real */
+.card-media{background:var(--creme);perspective:none}
+.card-media::after{display:none}
+.card-media .pouch-wrap{width:86%;transform:none}
+.card-media .pouch{width:100%;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(20,33,26,.18));transition:transform .4s var(--ease)}
+.card:hover .pouch{transform:translateY(-4px)}
+.add:hover{transform:none;background:var(--mata3)}
+.quick{background:var(--papel)}
+.citem .thumb,.mpick .thumb{background:var(--creme)}
+.citem .thumb .pouch,.mpick .thumb .pouch{width:100%;height:100%;object-fit:contain;padding:4px}
+.qv-media{background:var(--creme)}
+.qv-media .pouch{width:min(70vw,360px);height:auto;animation:none;filter:drop-shadow(0 24px 24px rgba(20,33,26,.2))}
+.fly{object-fit:contain}
+/* contato e rodapé */
+.contact .ic{background:rgba(243,235,216,.08);color:var(--erva2)}
+.foot-brand{display:flex;align-items:center;gap:16px;padding:48px 0 32px}
+.foot-brand img{width:56px;height:56px;border-radius:12px;background:#fff;object-fit:contain}
+.foot-brand p{max-width:52ch;font-size:15px;line-height:1.5}
+.foot-brand b{display:block;color:var(--creme);font-size:18px;font-weight:600}
+@media (max-width:899px){.hero-pick{left:0;bottom:2%}.hero-pick img{width:56px;height:56px}}
 </style>
 </head>
 <body>
@@ -745,10 +802,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   </div>
 </div>
 
-<div class="grain" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"><b>ver</b></div>
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
 <!-- ============ HEADER ============ -->
 <header class="header" id="header">
@@ -793,14 +847,13 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
 <main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
-  <div class="leaves" aria-hidden="true" id="leaves"></div>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow hero-fade">Desde 1999 · São José do Inhacorá · RS</span>
       <h1 class="h-xl">
         <span class="line"><span>Do coração</span></span>
         <span class="line"><span>da mata para</span></span>
-        <span class="line"><span>a sua <em>cuia.</em></span></span>
+        <span class="line"><span>a sua cuia</span></span>
       </h1>
       <p class="lead hero-fade">Chás, aditivos e ervas selecionadas para quem leva o chimarrão a sério — e gosta de inventar moda de vez em quando.</p>
       <div class="hero-ctas hero-fade">
@@ -809,55 +862,26 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
         <a href="#produtos" class="btn btn-ghost magnetic">Ver a coleção</a>
       </div>
       <div class="hero-stats hero-fade">
-        <div><strong data-count="29">0</strong><span>produtos na loja</span></div>
-        <div><strong data-count="8">0</strong><span>aditivos p/ chimarrão</span></div>
+        <div><strong>1999</strong><span>ano em que tudo começou</span></div>
+        <div><strong data-count="16" id="statCount">0</strong><span>produtos na loja online</span></div>
         <div><strong><span data-count="10">0</span>%</strong><span>de desconto no Pix</span></div>
       </div>
     </div>
 
     <div class="scene" aria-hidden="true">
-      <div class="halo"></div>
-      <div class="ring"></div>
-      <div class="orbit" id="orbit"></div>
       <!-- Foto gerada para o site (assets/img). Para usar uma foto própria do cliente, troque o src/srcset abaixo. -->
       <figure class="cuia-photo" id="cuiaPhoto">
         <span class="cuia-frame"></span>
         <div class="cuia-img">
           <img src="assets/img/hero-cuia-900.webp" srcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1117" alt="Cuia de chimarrão com erva-mate e bomba de prata sobre mesa de madeira rústica" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
-          <span class="cuia-shine"></span>
         </div>
-        <figcaption><span>Chimarrão</span><b>de verdade</b></figcaption>
       </figure>
-      <div class="cuia cuia-fallback">
-        <svg viewBox="0 0 400 460">
-          <defs>
-            <linearGradient id="cuiaG" x1="0" x2="1">
-              <stop offset="0" stop-color="#3a2212"/><stop offset=".45" stop-color="#8a552c"/><stop offset=".7" stop-color="#6b3f1f"/><stop offset="1" stop-color="#2b170b"/>
-            </linearGradient>
-            <linearGradient id="rimG" x1="0" x2="1">
-              <stop offset="0" stop-color="#8f8f86"/><stop offset=".35" stop-color="#f1efe4"/><stop offset=".6" stop-color="#b9b7aa"/><stop offset="1" stop-color="#6f6e66"/>
-            </linearGradient>
-            <radialGradient id="ervaG" cx=".4" cy=".4"><stop offset="0" stop-color="#b6c878"/><stop offset="1" stop-color="#4d6b26"/></radialGradient>
-            <linearGradient id="bombaG" x1="0" x2="1"><stop offset="0" stop-color="#a7a59a"/><stop offset=".5" stop-color="#fbfaf2"/><stop offset="1" stop-color="#8d8b80"/></linearGradient>
-          </defs>
-          <g class="steam"><path d="M170 150c-14-24 16-36 2-62s14-40 6-60"/><path d="M205 140c-14-24 16-36 2-62s14-40 6-60"/><path d="M238 152c-14-24 16-36 2-62s14-40 6-60"/></g>
-          <path d="M84 176c-26 96 22 236 116 240 94-4 142-144 116-240Z" fill="url(#cuiaG)"/>
-          <path d="M120 230c-6 60 20 130 64 150" stroke="rgba(255,240,210,.18)" stroke-width="10" fill="none" stroke-linecap="round"/>
-          <path d="M92 300c70 26 146 26 216 0" stroke="#d9a050" stroke-opacity=".55" stroke-width="3" fill="none"/>
-          <path d="M98 318c68 24 136 24 204 0" stroke="#d9a050" stroke-opacity=".35" stroke-width="2" fill="none" stroke-dasharray="2 8" stroke-linecap="round"/>
-          <ellipse cx="200" cy="176" rx="118" ry="30" fill="url(#rimG)"/>
-          <ellipse cx="200" cy="176" rx="106" ry="23" fill="#2a3a1a"/>
-          <path d="M100 178c20-30 80-36 120-30 36 6 70 14 82 28-30 18-176 22-202 2Z" fill="url(#ervaG)"/>
-          <g fill="#dfe8b4" opacity=".5"><circle cx="150" cy="166" r="2"/><circle cx="178" cy="160" r="1.6"/><circle cx="214" cy="164" r="2"/><circle cx="246" cy="170" r="1.5"/><circle cx="130" cy="174" r="1.4"/></g>
-          <path d="M258 30 214 186" stroke="url(#bombaG)" stroke-width="10" stroke-linecap="round"/>
-          <rect x="248" y="18" width="26" height="12" rx="6" transform="rotate(16 261 24)" fill="#d9a050"/>
-        </svg>
-      </div>
-      <div class="tag-float tag-a"><span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 5.6L20 6l-3.4 5L22 13l-5.8 1.2L17 20l-5-3.4L7 20l.8-5.8L2 13l5.4-2L4 6l5.6 1.6Z"/></svg></span><span><b>Anis estrelado</b>notas doces e especiadas</span></div>
-      <div class="tag-float tag-b"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5 6.8 15M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.5"/></svg></span><span><b>70–80 °C</b>a água ideal</span></div>
+      <button class="hero-pick" type="button" id="heroPick" aria-label="Ver Anis Estrelado 10g">
+        <img src="assets/img/produtos/anis-estrelado-10g.webp" width="600" height="600" alt="">
+        <span><small>Mais pedido na roda</small><b>Anis Estrelado 10g</b><em>R$ 19,00 · R$ 17,10 no Pix</em></span>
+      </button>
     </div>
   </div>
-  <div class="scroll-hint" aria-hidden="true"><span>role</span><i></i></div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
@@ -869,7 +893,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
     <div class="manifesto-grid">
     <div>
     <span class="eyebrow" data-reveal>Quem somos</span>
-    <p class="manifesto-text" id="manifesto">Desde 1999 em São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate.</em></p>
+    <p class="manifesto-text" id="manifesto">Desde 1999 em São José do Inhacorá, no interior gaúcho, onde o chimarrão é companhia de manhã cedo e conversa de fim de tarde. Por isso, cada erva que a gente seleciona precisa passar no teste mais exigente: <em>a roda de mate</em>.</p>
     </div>
     <figure class="man-photo" data-reveal="scale">
       <div class="man-photo-in"><img data-par="60" src="assets/img/erva-folhas-880.webp" srcset="assets/img/erva-folhas-560.webp 560w, assets/img/erva-folhas-880.webp 880w" sizes="(min-width:900px) 420px, 88vw" width="880" height="1179" alt="Ramo de erva-mate com gotas de orvalho sob a luz da manhã" loading="lazy" decoding="async"></div>
@@ -899,7 +923,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
     <div class="lab-head">
       <div>
         <span class="eyebrow" data-reveal>Laboratório de chás</span>
-        <h2 class="h-lg" data-reveal style="--d:.08s">Monte o seu <em>blend</em> e veja ele nascer.</h2>
+        <h2 class="h-lg" data-reveal style="--d:.08s">Monte o seu blend e veja a cor na xícara</h2>
       </div>
       <p class="lead" data-reveal style="--d:.16s">Escolha até 3 ingredientes e veja o seu chá ganhar cor na xícara. A gente mostra o perfil de sabor, dá nome à mistura e você pede tudo em um toque.</p>
     </div>
@@ -989,10 +1013,10 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap">
     <div class="shop-head">
       <div>
-        <span class="eyebrow" data-reveal>Chás e aditivos para chimarrão</span>
-        <h2 class="h-lg" data-reveal style="--d:.08s">A coleção da <em>casa</em>.</h2>
+        <span class="eyebrow" data-reveal>Chás, aditivos e caixinhas</span>
+        <h2 class="h-lg" data-reveal style="--d:.08s">A coleção da casa</h2>
       </div>
-      <p class="lead" data-reveal style="--d:.16s">Toque em um produto para ver os detalhes. No Pix, todos os itens saem com 10% de desconto.</p>
+      <p class="lead" data-reveal style="--d:.16s">Fotos das embalagens que chegam na sua casa. Toque em um produto para ver os detalhes. No Pix, tudo sai com 10% de desconto.</p>
     </div>
 
     <div class="toolbar">
@@ -1002,6 +1026,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
         <button class="filter" data-f="aditivo" aria-pressed="false"><span>Aditivos<sup></sup></span></button>
         <button class="filter" data-f="cha" aria-pressed="false"><span>Chás<sup></sup></span></button>
         <button class="filter" data-f="misto" aria-pressed="false"><span>Mistos<sup></sup></span></button>
+        <button class="filter" data-f="caixinha" aria-pressed="false"><span>Caixinhas<sup></sup></span></button>
         <button class="filter" data-f="promo" aria-pressed="false"><span>Ofertas<sup></sup></span></button>
       </div>
       <label class="sort">Ordenar
@@ -1025,7 +1050,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap">
     <div class="moments-head">
       <span class="eyebrow">Um chá pra cada hora</span>
-      <h2 class="h-lg">Arraste <em id="astro">o sol</em>.</h2>
+      <h2 class="h-lg">Arraste <span id="astro">o sol</span></h2>
     </div>
 
     <div class="arc-wrap" id="arcWrap">
@@ -1058,11 +1083,11 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap ritual-grid">
     <div>
       <span class="eyebrow" data-reveal>O ritual</span>
-      <h2 class="h-lg" data-reveal style="--d:.08s" >O chimarrão <em>perfeito</em> em seis passos.</h2>
+      <h2 class="h-md" data-reveal style="--d:.08s">O chimarrão em seis passos</h2>
       <div class="ritual-visual" style="margin-top:40px">
         <div class="rv-card">
           <img class="rv-bg" src="assets/img/ritual-chaleira-900.webp" srcset="assets/img/ritual-chaleira-600.webp 600w, assets/img/ritual-chaleira-900.webp 900w" sizes="(min-width:900px) 460px, 1px" width="900" height="1117" alt="" loading="lazy" decoding="async">
-          <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;font-weight:700">Passo</span>
+          <span style="font-size:14px;opacity:.6;font-weight:500">Passo</span>
           <div class="rv-num" id="rvNum">01</div>
           <div class="rv-temp">
             <div class="thermo"><i id="thermo"></i></div>
@@ -1088,30 +1113,30 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
 <section class="cats" id="categorias">
   <div class="wrap">
     <span class="eyebrow" data-reveal>Explore a loja</span>
-    <h2 class="h-lg" data-reveal style="--d:.08s">Tem mais coisa <em>boa</em> por aqui.</h2>
+    <h2 class="h-lg" data-reveal style="--d:.08s">Tem mais coisa boa por aqui</h2>
     <figure class="cats-photo" data-reveal="scale"><img id="catsImg" data-par="70" src="assets/img/ervas-flatlay-1264.webp" srcset="assets/img/ervas-flatlay-800.webp 800w, assets/img/ervas-flatlay-1264.webp 1264w" sizes="(min-width:1240px) 1112px, 92vw" width="1264" height="848" alt="Anis estrelado, canela, casca de laranja, ervas secas, chia e flores sobre pedra escura" loading="lazy" decoding="async"></figure>
     <div class="cat-list">
-      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Chás Aromáticos da Erva da Mata." data-cursor="pedir">
+      <a href="#produtos" class="cat" data-reveal data-filter="caixinha">
         <h3><span class="num">01</span>Chás Aromáticos</h3>
-        <span class="meta">12 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        <span class="meta"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
-      <a href="#produtos" class="cat" data-reveal data-cursor="ver">
+      <a href="#produtos" class="cat" data-reveal data-filter="aditivo">
         <h3><span class="num">02</span>Aditivos p/ Chimarrão</h3>
-        <span class="meta">8 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        <span class="meta"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
-      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer as Especiarias, Kits e Frutas Secas da Erva da Mata." data-cursor="pedir">
+      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer as Especiarias, Kits e Frutas Secas da Erva da Mata.">
         <h3><span class="num">03</span>Especiarias, Kits &amp; Frutas Secas</h3>
-        <span class="meta">4 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        <span class="meta"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
-      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Temperos da Erva da Mata." data-cursor="pedir">
+      <a href="#" class="cat" data-reveal data-wa="Olá! Quero conhecer os Temperos da Erva da Mata.">
         <h3><span class="num">04</span>Temperos</h3>
-        <span class="meta">5 produtos <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        <span class="meta"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
     </div>
 
     <div class="perks" data-reveal>
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg><b>10% off no Pix</b><span>Em todos os produtos</span></div>
-      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg><b>Pedido no WhatsApp</b><span>Rápido e sem cadastro</span></div>
+      <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg><b>Frete pelo CEP</b><span>Pix ou cartão em até 3x</span></div>
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-4-8-8-8-12a8 8 0 0 1 16 0c0 4-3 8-8 12Z"/><path d="M12 7v10"/></svg><b>Ervas selecionadas</b><span>Aroma e frescor</span></div>
       <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Interior gaúcho</b><span>São José do Inhacorá</span></div>
     </div>
@@ -1124,7 +1149,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
     <div class="insta-head">
       <div>
         <span class="eyebrow" data-reveal>@chaervadamata</span>
-        <h2 class="h-lg" data-reveal style="--d:.08s">Do nosso <em>dia a dia.</em></h2>
+        <h2 class="h-lg" data-reveal style="--d:.08s">Do nosso dia a dia</h2>
       </div>
       <div class="insta-side" data-reveal style="--d:.16s">
         <p class="lead">Fotos reais dos nossos produtos, direto do Instagram da Erva da Mata.</p>
@@ -1132,23 +1157,23 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
       </div>
     </div>
     <div class="insta-grid" data-reveal>
-        <a class="ig ig-a" href="https://www.instagram.com/chaervadamata/reel/CZUoZbnqL4W/" target="_blank" rel="noopener" data-cursor="ver">
+        <a class="ig ig-a" href="https://www.instagram.com/chaervadamata/reel/CZUoZbnqL4W/" target="_blank" rel="noopener">
           <img src="assets/img/insta/kit-presente.webp" width="640" height="640" alt="Kit presente com chás, frutas secas e ervas frescas numa caixa de madeira" loading="lazy" decoding="async">
           <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Kit presente</span>
         </a>
-        <a class="ig ig-b" href="https://www.instagram.com/chaervadamata/p/DezMe9mxYxo/" target="_blank" rel="noopener" data-cursor="ver">
+        <a class="ig ig-b" href="https://www.instagram.com/chaervadamata/p/DezMe9mxYxo/" target="_blank" rel="noopener">
           <img src="assets/img/insta/xicara.webp" width="900" height="745" alt="Xícara de chá na bandeja de palha com sachês Erva da Mata" loading="lazy" decoding="async">
           <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Chá na xícara</span>
         </a>
-        <a class="ig ig-c" href="https://www.instagram.com/chaervadamata/p/DceJgXZlHxF/" target="_blank" rel="noopener" data-cursor="ver">
+        <a class="ig ig-c" href="https://www.instagram.com/chaervadamata/p/DceJgXZlHxF/" target="_blank" rel="noopener">
           <img src="assets/img/insta/copo-cha.webp" width="512" height="384" alt="Copo de vidro com chá Erva da Mata" loading="lazy" decoding="async">
           <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Um chá pra cada ocasião</span>
         </a>
-        <a class="ig ig-d" href="https://www.instagram.com/chaervadamata/reel/DbzG5zdNGMp/" target="_blank" rel="noopener" data-cursor="ver">
+        <a class="ig ig-d" href="https://www.instagram.com/chaervadamata/reel/DbzG5zdNGMp/" target="_blank" rel="noopener">
           <img src="assets/img/insta/cuia.webp" width="360" height="499" alt="Cuia com erva-mate e blend Erva da Mata" loading="lazy" decoding="async">
           <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Chimarrão de respeito</span>
         </a>
-        <a class="ig ig-e" href="https://www.instagram.com/chaervadamata/p/DeAAO-Rvp2t/" target="_blank" rel="noopener" data-cursor="ver">
+        <a class="ig ig-e" href="https://www.instagram.com/chaervadamata/p/DeAAO-Rvp2t/" target="_blank" rel="noopener">
           <img src="assets/img/insta/churrasco.webp" width="1000" height="701" alt="Carnes na tábua com temperos Erva da Mata" loading="lazy" decoding="async">
           <span class="ig-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Temperos pro churrasco</span>
         </a>
@@ -1161,12 +1186,12 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap faq-grid">
     <div>
       <span class="eyebrow" data-reveal style="color:var(--erva)">Dúvidas</span>
-      <h2 class="h-md" data-reveal style="--d:.08s;margin-top:16px">Perguntas de <em>roda de mate</em>.</h2>
+      <h2 class="h-md" data-reveal style="--d:.08s;margin-top:16px">Perguntas de roda de mate</h2>
     </div>
     <div data-reveal style="--d:.12s">
-      <details><summary>Como faço meu pedido?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Adicione os produtos ao carrinho e toque em “Finalizar pelo WhatsApp”. A mensagem já vai pronta com os itens e o total — é só enviar e combinar o pagamento e a entrega com a gente.</p></details>
+      <details><summary>Como faço meu pedido?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Adicione os produtos ao carrinho e toque em “Finalizar compra”. Você informa o CEP, escolhe a entrega e paga no Pix ou no cartão. Se preferir, o carrinho também manda o pedido pronto pelo WhatsApp.</p></details>
       <details><summary>Como funciona o desconto no Pix?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Pagando no Pix, todos os produtos saem com 10% de desconto. O valor com desconto aparece embaixo de cada preço e no resumo do carrinho.</p></details>
-      <details><summary>Vocês entregam na minha cidade?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Fale com a gente pelo WhatsApp informando seu CEP. Combinamos a melhor forma de envio ou retirada para a sua região.</p></details>
+      <details><summary>Vocês entregam na minha cidade?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Entregamos para todo o Brasil. No checkout, o frete aparece assim que você digita o CEP, e quem é da região pode retirar na loja em São José do Inhacorá.</p></details>
       <details><summary>Quanto aditivo coloco na cuia?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Comece com uma pitada sobre a erva e ajuste ao seu gosto. Aditivos de sabor marcante, como carqueja e anis, rendem bastante com pouca quantidade.</p></details>
       <details><summary>Como guardo meus chás?<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Em pote bem fechado, em lugar seco, fresco e longe da luz. Assim o aroma se mantém por muito mais tempo.</p></details>
     </div>
@@ -1179,7 +1204,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
   <div class="wrap">
     <div class="cta-inner">
       <span class="eyebrow" data-reveal>Bora de mate?</span>
-      <h2 class="h-xl" data-reveal style="--d:.08s">A chaleira já tá <em>chiando.</em></h2>
+      <h2 class="h-xl" data-reveal style="--d:.08s">A chaleira já tá chiando</h2>
       <p class="lead" data-reveal style="--d:.16s">Chame a gente no WhatsApp, tire suas dúvidas e monte o pedido do seu jeito.</p>
       <div class="cta-actions" data-reveal style="--d:.24s">
         <a href="#" class="btn btn-wa magnetic" data-wa="Olá, Erva da Mata! Vim pelo site e quero fazer um pedido.">
@@ -1201,7 +1226,7 @@ h1 em,h2 em,h3 em,.manifesto-text em{font-style:normal;color:inherit}
 
 <footer class="footer">
   <div class="wrap">
-    <div class="giant" aria-hidden="true">Erva <em>da</em> Mata</div>
+    <div class="foot-brand"><img src="assets/img/insta/logo.png" width="150" height="150" alt=""><p><b>Erva da Mata</b>Chás, aditivos e temperos selecionados em São José do Inhacorá, RS, desde 1999.</p></div>
     <div class="foot-row">
       <span>© <span id="year">2026</span> Erva da Mata · Todos os direitos reservados</span>
       <nav aria-label="Rodapé">
@@ -1257,37 +1282,69 @@ const PIX_OFF = 0.10;
 
 const PRODUCTS = [
   { id:'anis-10', name:'Anis Estrelado', short:'Anis Estrelado', kicker:'Aditivo', weight:'10g', price:19.00, old:null, cat:'aditivo',
-    color:'#7a3b22', accent:'#e8b46a', icon:'star', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Anis-Estrelado-10g-600x600-1.webp',
+    color:'#7a3b22', accent:'#e8b46a', icon:'star', img:'assets/img/produtos/anis-estrelado-10g.webp',
     desc:'A estrela inteira, do jeito que a natureza entrega. Perfume adocicado e levemente especiado que transforma a primeira cuia do dia.',
     notes:['Doce','Especiado'], f:{doce:3,amargo:0,citrico:0,especiado:4,herbal:2,tostado:0} },
   { id:'anis-moido-12', name:'Anis Estrelado Moído', short:'Anis Moído', kicker:'Aditivo', weight:'12g', price:9.90, old:19.00, cat:'aditivo',
-    color:'#9a5a2e', accent:'#f0c98a', icon:'star', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Anis-Estrelado-Moido-12g-600x600-1.webp',
+    color:'#9a5a2e', accent:'#f0c98a', icon:'star', img:'assets/img/produtos/anis-estrelado-moido-12g.webp',
     desc:'Já moído, se espalha por igual na erva e libera o aroma desde o primeiro mate. Mais prático, mesmo perfume doce.',
     notes:['Doce','Prático'], f:{doce:3,amargo:0,citrico:0,especiado:4,herbal:1,tostado:0} },
   { id:'carqueja-15', name:'Chá Carqueja', short:'Carqueja', kicker:'Chá', weight:'15g', price:19.00, old:null, cat:'cha',
-    color:'#3f5a2a', accent:'#c9d98c', icon:'herb', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Carqueja-15g-600x600-1.webp',
+    color:'#3f5a2a', accent:'#c9d98c', icon:'herb', img:'assets/img/produtos/cha-carqueja-15g.webp',
     desc:'Amargor de raiz, direto do campo. Para quem gosta do chimarrão com personalidade e não abre mão do sabor marcante.',
     notes:['Amargo','Herbal'], f:{doce:0,amargo:5,citrico:0,especiado:0,herbal:4,tostado:0} },
   { id:'mate-tostado-20', name:'Chá Mate Tostado', short:'Mate Tostado', kicker:'Chá', weight:'20g', price:7.00, old:19.00, cat:'cha',
-    color:'#5a3a1f', accent:'#e2a65c', icon:'leaf', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Mate-Tostado-20g-600x600-1.webp',
+    color:'#5a3a1f', accent:'#e2a65c', icon:'leaf', img:'assets/img/produtos/cha-mate-tostado-20g.webp',
     desc:'A erva-mate tostada ganha notas de caramelo e torra. Vai bem quente, gelado com limão ou como base do chá da tarde.',
     notes:['Tostado','Caramelo'], f:{doce:2,amargo:2,citrico:0,especiado:0,herbal:1,tostado:5} },
   { id:'anoitecer-20', name:'Chá Misto Anoitecer', short:'Anoitecer', kicker:'Chá misto', weight:'20g', price:19.00, old:null, cat:'misto',
-    color:'#33305a', accent:'#c7b8f0', icon:'moon', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-Misto-Anoitecer-20g-600x600-1.webp',
+    color:'#33305a', accent:'#c7b8f0', icon:'moon', img:'assets/img/produtos/cha-misto-anoitecer-20g.webp',
     desc:'Um blend de ervas pensado para o fim do dia: suave, floral e sem pressa. Combina com luz baixa e conversa calma.',
     notes:['Suave','Floral'], f:{doce:2,amargo:0,citrico:0,especiado:1,herbal:4,tostado:0} },
   { id:'dr-cha', name:'Chá Misto Composto Dr. Chá', short:'Composto Dr. Chá', kicker:'Chá misto', weight:'', price:19.00, old:null, cat:'misto',
-    color:'#1f4d3a', accent:'#9fd3a8', icon:'trio', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Composto-Dr.Cha_-600x600-1.webp',
+    color:'#1f4d3a', accent:'#9fd3a8', icon:'trio', img:'assets/img/produtos/cha-misto-composto-drcha.webp',
     desc:'O composto da casa: uma combinação de ervas selecionadas que dá corpo e frescor ao chimarrão de todo dia.',
     notes:['Herbal','Encorpado'], f:{doce:0,amargo:2,citrico:0,especiado:1,herbal:5,tostado:0} },
   { id:'laranja-canela', name:'Chá Misto Laranja com Canela', short:'Laranja com Canela', kicker:'Chá misto', weight:'', price:19.00, old:null, cat:'misto',
-    color:'#c0642a', accent:'#ffd29a', icon:'orange', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Cha-misto-Laranja-com-canela-600x600-1.webp',
+    color:'#c0642a', accent:'#ffd29a', icon:'orange', img:'assets/img/produtos/cha-misto-laranja-com-canela.webp',
     desc:'Casca de laranja e canela: cítrico, quentinho e aconchegante. Feito para as tardes frias do inverno gaúcho.',
     notes:['Cítrico','Especiado'], f:{doce:2,amargo:0,citrico:4,especiado:4,herbal:0,tostado:0} },
   { id:'chia-100', name:'Chia', short:'Chia', kicker:'Semente', weight:'100g', price:19.00, old:null, cat:'aditivo',
-    color:'#4b4a40', accent:'#e6e1cf', icon:'seeds', img:'https://ervadamata.com.br/wp-content/uploads/2023/08/Chia-100g-600x600-1.webp',
+    color:'#4b4a40', accent:'#e6e1cf', icon:'seeds', img:'assets/img/produtos/chia-100g.webp',
     desc:'Sementes de chia selecionadas. Versátil: vai no suco, no iogurte, na massa do pão e no que mais a criatividade mandar.',
     notes:['Versátil','Neutro'], f:{doce:0,amargo:0,citrico:0,especiado:0,herbal:1,tostado:0} },
+  { id:'camomila', name:'Chá de Camomila', short:'Camomila', kicker:'Caixinha', weight:'10 sachês', price:10.00, old:25.00, cat:'caixinha',
+    color:'#c9a227', accent:'#f6e27a', icon:'flower', img:'assets/img/produtos/camomila.webp',
+    desc:'A camomila de sempre, em sachês prontos para a xícara. Suave e floral, para fechar o dia com calma.',
+    notes:['Floral','Suave'], f:{doce:2,amargo:0,citrico:0,especiado:0,herbal:4,tostado:0}, lab:false },
+  { id:'capim-cidreira', name:'Chá de Capim-Cidreira', short:'Capim-Cidreira', kicker:'Caixinha', weight:'10 sachês', price:11.00, old:19.00, cat:'caixinha',
+    color:'#4f8a3a', accent:'#c9e39a', icon:'herb', img:'assets/img/produtos/capim-cidreira.webp',
+    desc:'Cítrico e fresco, com aquele perfume de quintal. Vai bem quente no inverno e gelado no verão.',
+    notes:['Cítrico','Fresco'], f:{doce:1,amargo:0,citrico:4,especiado:0,herbal:4,tostado:0}, lab:false },
+  { id:'camomila-laranja', name:'Chá Misto de Camomila com Laranja', short:'Camomila com Laranja', kicker:'Caixinha', weight:'10 sachês', price:7.00, old:19.00, cat:'caixinha',
+    color:'#e08a2c', accent:'#ffd29a', icon:'orange', img:'assets/img/produtos/camomila-laranja.webp',
+    desc:'A camomila ganha casca de laranja: floral por cima, cítrico no fim. Um chá de tarde que agrada todo mundo.',
+    notes:['Floral','Cítrico'], f:{doce:2,amargo:0,citrico:3,especiado:0,herbal:3,tostado:0}, lab:false },
+  { id:'hortela', name:'Chá de Hortelã', short:'Hortelã', kicker:'Caixinha', weight:'10 sachês', price:19.00, old:null, cat:'caixinha',
+    color:'#6a5a9c', accent:'#cfc4f0', icon:'herb', img:'assets/img/produtos/hortela.webp',
+    desc:'Hortelã refrescante em sachês. Depois do almoço, no meio da tarde ou gelado com limão.',
+    notes:['Refrescante','Herbal'], f:{doce:0,amargo:0,citrico:1,especiado:1,herbal:5,tostado:0}, lab:false },
+  { id:'erva-doce', name:'Chá de Erva-Doce', short:'Erva-Doce', kicker:'Caixinha', weight:'10 sachês', price:19.00, old:null, cat:'caixinha',
+    color:'#9bb23a', accent:'#e6f09a', icon:'seeds', img:'assets/img/produtos/ervadoce.webp',
+    desc:'Adocicado e aconchegante, com o aroma de anis que vem da semente. Um clássico de vó.',
+    notes:['Doce','Aromático'], f:{doce:4,amargo:0,citrico:0,especiado:2,herbal:2,tostado:0}, lab:false },
+  { id:'maca-canela', name:'Chá Misto de Maçã com Canela', short:'Maçã com Canela', kicker:'Caixinha', weight:'10 sachês', price:19.00, old:null, cat:'caixinha',
+    color:'#b8322a', accent:'#f4a08a', icon:'cinnamon', img:'assets/img/produtos/maca.webp',
+    desc:'Maçã e canela, com cheiro de bolo saindo do forno. Doce sem açúcar, quente sem pressa.',
+    notes:['Doce','Especiado'], f:{doce:4,amargo:0,citrico:1,especiado:4,herbal:0,tostado:0}, lab:false },
+  { id:'misto-dia', name:'Chá Misto Dia', short:'Misto Dia', kicker:'Caixinha', weight:'10 sachês', price:19.00, old:null, cat:'caixinha',
+    color:'#d8487e', accent:'#f6b3cc', icon:'flower', img:'assets/img/produtos/dia.webp',
+    desc:'Blend frutado e vivo para a primeira xícara da manhã, com hortelã, limão e frutas vermelhas.',
+    notes:['Frutado','Vivo'], f:{doce:2,amargo:0,citrico:3,especiado:0,herbal:3,tostado:0}, lab:false },
+  { id:'misto-noite', name:'Chá Misto Noite', short:'Misto Noite', kicker:'Caixinha', weight:'10 sachês', price:19.00, old:null, cat:'caixinha',
+    color:'#2d3f78', accent:'#b9c6f2', icon:'moon', img:'assets/img/produtos/noite.webp',
+    desc:'Ervas calmas para depois da janta. Floral e macio, para a casa desacelerar junto.',
+    notes:['Calmo','Floral'], f:{doce:2,amargo:0,citrico:0,especiado:0,herbal:4,tostado:0}, lab:false },
 ];
 const byId = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
 const FLAVORS = [
@@ -1331,29 +1388,9 @@ function iconSVG(type, c, c2 = 'rgba(0,0,0,.25)') {
 }
 const icon = (type, c, c2) => `<svg viewBox="0 0 100 100" aria-hidden="true">${iconSVG(type, c, c2)}</svg>`;
 
-/* embalagem ilustrada (stand-up pouch) */
-function wrapLines(t, max = 11) {
-  const words = t.split(' '); const lines = []; let cur = '';
-  words.forEach(w => { if ((cur + ' ' + w).trim().length > max && cur) { lines.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); });
-  if (cur) lines.push(cur); return lines.slice(0, 3);
-}
-function pouch(p) {
-  const g = `pg${++uid}`;
-  const lines = wrapLines(p.short);
-  const startY = 150 - (lines.length - 1) * 9;
-  return `<svg class="pouch" viewBox="0 0 200 260" aria-hidden="true">
-    <defs><linearGradient id="${g}" x1="0" x2="1"><stop offset="0" stop-color="${p.color}" stop-opacity=".85"/><stop offset=".08" stop-color="${p.color}"/><stop offset=".55" stop-color="${p.color}"/><stop offset=".92" stop-color="${p.color}" stop-opacity=".88"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient></defs>
-    <path d="M28 22h144l8 218c.4 9-6 14-14 14H34c-8 0-14.4-5-14-14Z" fill="url(#${g})"/>
-    <path d="M28 22h144v14H28z" fill="#000" opacity=".18"/>
-    <path d="M28 30h144" stroke="#fff" stroke-opacity=".25" stroke-dasharray="3 4"/>
-    <g transform="translate(70 48) scale(.6)">${iconSVG(p.icon, p.accent, 'rgba(0,0,0,.28)')}</g>
-    <rect x="44" y="114" width="112" height="104" rx="10" fill="#faf5ea"/>
-    <text x="100" y="${startY - 16}" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="7.5" font-weight="800" letter-spacing="2" fill="${p.color}">ERVA DA MATA</text>
-    ${lines.map((l, i) => `<text x="100" y="${startY + i * 18}" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="15" font-weight="700" letter-spacing="-0.4" fill="#14211a">${l}</text>`).join('')}
-    <line x1="74" y1="196" x2="126" y2="196" stroke="${p.color}" stroke-opacity=".35"/>
-    <text x="100" y="209" text-anchor="middle" font-family="Schibsted Grotesk, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#5f6b62">${(p.weight || p.kicker).toUpperCase()}</text>
-    <path d="M36 40c-4 60-2 140 6 196" stroke="#fff" stroke-opacity=".18" stroke-width="8" stroke-linecap="round" fill="none"/>
-  </svg>`;
+/* foto real da embalagem (fundo transparente) */
+function pouch(p, eager) {
+  return `<img class="pouch" src="${p.img}" width="600" height="600" alt="${p.name}${p.weight ? ' ' + p.weight : ''}" ${eager ? '' : 'loading="lazy"'} decoding="async">`;
 }
 
 /* =========================================================
@@ -1453,7 +1490,7 @@ const grid = $('#grid');
 const plus = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
 function cardHTML(p, i) {
   return `<article class="card" data-id="${p.id}" data-cat="${p.cat}" style="--c:${p.color};--d:${(i % 4) * .07}s" data-reveal>
-    <button class="card-media" data-quick="${p.id}" aria-label="Ver detalhes de ${p.name}" data-cursor="ver">
+    <button class="card-media" data-quick="${p.id}" aria-label="Ver detalhes de ${p.name}">
       ${p.old ? `<span class="badge">−${off(p)}%</span>` : ''}
       <span class="quick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
       <div class="pouch-wrap">${pouch(p)}</div>
@@ -1528,8 +1565,6 @@ function openQuick(id) {
     <div class="qv-media" style="--c:${p.color}">
       ${p.old ? `<span class="badge">−${off(p)}%</span>` : ''}
       <div id="qvIll">${pouch(p)}</div>
-      <img id="qvImg" src="${p.img}" alt="Foto da embalagem de ${p.name}" loading="lazy" hidden>
-      <div class="qv-toggle" id="qvToggle" hidden><button aria-pressed="true" data-v="ill">Ilustração</button><button aria-pressed="false" data-v="foto">Foto real</button></div>
     </div>
     <div class="qv-body">
       <span class="kicker">${p.kicker}${p.weight ? ' · ' + p.weight : ''}</span>
@@ -1543,13 +1578,6 @@ function openQuick(id) {
       </div>
       <a href="#" class="btn btn-wa" id="qvWa" style="justify-self:start">Tirar dúvida no WhatsApp</a>
     </div>`;
-  const img = $('#qvImg');
-  img.addEventListener('load', () => { $('#qvToggle').hidden = false; });
-  $('#qvToggle').addEventListener('click', e => {
-    const b = e.target.closest('button'); if (!b) return;
-    $$('#qvToggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
-    const foto = b.dataset.v === 'foto'; img.hidden = !foto; $('#qvIll').hidden = foto;
-  });
   const upd = () => { $('#qvQty').textContent = q; $('#qvAdd').textContent = `Adicionar · ${brl(p.price * q)}`; };
   $('.qv-buy .qty').addEventListener('click', e => { const b = e.target.closest('[data-q]'); if (b) { q = clamp(q + +b.dataset.q, 1, 99); upd(); } });
   $('#qvAdd').addEventListener('click', () => { addToCart(id, q, $('#qvIll .pouch')); qv.close(); });
@@ -1571,7 +1599,7 @@ const NAMES = {
 };
 let picks = [];
 const chipsEl = $('#chips');
-chipsEl.innerHTML = PRODUCTS.map(p => `<button class="chip" data-pick="${p.id}" aria-pressed="false" style="--c:${p.color}"><i>${icon(p.icon, p.accent, 'rgba(0,0,0,.25)')}</i>${p.short}</button>`).join('');
+chipsEl.innerHTML = PRODUCTS.filter(p => p.lab !== false).map(p => `<button class="chip" data-pick="${p.id}" aria-pressed="false" style="--c:${p.color}"><i>${icon(p.icon, p.accent, 'rgba(0,0,0,.25)')}</i>${p.short}</button>`).join('');
 $('#bars').innerHTML = FLAVORS.map(fl => `<div class="bar" data-k="${fl.k}"><span>${fl.label}</span><div class="track"><div class="fill" style="--c:${fl.c}"></div></div><output>0</output></div>`).join('');
 
 /* ---------- xícara de vidro ---------- */
@@ -1723,9 +1751,9 @@ $('#labWa').addEventListener('click', () => {
    MOMENTOS — sol arrastável
    ========================================================= */
 const MOMENTS = {
-  manha: { title:'Para acordar devagar', text:'Notas tostadas e cítricas para acompanhar o primeiro mate do dia, enquanto o sol ainda espreguiça.', picks:['mate-tostado-20','laranja-canela','chia-100'], astro:'o sol' },
+  manha: { title:'Para acordar devagar', text:'Mate tostado na cuia e um chá frutado na xícara, enquanto o sol ainda espreguiça.', picks:['mate-tostado-20','misto-dia','capim-cidreira'], astro:'o sol' },
   tarde: { title:'Roda de mate, prosa longa', text:'Sabores marcantes para dividir a cuia com quem chegar — e fazer a conversa render.', picks:['carqueja-15','dr-cha','anis-10'], astro:'o sol' },
-  noite: { title:'Desacelerar é um ritual', text:'Blends suaves e aromáticos para fechar o dia sem pressa, com a casa em silêncio.', picks:['anoitecer-20','anis-moido-12','laranja-canela'], astro:'a lua' },
+  noite: { title:'Desacelerar é um ritual', text:'Camomila, ervas calmas e um blend floral para fechar o dia sem pressa, com a casa em silêncio.', picks:['anoitecer-20','misto-noite','camomila'], astro:'a lua' },
 };
 const mSec = $('#momentos'), sun = $('#sun'), arcWrap = $('#arcWrap'), arcSvg = $('#arcSvg');
 const CX = 300, CY = 300, R = 240;
@@ -1787,25 +1815,6 @@ placeSun(theta);
 /* =========================================================
    HERO — folhas, órbita, parallax
    ========================================================= */
-const leafPath = c => `<svg viewBox="0 0 74 90"><path d="M37 3C60 18 70 48 37 86 4 48 14 18 37 3Z" fill="${c}"/><path d="M37 12V80M37 34l12-9M37 48l-13-10M37 60l13-9" stroke="rgba(13,29,21,.35)" stroke-width="2" stroke-linecap="round" fill="none"/></svg>`;
-const LEAVES = [
-  { x:'4%', y:'14%', w:'70px', r:'-24deg', d:'-30px', o:.35, c:'#7f9c45', t:'8s' },
-  { x:'42%', y:'8%', w:'40px', r:'40deg', d:'20px', o:.25, c:'#b6c878', t:'10s' },
-  { x:'88%', y:'70%', w:'110px', r:'150deg', d:'-46px', o:.3, c:'#4f6d2a', t:'11s' },
-  { x:'60%', y:'86%', w:'54px', r:'200deg', d:'30px', o:.28, c:'#7f9c45', t:'9s' },
-  { x:'-2%', y:'72%', w:'130px', r:'30deg', d:'-60px', o:.18, c:'#b6c878', t:'12s' },
-  { x:'30%', y:'60%', w:'26px', r:'80deg', d:'40px', o:.35, c:'#dfe8b4', t:'7s' },
-  { x:'94%', y:'18%', w:'60px', r:'-60deg', d:'26px', o:.22, c:'#7f9c45', t:'10s' },
-];
-$('#leaves').innerHTML = LEAVES.map(l => `<div class="leaf" style="--x:${l.x};--y:${l.y};--w:${l.w};--r:${l.r};--d:${l.d};--o:${l.o};--t:${l.t}">${leafPath(l.c)}</div>`).join('');
-const ORBIT = [
-  { type:'star', c:'#e8b46a', x:'12%', y:'30%', s:'78px', p:'22px' },
-  { type:'cinnamon', c:'#c0642a', x:'90%', y:'46%', s:'70px', p:'-18px' },
-  { type:'orange', c:'#f0a33a', x:'24%', y:'88%', s:'64px', p:'26px' },
-  { type:'herb', c:'#b6c878', x:'80%', y:'86%', s:'58px', p:'-24px' },
-  { type:'seeds', c:'#e6e1cf', x:'56%', y:'2%', s:'50px', p:'14px' },
-];
-$('#orbit').innerHTML = ORBIT.map(o => `<div class="ing" style="--x:${o.x};--y:${o.y};--s:${o.s};--p:${o.p}"><div>${icon(o.type, o.c)}</div></div>`).join('');
 const hero = $('.hero');
 if (fine && !reduce) {
   hero.addEventListener('pointermove', e => {
@@ -1817,8 +1826,7 @@ if (fine && !reduce) {
 }
 
 /* marquee */
-const MQ = ['Anis estrelado', 'Carqueja', 'Mate tostado', 'Laranja com canela', 'Anoitecer', 'Composto Dr. Chá', 'Chia'];
-const mqHalf = MQ.map(t => `<span>${t}${icon('leaf', '#0d1d15', 'rgba(217,160,80,.6)')}</span>`).join('');
+const mqHalf = PRODUCTS.map(p => `<span><img src="${p.img}" width="600" height="600" alt="" loading="lazy">${p.short}</span>`).join('');
 $('#marquee').innerHTML = mqHalf + mqHalf;
 
 /* =========================================================
@@ -1912,28 +1920,13 @@ $$('[data-wa]').forEach(a => { if (a.tagName === 'A') { a.href = waLink(a.datase
 /* =========================================================
    CURSOR + BOTÕES MAGNÉTICOS (desktop)
    ========================================================= */
-if (fine && !reduce) {
-  document.documentElement.classList.add('has-cursor');
-  const cur = $('#cursor'), dot = $('#cursorDot'); const lbl = $('b', cur);
-  let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
-  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
-  (function loop() { cx += (mx - cx) * .18; cy += (my - cy) * .18; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
-  document.addEventListener('pointerover', e => {
-    const t = e.target.closest('[data-cursor], a, button, .chip, .sun, select, summary');
-    cur.classList.remove('hover', 'label');
-    if (!t) return;
-    if (t.dataset.cursor) { cur.classList.add('label'); lbl.textContent = t.dataset.cursor; } else cur.classList.add('hover');
-  });
-  $$('.magnetic').forEach(b => {
-    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`; });
-    b.addEventListener('pointerleave', () => b.style.transform = '');
-  });
-}
-
 /* =========================================================
    INIT
    ========================================================= */
 $('#year').textContent = new Date().getFullYear();
+$('#heroPick').addEventListener('click', () => openQuick('anis-10'));
+$('#statCount').dataset.count = PRODUCTS.length;
+$$('.cat[data-filter]').forEach(a => a.addEventListener('click', () => { const b = $(`.filter[data-f="${a.dataset.filter}"]`); if (b) setTimeout(() => b.click(), 450); }));
 renderCart(); renderLab(); movePill(); onScroll();
 function ready() {
   $('#loader').classList.add('done');

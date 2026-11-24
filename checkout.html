@@ -28,7 +28,7 @@
 <main class="page">
   <div class="hero-mini reveal">
     <a class="back" href="index.html#produtos" style="color:var(--muted)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>Continuar comprando</a>
-    <h1 class="title">Quase lá. <em>Falta pouco</em> pro seu mate.</h1>
+    <h1 class="title">Falta pouco pro seu mate</h1>
     <ol class="steps" aria-label="Etapas"><li class="on" data-step="1"><b>1</b>Seus dados</li><li data-step="2"><b>2</b>Entrega</li><li data-step="3"><b>3</b>Pagamento</li></ol>
   </div>
 
@@ -173,7 +173,7 @@ function restore() { try { const d = JSON.parse(localStorage.getItem(FORM_KEY) |
 const leaf = c => `<svg viewBox="0 0 100 100"><path d="M50 6C80 26 90 60 50 94 10 60 20 26 50 6Z" fill="${c}"/><path d="M50 18V84" stroke="rgba(0,0,0,.25)" stroke-width="5" stroke-linecap="round"/></svg>`;
 function renderItems() {
   $('#items').innerHTML = lines.map(l => { const [c, a] = L.look(l.p.id); return `
-    <div class="it"><div class="th" style="--c:${c}">${leaf(a)}<em>${l.qty}</em></div>
+    <div class="it"><div class="th" style="--c:${L.img(l.p.id) ? '#f3ebd8' : c}">${L.img(l.p.id) ? `<img src="${L.img(l.p.id)}" alt="" width="52" height="52">` : leaf(a)}<em>${l.qty}</em></div>
     <div><b>${L.esc(l.p.name)}${l.p.weight_label ? ' ' + L.esc(l.p.weight_label) : ''}</b><small>${L.brl(l.p.price)} cada</small></div>
     <span class="v">${L.brl(l.p.price * l.qty)}</span></div>`; }).join('');
 }
