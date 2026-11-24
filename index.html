@@ -889,7 +889,6 @@ body:has(.header.hide) .toolbar{top:0}
         <span class="cuia-frame"></span>
         <div class="cuia-img">
           <video id="heroFilm" autoplay muted loop playsinline preload="auto" poster="assets/video/chimarrao-poster.webp" aria-label="Chimarrão sendo preparado: a erva cai na cuia, a bomba entra, a água quente e o mate pronto">
-            <source src="assets/video/chimarrao.webm" type="video/webm">
             <source src="assets/video/chimarrao.mp4" type="video/mp4">
           </video>
           <ol class="film-steps" id="filmSteps" aria-hidden="true">
@@ -1946,14 +1945,14 @@ $$('[data-wa]').forEach(a => { if (a.tagName === 'A') { a.href = waLink(a.datase
    ========================================================= */
 $('#year').textContent = new Date().getFullYear();
 $('#heroPick').addEventListener('click', () => openQuick('anis-10'));
-/* filme do topo: legenda acompanha cada etapa (5 planos de 3,2 s) */
+/* filme do topo (plano contínuo de 20 s): legenda acompanha cada etapa */
 (() => {
   const v = $('#heroFilm'), steps = $$('#filmSteps li'); if (!v) return;
   steps.forEach(li => li.insertAdjacentHTML('beforeend', '<i></i>'));
   if (reduce) { v.removeAttribute('autoplay'); v.pause(); return; }
-  const SH = 3.2;
+  const SH = 4, LEAD = 1.4;   // cada etapa dura 4 s; a legenda vira no meio da transição
   (function tick() {
-    const t = v.currentTime % 16, k = Math.min(4, Math.floor(t / SH)), p = (t - k * SH) / SH;
+    const t = (v.currentTime + LEAD) % 20, k = Math.min(4, Math.floor(t / SH)), p = (t - k * SH) / SH;
     steps.forEach((li, i) => { li.classList.toggle('on', i === k); $('i', li).style.width = i < k ? 'calc(100% - 8px)' : i === k ? `calc((100% - 8px) * ${p.toFixed(3)})` : '0'; });
     requestAnimationFrame(tick);
   })();
