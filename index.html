@@ -789,6 +789,11 @@ h1 em,h2 em,h3 em,.hero h1 em,.lab h2 em,.cta h2 em{color:inherit;font-style:nor
 .foot-brand img{width:56px;height:56px;border-radius:12px;background:#fff;object-fit:contain}
 .foot-brand p{max-width:52ch;font-size:15px;line-height:1.5}
 .foot-brand b{display:block;color:var(--creme);font-size:18px;font-weight:600}
+/* barra de filtros: faixa sólida que gruda no topo, sem ficar por cima das fotos */
+.toolbar{top:60px;padding:12px 0;margin-bottom:24px;background:var(--papel);box-shadow:0 0 0 100vmax var(--papel),0 1px 0 100vmax var(--line);clip-path:inset(0 -100vmax -1px);transition:top .6s var(--ease)}
+body:has(.header.hide) .toolbar{top:0}
+.filters{background:var(--linho)}
+@media (max-width:699px){.toolbar{flex-wrap:nowrap;gap:8px}.filters{flex:1;min-width:0}.sort{font-size:0;gap:0}.sort select{font-size:14px;padding-left:12px;max-width:128px}}
 @media (max-width:899px){.hero-pick{left:0;bottom:2%}.hero-pick img{width:56px;height:56px}}
 </style>
 </head>
