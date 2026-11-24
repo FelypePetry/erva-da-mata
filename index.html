@@ -789,16 +789,55 @@ h1 em,h2 em,h3 em,.hero h1 em,.lab h2 em,.cta h2 em{color:inherit;font-style:nor
 .foot-brand img{width:56px;height:56px;border-radius:12px;background:#fff;object-fit:contain}
 .foot-brand p{max-width:52ch;font-size:15px;line-height:1.5}
 .foot-brand b{display:block;color:var(--creme);font-size:18px;font-weight:600}
-/* filme do chimarrão no topo */
-.cuia-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;opacity:0;transition:opacity 1.4s var(--ease)}
-.ready .cuia-img video{opacity:1}
-.film-steps{position:absolute;z-index:3;left:0;right:0;bottom:18px;display:flex;justify-content:center;gap:6px;margin:0;padding:0 12px;list-style:none}
-.film-steps li{position:relative;padding:4px 0 10px;font-size:12px;font-weight:500;color:rgba(243,235,216,.45);transition:color .5s var(--ease);min-width:44px;text-align:center}
-.film-steps li::after{content:"";position:absolute;left:4px;right:4px;bottom:0;height:2px;border-radius:2px;background:rgba(243,235,216,.18)}
-.film-steps li i{position:absolute;left:4px;bottom:0;height:2px;border-radius:2px;background:var(--ouro);width:0}
-.film-steps li.on{color:var(--creme)}
-@media (prefers-reduced-motion:reduce){.film-steps{display:none}}
-@media (max-width:560px){.film-steps{gap:2px;padding:0 6px;bottom:12px}.film-steps li{min-width:0;flex:1;font-size:11px}}
+/* busca no catálogo */
+.shop-side{display:grid;gap:16px;align-content:end}
+.search{position:relative;display:flex;align-items:center;height:48px;border-radius:12px;background:#fff;box-shadow:0 0 0 1px var(--line);transition:box-shadow .2s var(--ease)}
+.search:focus-within{box-shadow:0 0 0 2px var(--erva)}
+.search>svg{position:absolute;left:14px;width:18px;height:18px;color:var(--muted);pointer-events:none}
+.search input{flex:1;height:100%;border:0;background:none;padding:0 44px;font:inherit;font-size:16px;color:var(--ink);outline:0;min-width:0}
+.search input::-webkit-search-cancel-button{display:none}
+.search button{position:absolute;right:6px;width:36px;height:36px;border-radius:8px;display:grid;place-items:center;color:var(--muted)}
+.search button:hover{background:var(--linho);color:var(--ink)}
+.search button svg{width:16px;height:16px}
+.no-results{display:grid;justify-items:center;gap:8px;padding:48px 16px;text-align:center;color:var(--muted)}
+.no-results b{font-size:22px;font-weight:500;color:var(--ink)}
+.no-results .btn{margin-top:8px}
+.card mark{background:rgba(182,200,120,.45);color:inherit;border-radius:3px;padding:0 1px}
+/* carrinho: frete e sugestões */
+.ship{display:grid;gap:8px;padding:18px 0 4px}
+.ship label{font-size:14px;font-weight:500}
+.ship-row{display:flex;gap:8px}
+.ship-row input{flex:1;min-width:0;height:44px;border-radius:10px;border:1px solid var(--line);background:#fff;padding:0 14px;font:inherit;font-size:16px;outline:0}
+.ship-row input:focus{border-color:var(--erva);box-shadow:0 0 0 3px rgba(127,156,69,.18)}
+.ship-row .btn{min-height:44px;height:44px;padding:0 16px;font-size:14px}
+.ship-out{display:grid;gap:4px;font-size:13.5px;color:var(--muted)}
+.ship-out div{display:flex;justify-content:space-between;gap:12px}
+.ship-out b{color:var(--ink);font-weight:600}
+.ship-out .err{color:#9c3412}
+.combo{padding:20px 0 8px}
+.combo h3{font-size:15px;font-weight:600;margin-bottom:12px}
+.combo-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cmb{display:grid;gap:6px;padding:8px;border-radius:12px;background:#fff;box-shadow:0 0 0 1px var(--line);text-align:left;font-size:13px;line-height:1.25}
+.cmb img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:8px;background:var(--creme)}
+.cmb b{font-weight:600;font-size:13px}
+.cmb span{display:flex;align-items:center;justify-content:space-between;gap:4px;color:var(--muted)}
+.cmb i{width:28px;height:28px;border-radius:8px;background:var(--mata);color:var(--creme);display:grid;place-items:center;font-style:normal;flex:none;transition:background .2s}
+.cmb:hover i{background:var(--mata3)}
+.cmb i svg{width:14px;height:14px}
+/* compartilhar produto */
+.qv-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{background:var(--linho)}
+/* atalho do carrinho */
+.cart-float{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));z-index:94;display:flex;align-items:center;gap:12px;height:52px;padding:0 20px 0 16px;border-radius:999px;background:var(--mata);color:var(--creme);box-shadow:0 18px 40px -16px rgba(0,0,0,.55);transform:translate(-50%,0);transition:transform .45s var(--ease),opacity .3s}
+.cart-float svg{width:20px;height:20px;color:var(--ouro)}
+.cart-float span{display:flex;gap:10px;align-items:baseline;font-size:14px}
+.cart-float b{font-weight:600}
+.cart-float em{font-style:normal;color:var(--erva2)}
+.cart-float.off{transform:translate(-50%,140%);opacity:0;pointer-events:none}
+.cart-open .cart-float,.menu-open .cart-float{transform:translate(-50%,140%);opacity:0;pointer-events:none}
+body.cf-on .wa-tip{display:none}
+@media (max-width:480px){.cart-float{left:14px;right:84px;justify-content:center;transform:none;bottom:calc(14px + env(safe-area-inset-bottom))}.cart-float.off,.cart-open .cart-float,.menu-open .cart-float{transform:translateY(140%)}}
 /* barra de filtros: faixa sólida que gruda no topo, sem ficar por cima das fotos */
 .toolbar{top:60px;padding:12px 0;margin-bottom:24px;background:var(--papel);box-shadow:0 0 0 100vmax var(--papel),0 1px 0 100vmax var(--line);clip-path:inset(0 -100vmax -1px);transition:top .6s var(--ease)}
 body:has(.header.hide) .toolbar{top:0}
@@ -888,12 +927,8 @@ body:has(.header.hide) .toolbar{top:0}
       <figure class="cuia-photo" id="cuiaPhoto">
         <span class="cuia-frame"></span>
         <div class="cuia-img">
-          <video id="heroFilm" autoplay muted loop playsinline preload="auto" poster="assets/video/chimarrao-poster.webp" aria-label="Chimarrão sendo preparado: a erva cai na cuia, a bomba entra, a água quente e o mate pronto">
-            <source src="assets/video/chimarrao.mp4" type="video/mp4">
-          </video>
-          <ol class="film-steps" id="filmSteps" aria-hidden="true">
-            <li>Cuia</li><li>Erva</li><li>Bomba</li><li>Água</li><li>Mate</li>
-          </ol>
+          <img src="assets/img/hero-cuia-900.webp" srcset="assets/img/hero-cuia-560.webp 560w, assets/img/hero-cuia-900.webp 900w" sizes="(min-width:900px) 380px, 66vw" width="900" height="1117" alt="Cuia de chimarrão com erva-mate e bomba de prata sobre mesa de madeira rústica" fetchpriority="high" decoding="async" onerror="this.closest('.scene').classList.add('noimg')">
+          <span class="cuia-shine"></span>
         </div>
       </figure>
       <button class="hero-pick" type="button" id="heroPick" aria-label="Ver Anis Estrelado 10g">
@@ -1036,7 +1071,13 @@ body:has(.header.hide) .toolbar{top:0}
         <span class="eyebrow" data-reveal>Chás, aditivos e caixinhas</span>
         <h2 class="h-lg" data-reveal style="--d:.08s">A coleção da casa</h2>
       </div>
-      <p class="lead" data-reveal style="--d:.16s">Fotos das embalagens que chegam na sua casa. Toque em um produto para ver os detalhes. No Pix, tudo sai com 10% de desconto.</p>
+      <div class="shop-side" data-reveal style="--d:.16s">
+        <p class="lead">Fotos das embalagens que chegam na sua casa. Toque em um produto para ver os detalhes. No Pix, tudo sai com 10% de desconto.</p>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sr-only">Buscar produto</span>
+          <input id="q" type="search" placeholder="Buscar: camomila, anis, laranja…" autocomplete="off" enterkeyhint="search">
+          <button type="button" id="qClear" aria-label="Limpar busca" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </label>
+      </div>
     </div>
 
     <div class="toolbar">
@@ -1059,7 +1100,11 @@ body:has(.header.hide) .toolbar{top:0}
       </label>
     </div>
 
-    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="grid" id="grid"></div>
+    <div class="no-results" id="noResults" hidden role="status">
+      <b>Nada encontrado</b><span id="noResultsText">Tente outro nome ou veja todos os produtos.</span>
+      <button type="button" class="btn btn-dark" id="resetFilters">Ver todos os produtos</button>
+    </div>
   </div>
 </section>
 
@@ -1263,6 +1308,12 @@ body:has(.header.hide) .toolbar{top:0}
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.2.2.2.7 0 1.2Z"/></svg>
 </a>
 
+<!-- Atalho do carrinho quando o menu some ao rolar -->
+<button type="button" class="cart-float" id="cartFloat" aria-label="Ver carrinho" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+  <span><b id="cfQty">0 itens</b><em id="cfTotal">R$ 0,00</em></span>
+</button>
+
 <!-- Carrinho -->
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
@@ -1270,7 +1321,14 @@ body:has(.header.hide) .toolbar{top:0}
     <h2 id="drawerTitle">Sua <em>cuia</em></h2>
     <button class="icon-btn" id="closeCart" aria-label="Fechar carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
-  <div class="drawer-body" id="cartList"></div>
+  <div class="drawer-body"><div id="cartList"></div>
+    <form class="ship" hidden id="shipForm" novalidate>
+      <label for="shipCep">Calcule o frete</label>
+      <div class="ship-row"><input id="shipCep" inputmode="numeric" autocomplete="postal-code" placeholder="Seu CEP" maxlength="9"><button class="btn btn-dark" type="submit">Calcular</button></div>
+      <div class="ship-out" id="shipOut" aria-live="polite"></div>
+    </form>
+    <div class="combo" id="combo" hidden><h3>Combina com a sua cuia</h3><div class="combo-row" id="comboRow"></div></div>
+  </div>
   <div class="drawer-foot" id="cartFoot">
     <div class="sumline"><span>Subtotal</span><span id="sub">R$ 0,00</span></div>
     <div class="sumline"><span>Desconto Pix (10%)</span><span id="disc">− R$ 0,00</span></div>
@@ -1467,7 +1525,56 @@ function renderCart() {
     $('#disc').textContent = '− ' + brl(sub - pix(sub));
     $('#totalPix').textContent = brl(pix(sub));
   }
+  renderCombo(); syncCartFloat(); $('#shipForm').hidden = !ids.length;
+  if ($('#shipOut') && $('#shipOut').innerHTML && ids.length) { clearTimeout(renderCart.t); renderCart.t = setTimeout(() => quoteCart(true), 400); }
 }
+/* atalho do carrinho: aparece quando o menu do topo está escondido e há itens */
+function syncCartFloat() {
+  const f = $('#cartFloat'); if (!f) return;
+  const n = cartQty(); f.hidden = n === 0;
+  f.classList.toggle('off', !$('.header').classList.contains('hide'));
+  document.body.classList.toggle('cf-on', n > 0 && !f.classList.contains('off'));
+  $('#cfQty').textContent = `${n} ${n === 1 ? 'item' : 'itens'}`;
+  $('#cfTotal').textContent = brl(pix(cartSub())) + ' no Pix';
+  f.setAttribute('aria-label', `Ver carrinho: ${n} ${n === 1 ? 'item' : 'itens'}`);
+}
+$('#cartFloat').addEventListener('click', () => openCart());
+
+/* sugestões: produtos que ainda não estão no carrinho, da mesma linha primeiro */
+function renderCombo() {
+  const ids = Object.keys(cart);
+  if (!ids.length) { $('#combo').hidden = true; return; }
+  const chim = ids.some(id => byId[id] && byId[id].cat !== 'caixinha');
+  const pool = PRODUCTS.filter(p => !cart[p.id] && !p.unavailable && p.stock !== 0)
+    .sort((a, b) => ((chim ? a.cat === 'caixinha' : a.cat !== 'caixinha') - (chim ? b.cat === 'caixinha' : b.cat !== 'caixinha')) || (!!b.old - !!a.old));
+  const pick = pool.slice(0, 3);
+  $('#combo').hidden = !pick.length;
+  $('#comboRow').innerHTML = pick.map(p => `<button type="button" class="cmb" data-cmb="${p.id}" aria-label="Adicionar ${p.name}">
+    <img src="${p.img}" alt="" width="600" height="600"><b>${p.short}</b><span>${brl(p.price)}<i>${plus}</i></span></button>`).join('');
+}
+$('#comboRow').addEventListener('click', e => { const b = e.target.closest('[data-cmb]'); if (b) addToCart(b.dataset.cmb, 1); });
+
+/* frete estimado no carrinho (usa a mesma função do checkout) */
+const SHIP_KEY = 'edm-checkout';
+const cepMask = v => v.replace(/\D/g, '').slice(0, 8).replace(/(\d{5})(\d)/, '$1-$2');
+$('#shipCep').addEventListener('input', e => { e.target.value = cepMask(e.target.value); });
+try { const saved = JSON.parse(localStorage.getItem(SHIP_KEY) || '{}'); if (saved.cep) $('#shipCep').value = cepMask(saved.cep); } catch (_) {}
+let shipSeq = 0;
+async function quoteCart(silent) {
+  const cep = $('#shipCep').value.replace(/\D/g, ''); const out = $('#shipOut');
+  if (cep.length !== 8) { if (!silent) out.innerHTML = '<span class="err">Digite os 8 números do CEP.</span>'; return; }
+  const items = Object.entries(cart).map(([id, qty]) => ({ id, qty }));
+  if (!items.length || !window.LOJA) return;
+  try { const saved = JSON.parse(localStorage.getItem(SHIP_KEY) || '{}'); saved.cep = cepMask(cep); localStorage.setItem(SHIP_KEY, JSON.stringify(saved)); } catch (_) {}
+  const seq = ++shipSeq; out.innerHTML = '<span>Calculando…</span>';
+  try {
+    const r = await LOJA.fn('frete', { cep, items });
+    if (seq !== shipSeq) return;
+    out.innerHTML = `<span>Para ${r.city} · ${r.uf}</span>` + r.options.map(o => `<div><span>${o.name}${o.days ? ` · até ${o.days} dias úteis` : ''}</span><b>${o.price ? brl(o.price) : 'Grátis'}</b></div>`).join('');
+  } catch (err) { if (seq === shipSeq) out.innerHTML = `<span class="err">${err.message}</span>`; }
+}
+$('#shipForm').addEventListener('submit', e => { e.preventDefault(); quoteCart(false); });
+
 $('#cartList').addEventListener('click', e => {
   const t = e.target.closest('button,a'); if (!t) return;
   if (t.dataset.inc) setQty(t.dataset.inc, cart[t.dataset.inc] + 1);
@@ -1538,14 +1645,28 @@ function movePill() {
   const a = $('.filter[aria-pressed="true"]'), pill = $('#filterPill');
   pill.style.width = a.offsetWidth + 'px'; pill.style.transform = `translateX(${a.offsetLeft}px)`;
 }
+const norm = t => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+let term = '';
 function applyFilter() {
+  let shown = 0;
   $$('.card', grid).forEach(c => {
     const p = byId[c.dataset.id];
-    const show = !p.unavailable && (curFilter === 'all' || (curFilter === 'promo' ? !!p.old : p.cat === curFilter));
-    c.hidden = !show;
+    const hay = norm([p.name, p.short, p.kicker, p.weight, ...p.notes, p.desc].join(' '));
+    const show = !p.unavailable && (curFilter === 'all' || (curFilter === 'promo' ? !!p.old : p.cat === curFilter)) && (!term || term.split(/\s+/).every(w => hay.includes(w)));
+    c.hidden = !show; if (show) shown++;
     if (show) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop', 'in'); }
   });
+  $('#noResults').hidden = shown > 0;
+  if (!shown) $('#noResultsText').textContent = term ? `Nenhum produto com “${$('#q').value.trim()}”${curFilter !== 'all' ? ' neste filtro' : ''}.` : 'Nenhum produto neste filtro agora.';
 }
+let qT;
+$('#q').addEventListener('input', e => {
+  $('#qClear').hidden = !e.target.value;
+  clearTimeout(qT); qT = setTimeout(() => { term = norm(e.target.value.trim()); applyFilter(); }, 120);
+});
+$('#q').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); e.target.blur(); grid.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); } });
+$('#qClear').addEventListener('click', () => { $('#q').value = ''; $('#qClear').hidden = true; term = ''; applyFilter(); $('#q').focus(); });
+$('#resetFilters').addEventListener('click', () => { $('#q').value = ''; $('#qClear').hidden = true; term = ''; $('.filter[data-f="all"]').click(); });
 $('#filters').addEventListener('click', e => {
   const b = e.target.closest('.filter'); if (!b) return;
   $$('.filter').forEach(x => x.setAttribute('aria-pressed', x === b));
@@ -1596,16 +1717,26 @@ function openQuick(id) {
         <div class="qty"><button data-q="-1" aria-label="Diminuir">−</button><span id="qvQty">1</span><button data-q="1" aria-label="Aumentar">+</button></div>
         <button class="btn btn-dark" id="qvAdd">Adicionar · ${brl(p.price)}</button>
       </div>
-      <a href="#" class="btn btn-wa" id="qvWa" style="justify-self:start">Tirar dúvida no WhatsApp</a>
+      <div class="qv-actions">
+        <a href="#" class="btn btn-wa" id="qvWa">Tirar dúvida no WhatsApp</a>
+        <button type="button" class="btn btn-ghost" id="qvShare">Compartilhar</button>
+      </div>
     </div>`;
   const upd = () => { $('#qvQty').textContent = q; $('#qvAdd').textContent = `Adicionar · ${brl(p.price * q)}`; };
   $('.qv-buy .qty').addEventListener('click', e => { const b = e.target.closest('[data-q]'); if (b) { q = clamp(q + +b.dataset.q, 1, 99); upd(); } });
   $('#qvAdd').addEventListener('click', () => { addToCart(id, q, $('#qvIll .pouch')); qv.close(); });
   $('#qvWa').addEventListener('click', e => { e.preventDefault(); openWa(`Olá! Tenho uma dúvida sobre o ${p.name}${p.weight ? ' ' + p.weight : ''}.`); });
+  $('#qvShare').addEventListener('click', async () => {
+    const url = location.origin + location.pathname + '?p=' + encodeURIComponent(id);
+    try { if (navigator.share) { await navigator.share({ title: p.name + ' · Erva da Mata', url }); return; } } catch (_) { return; }
+    try { await navigator.clipboard.writeText(url); toast('Link do produto copiado'); } catch (_) { prompt('Copie o link do produto:', url); }
+  });
+  try { history.replaceState(null, '', '?p=' + encodeURIComponent(id) + location.hash); } catch (_) {}
   qv.showModal();
   requestAnimationFrame(() => setTimeout(() => $$('.fill', qv).forEach(f => f.style.width = f.dataset.w + '%'), 120));
 }
 $('#qvClose').addEventListener('click', () => qv.close());
+qv.addEventListener('close', () => { try { history.replaceState(null, '', location.pathname + location.hash); } catch (_) {} });
 qv.addEventListener('click', e => { if (e.target === qv) qv.close(); });
 
 /* =========================================================
@@ -1887,6 +2018,7 @@ function onScroll() {
   prog.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
   header.classList.toggle('scrolled', y > 40);
   header.classList.toggle('hide', y > lastY && y > 500 && !document.body.classList.contains('menu-open'));
+  syncCartFloat();
   lastY = y;
   // manifesto
   const r = man.getBoundingClientRect();
@@ -1945,20 +2077,7 @@ $$('[data-wa]').forEach(a => { if (a.tagName === 'A') { a.href = waLink(a.datase
    ========================================================= */
 $('#year').textContent = new Date().getFullYear();
 $('#heroPick').addEventListener('click', () => openQuick('anis-10'));
-/* filme do topo (plano contínuo de 20 s): legenda acompanha cada etapa */
-(() => {
-  const v = $('#heroFilm'), steps = $$('#filmSteps li'); if (!v) return;
-  steps.forEach(li => li.insertAdjacentHTML('beforeend', '<i></i>'));
-  if (reduce) { v.removeAttribute('autoplay'); v.pause(); return; }
-  const SH = 4, LEAD = 1.4;   // cada etapa dura 4 s; a legenda vira no meio da transição
-  (function tick() {
-    const t = (v.currentTime + LEAD) % 20, k = Math.min(4, Math.floor(t / SH)), p = (t - k * SH) / SH;
-    steps.forEach((li, i) => { li.classList.toggle('on', i === k); $('i', li).style.width = i < k ? 'calc(100% - 8px)' : i === k ? `calc((100% - 8px) * ${p.toFixed(3)})` : '0'; });
-    requestAnimationFrame(tick);
-  })();
-  // pausa fora da tela para poupar bateria
-  new IntersectionObserver(([e]) => { if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }).observe(v);
-})();
+{ const pid = new URLSearchParams(location.search).get('p'); if (pid && byId[pid]) setTimeout(() => { $('#produtos').scrollIntoView(); openQuick(pid); }, 600); }
 
 $('#statCount').dataset.count = PRODUCTS.length;
 $$('.cat[data-filter]').forEach(a => a.addEventListener('click', () => { const b = $(`.filter[data-f="${a.dataset.filter}"]`); if (b) setTimeout(() => b.click(), 450); }));
